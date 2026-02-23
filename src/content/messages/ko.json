@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "about": "소개",
+    "academics": "학업",
+    "careers": "진로",
+    "contact": "연락처",
+    "applyNow": "지원하기",
+    "language": "언어"
+  },
+  "footer": {
+    "brand": {
+      "schoolName": "WZIS / WZFS",
+      "tagline": "독수리들의 집",
+      "description": "2006년부터 중국에서 세계로 봉사하는 지도자를 양성하고 있습니다. 웨이하이, 산동성에 소재한 Cambridge International School입니다."
+    },
+    "explore": {
+      "title": "탐색"
+    },
+    "exploreLinks": {
+      "about": "WZIS 소개",
+      "news": "뉴스",
+      "events": "행사 및 갤러리",
+      "contact": "연락처"
+    },
+    "programs": {
+      "title": "프로그램"
+    },
+    "programsLinks": {
+      "primarySchool": "초등학교",
+      "middleSchool": "중학교",
+      "highSchool": "고등학교",
+      "admissions": "입학 안내"
+    },
+    "campusLife": {
+      "title": "캠퍼스 생활"
+    },
+    "campusLifeLinks": {
+      "clubs": "동아리",
+      "athletics": "체육",
+      "arts": "예술",
+      "careers": "진로"
+    },
+    "copyright": {
+      "text": "Weihai Zhongshi International School. All rights reserved."
+    }
+  },
+  "chatbot": {
+    "title": "보배 어시스턴트",
+    "status": "온라인 — EN / 한국어",
+    "greeting": "안녕하세요! 저는 보배 어시스턴트입니다. WZIS를 탐색하는 것을 도와드립니다. 입학, 캠퍼스 생활, 학업 등 무엇이든 물어보세요. 영어와 한국어를 모두 지원합니다!",
+    "placeholder": "질문을 입력하세요...",
+    "fabLabel": "WZIS에 대해 무엇이든 물어보세요!",
+    "chips": {
+      "apply": "지원 방법은?",
+      "tuition": "학비 및 수수료",
+      "campusLife": "캠퍼스 생활",
+      "careers": "진로"
+    },
+    "error": "지금 연결에 문제가 있습니다. 다시 시도하거나 입학 사무실(mkkim@zkis.org)에 직접 문의해주세요."
+  },
+  "home": {
+    "hero": {
+      "badge": "WASC & ACSI 인증",
+      "title": "봉사하는 지도자 양성",
+      "titleLine2": "중국에서 세계로",
+      "subtitle": "[KO] Weihai Zhongshi International School — home of the Eagles — offers a Cambridge International curriculum in one of China's most beautiful coastal cities. Nurturing BoBaes since 2006.",
+      "cta": "여정 시작하기",
+      "ctaSecondary": "가상 캠퍼스 투어",
+      "proofGrades": "1st–12th",
+      "proofGradesLabel": "전학년",
+      "proofNationalities": "20+",
+      "proofNationalitiesLabel": "국적",
+      "proofYear": "2006",
+      "proofYearLabel": "설립년도"
+    },
+    "marquee": {
+      "items": [
+        "Cambridge International School",
+        "WASC 인증",
+        "ACSI 회원교",
+        "2006년 Moody & Esther Lee 설립",
+        "1st–12th 국제교육",
+        "20+ 국적",
+        "중국 산동성 웨이하이",
+        "봉사하는 지도자 양성"
+      ]
+    },
+    "weihai": {
+      "tag": "우리의 터전",
+      "title": "웨이하이 발견",
+      "subtitle": "우리 캠퍼스는 중국에서 살기 좋은 해안 도시 중 하나에 위치하고 있습니다. 맑은 공기와 풍부한 문화가 어우러진 곳입니다.",
+      "cards": [
+        {
+          "title": "해변 일몰",
+          "desc": "금색 해안선과 깨끗한 해변"
+        },
+        {
+          "title": "해안 경치",
+          "desc": "1,000km의 아름다운 해안선"
+        },
+        {
+          "title": "역사적 다리",
+          "desc": "풍부한 문화유산"
+        },
+        {
+          "title": "겨울 해변",
+          "desc": "모든 계절이 아름답습니다"
+        },
+        {
+          "title": "고대 탑",
+          "desc": "깊은 역사의 뿌리"
+        },
+        {
+          "title": "조명 축제",
+          "desc": "생생한 문화 행사"
+        },
+        {
+          "title": "등불 거리",
+          "desc": "전통 축제"
+        },
+        {
+          "title": "현대 도시",
+          "desc": "옛것과 새것의 조화"
+        }
+      ],
+      "stats": {
+        "air": "중국 공기질 1위",
+        "population": "290만 주민",
+        "coastline": "1,000km 해안선",
+        "safety": "가장 안전한 도시 중 하나"
+      }
+    },
+    "story": {
+      "tag": "우리의 역사",
+      "title": "깊은 비전으로 설립",
+      "p1": "[KO] In 2006, Moody and Esther Lee founded Weihai Zhongshi International School (also known locally as Weihai Zhongshi Foreign School, or WZFS) with a bold vision: to cultivate servant leaders who will make a lasting, positive impact on the world.",
+      "p2": "[KO] The name \"Zhongshi\" (中世) reflects our mission — \"From China to the World.\" We nurture global citizens with strong values, academic excellence, and a deep commitment to serving others. Our students — whom we lovingly call BoBae (보배), the Korean word for \"precious one\" — are at the heart of everything we do.",
+      "values": [
+        "존중",
+        "지혜",
+        "자기 표현",
+        "책임감",
+        "전인 교육",
+        "봉사"
+      ]
+    },
+    "academics": {
+      "tag": "학업",
+      "title": "Cambridge International 교과과정",
+      "subtitle": "초등학교부터 A-Level까지 세계 수준의 교육",
+      "divisions": [
+        {
+          "title": "초등학교",
+          "grades": "1–5학년",
+          "desc": "Cambridge Primary — 문해력, 수리력, 탐구심의 기초를 다집니다."
+        },
+        {
+          "title": "중학교",
+          "grades": "6–8학년",
+          "desc": "Cambridge Lower Secondary — 비판적 사고와 독립심을 개발합니다."
+        },
+        {
+          "title": "고등학교",
+          "grades": "9–12학년",
+          "desc": "IGCSE & A-Levels — 세계적으로 인정받는 자격증을 취득합니다."
+        }
+      ],
+      "cta": "학업 살펴보기"
+    },
+    "programs": {
+      "tag": "프로그램",
+      "title": "교실 밖의 세계",
+      "subtitle": "문화, 언어, 예술, 그리고 글로벌 경로를 통해 다재다능한 지도자를 양성하는 WZIS만의 독특한 프로그램입니다.",
+      "items": [
+        {
+          "title": "문화 글로벌 개발",
+          "desc": "문화 교류와 봉사를 통한 글로벌 시민 양성",
+          "href": "/cgd"
+        },
+        {
+          "title": "1 Plus 3 대학 경로",
+          "desc": "개인맞춤형 대학 상담 및 준비",
+          "href": "/one-plus-three"
+        },
+        {
+          "title": "HSK 중국어 프로그램",
+          "desc": "웨이하이의 집중형 중국어 프로그램",
+          "href": "/hsk"
+        },
+        {
+          "title": "합창단 & 오케스트라",
+          "desc": "지역사회 공연 및 음악적 우수성",
+          "href": "/music"
+        },
+        {
+          "title": "ZSA 스포츠 아카데미",
+          "desc": "야구와 배구의 경쟁 프로그램",
+          "href": "/sports-academy"
+        }
+      ]
+    },
+    "campusLife": {
+      "title": "WZIS의 생활",
+      "subtitle": "체육, 학업, 그리고 커뮤니티 — WZIS에서는 매일이 모험입니다.",
+      "cards": [
+        {
+          "title": "Scholar's Cup 챔피언",
+          "desc": "우리 보배들은 세계 무대에서 경쟁하고 우수함을 드러냅니다."
+        },
+        {
+          "title": "스포츠 데이",
+          "desc": "체육과 팀워크를 축하하는 학교 전체 행사."
+        }
+      ]
+    },
+    "cta": {
+      "title": "WZIS 여정 시작하기",
+      "subtitle": "Cambridge 교과과정, 입학 절차, 캠퍼스 생활, 그리고 모든 보배가 성장하는 WZIS만의 특별함을 발견하세요.",
+      "cards": [
+        {
+          "title": "지금 지원하기",
+          "desc": "입학 절차 시작",
+          "href": "/admissions"
+        },
+        {
+          "title": "캠퍼스 방문",
+          "desc": "투어 일정 예약",
+          "href": "/contact"
+        },
+        {
+          "title": "우리 팀 만나기",
+          "desc": "교직원과 연결",
+          "href": "/contact"
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "WZIS 소개"
+    },
+    "welcome": {
+      "title": "총장 인사말",
+      "p1": "[KO] Welcome to Weihai Zhongshi International School — known as both WZIS and WZFS (Weihai Zhongshi Foreign School). Both names refer to the same school and community; you may see either used by staff, families, and alumni. Our competitive athletics program operates as the Zhongshi Sports Academy (ZSA). The name 'Zhongshi' reflects our mission, derived from the Chinese phrase meaning 'From China to the World.'",
+      "p2": "[KO] Since our founding in 2006, we have been committed to this vision: preparing our students to step out into the world as servant leaders.",
+      "p3": "[KO] At WZIS, a servant leader is someone who uses their talents and abilities to benefit others. Our goal is to equip students with both the academic skills and the character needed to excel wherever they go. Central to this mission is our comprehensive character development program, which is built around five core values: respect, wisdom, self-expression, responsibility, and holistic education.",
+      "p4": "[KO] Our students are at the heart of everything we do. They are so important to us that we affectionately refer to them as 'BoBae's' (pronounced Boh-Bae), a Korean word meaning 'precious one.' This reflects our deep commitment to nurturing and valuing each student as a unique and precious individual.",
+      "p5": "[KO] We offer a robust international curriculum alongside a wide range of extracurricular activities. We believe that every BoBae matters, and we are committed to providing opportunities for all who enroll. With our emphasis on small class sizes and a close-knit, supportive community, we ensure that each BoBae feels valued and encouraged to achieve their best.",
+      "signature": "진심으로,",
+      "signatureName": "무디 리",
+      "signatureTitle": "총장 및 설립자"
+    },
+    "bobae": {
+      "title": "보배 문화",
+      "description": "[KO] At WZIS, students are affectionately referred to as 'BoBae' (보배), a Korean term meaning 'precious one.' This term reflects how deeply we value each member of our school community, seeing each individual not just as a student, but as a cherished part of the WZIS family. Our school mascot, the Eagle, represents the strength, vision, and soaring ambition we cultivate in every BoBae."
+    }
+  },
+  "academics_page": {
+    "hero": {
+      "title": "WZIS의 학업"
+    },
+    "intro": "[KO] WZIS is proud to offer the Cambridge International curriculum, one of the world's most respected educational frameworks. Our program spans from Primary through A-Levels, providing a seamless and rigorous academic journey. We are accredited by WASC and ACSI, and serve as an official SAT Test Center."
+  },
+  "admissions": {
+    "hero": {
+      "title": "입학"
+    },
+    "cta": "오늘 보배로서의 여정을 시작하세요."
+  },
+  "athletics_page": {
+    "hero": {
+      "title": "WZFS 독수리 체육",
+      "subtitle": "[KO] Building character, resilience, and excellence through sport. As Eagles, every BoBae has the opportunity to develop athletically while upholding values of teamwork and integrity."
+    }
+  },
+  "careers_page": {
+    "hero": {
+      "title": "WZIS 채용 기회"
+    },
+    "intro": "[KO] Join the vibrant community at WZIS, where we are dedicated to shaping future leaders through excellence in education and a nurturing, collaborative environment."
+  },
+  "contact_page": {
+    "hero": {
+      "title": "연락처"
+    }
+  },
+  "common": {
+    "learnMore": "더 알아보기",
+    "applyNow": "지금 지원하기",
+    "contactUs": "연락하기",
+    "readMore": "더 읽기",
+    "viewAll": "전체 보기",
+    "backToHome": "홈으로 돌아가기"
+  }
+}

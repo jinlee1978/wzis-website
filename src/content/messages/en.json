@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "about": "About",
+    "academics": "Academics",
+    "careers": "Careers",
+    "contact": "Contact",
+    "applyNow": "Apply Now",
+    "language": "Language"
+  },
+  "footer": {
+    "brand": {
+      "schoolName": "WZIS / WZFS",
+      "tagline": "Home of the Eagles",
+      "description": "Shaping servant leaders from China to the world since 2006. A Cambridge International School in Weihai, Shandong."
+    },
+    "explore": {
+      "title": "Explore"
+    },
+    "exploreLinks": {
+      "about": "About WZIS",
+      "news": "News",
+      "events": "Events & Gallery",
+      "contact": "Contact Us"
+    },
+    "programs": {
+      "title": "Programs"
+    },
+    "programsLinks": {
+      "primarySchool": "Primary School",
+      "middleSchool": "Middle School",
+      "highSchool": "High School",
+      "admissions": "Admissions"
+    },
+    "campusLife": {
+      "title": "Campus Life"
+    },
+    "campusLifeLinks": {
+      "clubs": "Clubs",
+      "athletics": "Athletics",
+      "arts": "Arts",
+      "careers": "Careers"
+    },
+    "copyright": {
+      "text": "Weihai Zhongshi International School. All rights reserved."
+    }
+  },
+  "chatbot": {
+    "title": "BoBae Assistant",
+    "status": "Online — EN / 한국어",
+    "greeting": "Hey there! I'm your BoBae Assistant — here to help you explore WZIS. Ask me about admissions, campus life, academics, or anything else. I speak English and Korean!",
+    "placeholder": "Type your question...",
+    "fabLabel": "Ask me anything about WZIS!",
+    "chips": {
+      "apply": "How do I apply?",
+      "tuition": "Tuition & fees",
+      "campusLife": "Campus life",
+      "careers": "Careers"
+    },
+    "error": "I'm having trouble connecting right now. Please try again, or contact our admissions office directly at mkkim@zkis.org."
+  },
+  "home": {
+    "hero": {
+      "badge": "WASC & ACSI Accredited",
+      "title": "Shaping Servant Leaders",
+      "titleLine2": "From China to the World",
+      "subtitle": "Weihai Zhongshi International School — home of the Eagles — offers a Cambridge International curriculum in one of China's most beautiful coastal cities. Nurturing BoBaes since 2006.",
+      "cta": "Start Your Journey",
+      "ctaSecondary": "Take a Virtual Tour",
+      "proofGrades": "1st–12th",
+      "proofGradesLabel": "All Grades",
+      "proofNationalities": "20+",
+      "proofNationalitiesLabel": "Nationalities",
+      "proofYear": "2006",
+      "proofYearLabel": "Established"
+    },
+    "marquee": {
+      "items": [
+        "Cambridge International School",
+        "WASC Accredited",
+        "ACSI Member",
+        "Founded 2006 by Moody & Esther Lee",
+        "1st–12th International Education",
+        "20+ Nationalities",
+        "Weihai, Shandong, China",
+        "Shaping Servant Leaders"
+      ]
+    },
+    "weihai": {
+      "tag": "Our Home",
+      "title": "Discover Weihai",
+      "subtitle": "Our campus sits in one of China's most liveable coastal cities — where clean air meets rich culture.",
+      "cards": [
+        {
+          "title": "Beach Sunset",
+          "desc": "Golden coastlines and clean beaches"
+        },
+        {
+          "title": "Coastal Views",
+          "desc": "1,000km of stunning coastline"
+        },
+        {
+          "title": "Historic Bridge",
+          "desc": "Rich cultural heritage"
+        },
+        {
+          "title": "Winter Beach",
+          "desc": "Beautiful in every season"
+        },
+        {
+          "title": "Ancient Pagoda",
+          "desc": "Deep historical roots"
+        },
+        {
+          "title": "Light Festival",
+          "desc": "Vibrant cultural events"
+        },
+        {
+          "title": "Lantern Streets",
+          "desc": "Traditional celebrations"
+        },
+        {
+          "title": "Modern City",
+          "desc": "A blend of old and new"
+        }
+      ],
+      "stats": {
+        "air": "#1 Cleanest Air in China",
+        "population": "2.9M Residents",
+        "coastline": "1,000km Coastline",
+        "safety": "One of Safest Cities"
+      }
+    },
+    "story": {
+      "tag": "Our Story",
+      "title": "Founded With a Profound Vision",
+      "p1": "In 2006, Moody and Esther Lee founded Weihai Zhongshi International School (also known locally as Weihai Zhongshi Foreign School, or WZFS) with a bold vision: to cultivate servant leaders who will make a lasting, positive impact on the world.",
+      "p2": "The name \"Zhongshi\" (中世) reflects our mission — \"From China to the World.\" We nurture global citizens with strong values, academic excellence, and a deep commitment to serving others. Our students — whom we lovingly call BoBae (보배), the Korean word for \"precious one\" — are at the heart of everything we do.",
+      "values": [
+        "Respect",
+        "Wisdom",
+        "Self-Expression",
+        "Responsibility",
+        "Holistic Education",
+        "Service"
+      ]
+    },
+    "academics": {
+      "tag": "Academics",
+      "title": "Cambridge International Curriculum",
+      "subtitle": "A world-class education from Primary through A-Levels",
+      "divisions": [
+        {
+          "title": "Primary School",
+          "grades": "Grades 1–5",
+          "desc": "Cambridge Primary — building strong foundations in literacy, numeracy, and inquiry."
+        },
+        {
+          "title": "Middle School",
+          "grades": "Grades 6–8",
+          "desc": "Cambridge Lower Secondary — developing critical thinking and independence."
+        },
+        {
+          "title": "High School",
+          "grades": "Grades 9–12",
+          "desc": "IGCSE & A-Levels — university preparation with globally recognized qualifications."
+        }
+      ],
+      "cta": "Explore Academics"
+    },
+    "programs": {
+      "tag": "Programs",
+      "title": "Beyond the Classroom",
+      "subtitle": "Unique programs that set WZIS apart — nurturing well-rounded leaders through culture, language, arts, and global pathways.",
+      "items": [
+        {
+          "title": "Cultural Global Development",
+          "desc": "Building global citizens through cultural exchange and service",
+          "href": "/cgd"
+        },
+        {
+          "title": "1 Plus 3 University Pathway",
+          "desc": "Personalized university counseling and preparation",
+          "href": "/one-plus-three"
+        },
+        {
+          "title": "HSK Chinese Language",
+          "desc": "Full immersion Chinese program in Weihai",
+          "href": "/hsk"
+        },
+        {
+          "title": "Choir & Orchestra",
+          "desc": "Community performances and musical excellence",
+          "href": "/music"
+        },
+        {
+          "title": "ZSA Sports Academy",
+          "desc": "Competitive baseball and volleyball programs",
+          "href": "/sports-academy"
+        }
+      ]
+    },
+    "campusLife": {
+      "title": "Life at WZIS",
+      "subtitle": "Athletics, academics, and community — every day is an adventure at WZIS.",
+      "cards": [
+        {
+          "title": "Scholar's Cup Champions",
+          "desc": "Our BoBaes compete and excel on the world stage."
+        },
+        {
+          "title": "Sports Day",
+          "desc": "School-wide celebration of athletics and teamwork."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Begin Your WZIS Journey",
+      "subtitle": "Discover our Cambridge curriculum, admissions process, campus life, and what makes WZIS a place where every BoBae thrives.",
+      "cards": [
+        {
+          "title": "Apply Now",
+          "desc": "Start the admissions process",
+          "href": "/admissions"
+        },
+        {
+          "title": "Visit Campus",
+          "desc": "Schedule a tour",
+          "href": "/contact"
+        },
+        {
+          "title": "Meet Our Team",
+          "desc": "Connect with our staff",
+          "href": "/contact"
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About WZIS"
+    },
+    "welcome": {
+      "title": "Welcome from the President",
+      "p1": "Welcome to Weihai Zhongshi International School — known as both WZIS and WZFS (Weihai Zhongshi Foreign School). Both names refer to the same school and community; you may see either used by staff, families, and alumni. Our competitive athletics program operates as the Zhongshi Sports Academy (ZSA). The name 'Zhongshi' reflects our mission, derived from the Chinese phrase meaning 'From China to the World.'",
+      "p2": "Since our founding in 2006, we have been committed to this vision: preparing our students to step out into the world as servant leaders.",
+      "p3": "At WZIS, a servant leader is someone who uses their talents and abilities to benefit others. Our goal is to equip students with both the academic skills and the character needed to excel wherever they go. Central to this mission is our comprehensive character development program, which is built around five core values: respect, wisdom, self-expression, responsibility, and holistic education.",
+      "p4": "Our students are at the heart of everything we do. They are so important to us that we affectionately refer to them as 'BoBae's' (pronounced Boh-Bae), a Korean word meaning 'precious one.' This reflects our deep commitment to nurturing and valuing each student as a unique and precious individual.",
+      "p5": "We offer a robust international curriculum alongside a wide range of extracurricular activities. We believe that every BoBae matters, and we are committed to providing opportunities for all who enroll. With our emphasis on small class sizes and a close-knit, supportive community, we ensure that each BoBae feels valued and encouraged to achieve their best.",
+      "signature": "Sincerely,",
+      "signatureName": "Moody Lee",
+      "signatureTitle": "President and Founder"
+    },
+    "bobae": {
+      "title": "The BoBae Culture",
+      "description": "At WZIS, students are affectionately referred to as 'BoBae' (보배), a Korean term meaning 'precious one.' This term reflects how deeply we value each member of our school community, seeing each individual not just as a student, but as a cherished part of the WZIS family. Our school mascot, the Eagle, represents the strength, vision, and soaring ambition we cultivate in every BoBae."
+    }
+  },
+  "academics_page": {
+    "hero": {
+      "title": "Academics at WZIS"
+    },
+    "intro": "WZIS is proud to offer the Cambridge International curriculum, one of the world's most respected educational frameworks. Our program spans from Primary through A-Levels, providing a seamless and rigorous academic journey. We are accredited by WASC and ACSI, and serve as an official SAT Test Center."
+  },
+  "admissions": {
+    "hero": {
+      "title": "Admissions"
+    },
+    "cta": "Start your journey as a BoBae today."
+  },
+  "athletics_page": {
+    "hero": {
+      "title": "WZFS Eagles Athletics",
+      "subtitle": "Building character, resilience, and excellence through sport. As Eagles, every BoBae has the opportunity to develop athletically while upholding values of teamwork and integrity."
+    }
+  },
+  "careers_page": {
+    "hero": {
+      "title": "Career Opportunities at WZIS"
+    },
+    "intro": "Join the vibrant community at WZIS, where we are dedicated to shaping future leaders through excellence in education and a nurturing, collaborative environment."
+  },
+  "contact_page": {
+    "hero": {
+      "title": "Contact Us"
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "applyNow": "Apply Now",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "backToHome": "Back to Home"
+  }
+}
