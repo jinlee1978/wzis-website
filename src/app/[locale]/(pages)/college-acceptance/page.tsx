@@ -157,7 +157,7 @@ const placementHistory: RegionData[] = [
 ]
 
 const stats = [
-  { number: '17+', label: 'Years of Excellence' },
+  { number: '20', label: 'Years of Excellence' },
   { number: '100+', label: 'Universities' },
   { number: '15+', label: 'Countries' },
   { number: '4', label: 'Continents' },

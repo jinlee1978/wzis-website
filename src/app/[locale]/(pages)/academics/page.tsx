@@ -87,7 +87,7 @@ const signaturePrograms = [
 
 const stats = [
   {
-    value: '17+',
+    value: '20',
     label: 'Years',
   },
   {
