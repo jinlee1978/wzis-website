@@ -9,17 +9,6 @@ interface ChatMessage {
   content: string;
 }
 
-const SYSTEM_INSTRUCTION =
-  'You are the WZIS virtual assistant for Weihai Zhongshi International School. ' +
-  'ONLY answer questions about the school: admissions, academics, campus life, athletics, ' +
-  'arts, dormitory, events, and general school information. ' +
-  'NEVER discuss religion, Christianity, faith, churches, or any religious topics. ' +
-  'If ACSI is mentioned, refer to it only as "ACSI" without expanding the acronym. ' +
-  'NEVER discuss sensitive political topics about China, government policies, censorship, ' +
-  'human rights, territorial disputes, or any politically sensitive subjects. ' +
-  'If a user asks about any off-topic, religious, or politically sensitive subject, ' +
-  'politely redirect them: "I can only help with questions about WZIS. Is there anything ' +
-  'about our school I can assist you with?"';
 
 export default function ChatWidget() {
   const t = useTranslations();
@@ -76,7 +65,8 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const chatHistory = messages.slice(-9).concat(userMessage);
+      // Send last 4 messages as history (backend also caps at 4)
+      const chatHistory = messages.slice(-3).concat(userMessage);
 
       const apiUrl =
         process.env.NEXT_PUBLIC_CHAT_API_URL ||
@@ -90,32 +80,49 @@ export default function ChatWidget() {
         body: JSON.stringify({
           message: messageText.trim(),
           history: chatHistory,
-          systemInstruction: SYSTEM_INSTRUCTION,
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to get response from chatbot');
+        const status = response.status;
+        if (status === 429) {
+          throw new Error('busy');
+        } else if (status === 400) {
+          const errData = await response.json().catch(() => null);
+          throw new Error(errData?.error || 'invalid');
+        }
+        throw new Error('server');
       }
 
       const data = await response.json();
 
       const assistantMessage: ChatMessage = {
         role: 'assistant',
-        content: data.reply || data.response || data.message || 'I apologize, I could not process your request.',
+        content: data.reply || data.response || data.message || "Sorry, I didn't get a response. Could you try asking again?",
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (err) {
-      const errorMessage =
-        err instanceof Error
-          ? err.message
-          : 'Sorry, I encountered an error. Please try again.';
-      setError(errorMessage);
+      const code = err instanceof Error ? err.message : 'unknown';
+
+      let friendlyMessage: string;
+      if (code === 'busy') {
+        friendlyMessage = "I'm getting a lot of questions right now! Give me a few seconds and try again.";
+      } else if (code.includes('1000 characters')) {
+        friendlyMessage = "That message was a bit long for me. Could you shorten it a little?";
+      } else if (code === 'invalid') {
+        friendlyMessage = "I didn't quite catch that. Could you rephrase your question?";
+      } else if (code === 'Failed to fetch' || code === 'NetworkError when attempting to fetch resource.') {
+        friendlyMessage = "It looks like I'm having trouble connecting. Check your internet and try again!";
+      } else {
+        friendlyMessage = "Oops, something went wrong on my end. Try again in a moment!";
+      }
+
+      setError(null);
 
       const errorBotMessage: ChatMessage = {
         role: 'assistant',
-        content: 'I apologize, but I encountered an error processing your message. Please try again in a moment.',
+        content: friendlyMessage,
       };
 
       setMessages((prev) => [...prev, errorBotMessage]);
@@ -254,13 +261,6 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {error && (
-              <div className="flex justify-center mb-4">
-                <div className="bg-red-100 border border-red-300 text-red-700 px-4 py-2 rounded-lg text-sm max-w-xs text-center">
-                  {error}
-                </div>
-              </div>
-            )}
 
             <div ref={messagesEndRef} />
           </div>
