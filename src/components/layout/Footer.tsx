@@ -9,22 +9,22 @@ export default function Footer() {
 
   const exploreLinks = [
     { label: t('exploreLinks.about'), href: '/about' },
-    { label: t('exploreLinks.news'), href: '/news' },
     { label: t('exploreLinks.events'), href: '/events' },
     { label: t('exploreLinks.contact'), href: '/contact' },
+    { label: t('exploreLinks.admissions'), href: '/admissions' },
   ];
 
   const programsLinks = [
-    { label: t('programsLinks.primarySchool'), href: '/academics/primary' },
-    { label: t('programsLinks.middleSchool'), href: '/academics/middle' },
-    { label: t('programsLinks.highSchool'), href: '/academics/high' },
-    { label: t('programsLinks.admissions'), href: '/admissions' },
+    { label: t('programsLinks.academics'), href: '/academics' },
+    { label: t('programsLinks.cgd'), href: '/cgd' },
+    { label: t('programsLinks.onePlusThree'), href: '/one-plus-three' },
+    { label: t('programsLinks.hsk'), href: '/hsk' },
   ];
 
   const campusLifeLinks = [
-    { label: t('campusLifeLinks.clubs'), href: '/campus-life/clubs' },
-    { label: t('campusLifeLinks.athletics'), href: '/campus-life/athletics' },
-    { label: t('campusLifeLinks.arts'), href: '/campus-life/arts' },
+    { label: t('campusLifeLinks.athletics'), href: '/athletics' },
+    { label: t('campusLifeLinks.sportsAcademy'), href: '/sports-academy' },
+    { label: t('campusLifeLinks.music'), href: '/music' },
     { label: t('campusLifeLinks.careers'), href: '/careers' },
   ];
 

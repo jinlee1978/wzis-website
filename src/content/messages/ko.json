@@ -18,26 +18,26 @@
     },
     "exploreLinks": {
       "about": "WZIS 소개",
-      "news": "뉴스",
       "events": "행사 및 갤러리",
-      "contact": "연락처"
+      "contact": "연락처",
+      "admissions": "입학 안내"
     },
     "programs": {
       "title": "프로그램"
     },
     "programsLinks": {
-      "primarySchool": "초등학교",
-      "middleSchool": "중학교",
-      "highSchool": "고등학교",
-      "admissions": "입학 안내"
+      "academics": "학업",
+      "cgd": "CGD",
+      "onePlusThree": "1 Plus 3",
+      "hsk": "HSK 프로그램"
     },
     "campusLife": {
       "title": "캠퍼스 생활"
     },
     "campusLifeLinks": {
-      "clubs": "동아리",
       "athletics": "체육",
-      "arts": "예술",
+      "sportsAcademy": "스포츠 아카데미",
+      "music": "음악",
       "careers": "진로"
     },
     "copyright": {

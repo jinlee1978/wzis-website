@@ -18,26 +18,26 @@
     },
     "exploreLinks": {
       "about": "About WZIS",
-      "news": "News",
       "events": "Events & Gallery",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "admissions": "Admissions"
     },
     "programs": {
       "title": "Programs"
     },
     "programsLinks": {
-      "primarySchool": "Primary School",
-      "middleSchool": "Middle School",
-      "highSchool": "High School",
-      "admissions": "Admissions"
+      "academics": "Academics",
+      "cgd": "CGD",
+      "onePlusThree": "1 Plus 3",
+      "hsk": "HSK Program"
     },
     "campusLife": {
       "title": "Campus Life"
     },
     "campusLifeLinks": {
-      "clubs": "Clubs",
       "athletics": "Athletics",
-      "arts": "Arts",
+      "sportsAcademy": "Sports Academy",
+      "music": "Music",
       "careers": "Careers"
     },
     "copyright": {
