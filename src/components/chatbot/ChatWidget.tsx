@@ -297,7 +297,7 @@ export default function ChatWidget() {
               }}
               placeholder="Type your question..."
               disabled={isLoading}
-              className="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a3a52] disabled:opacity-50"
+              className="flex-1 bg-gray-100 rounded-full px-4 py-2 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#1a3a52] disabled:opacity-50"
             />
             <button
               onClick={() => handleSendMessage(inputValue)}
