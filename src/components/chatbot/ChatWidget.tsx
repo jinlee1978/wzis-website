@@ -7,6 +7,7 @@ import { MessageCircle, X, Send, Activity } from 'lucide-react';
 interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
+  isError?: boolean;
 }
 
 
@@ -65,8 +66,9 @@ export default function ChatWidget() {
     setIsLoading(true);
 
     try {
-      // Send last 4 messages as history (backend also caps at 4)
-      const chatHistory = messages.slice(-3).concat(userMessage);
+      // Send last 4 real messages as history — exclude error messages
+      const realMessages = messages.filter((m) => !m.isError);
+      const chatHistory = realMessages.slice(-3).concat(userMessage);
 
       const apiUrl =
         process.env.NEXT_PUBLIC_CHAT_API_URL ||
@@ -123,6 +125,7 @@ export default function ChatWidget() {
       const errorBotMessage: ChatMessage = {
         role: 'assistant',
         content: friendlyMessage,
+        isError: true,
       };
 
       setMessages((prev) => [...prev, errorBotMessage]);
