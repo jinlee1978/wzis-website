@@ -165,10 +165,10 @@ export default function ChatWidget() {
         </div>
       )}
 
-      {/* FAB Button */}
+      {/* FAB Button — hidden when chat is open on mobile */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-7 right-7 w-16 h-16 rounded-full bg-gradient-to-br from-[#1a3a52] to-[#0f2744] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:rotate-12 flex items-center justify-center group"
+        className={"fixed bottom-7 right-7 w-16 h-16 rounded-full bg-gradient-to-br from-[#1a3a52] to-[#0f2744] shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:rotate-12 flex items-center justify-center group" + (isOpen ? " hidden sm:flex" : "")}
         style={{ zIndex: 9999 }}
         aria-label="Open chat"
       >
@@ -177,10 +177,10 @@ export default function ChatWidget() {
         <MessageCircle className="w-7 h-7 text-white relative z-10" />
       </button>
 
-      {/* Chat Window */}
+      {/* Chat Window — full screen on mobile, floating card on desktop */}
       {isOpen && (
         <div
-          className="fixed bottom-32 right-7 w-[400px] h-[560px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-bounce-in"
+          className="fixed inset-0 sm:inset-auto sm:bottom-32 sm:right-7 sm:w-[400px] sm:h-[560px] bg-white sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-bounce-in"
           style={{
             zIndex: 9999,
             animation: 'bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
@@ -243,8 +243,8 @@ export default function ChatWidget() {
                 <div
                   className={
                     msg.role === 'assistant'
-                      ? 'bg-white rounded-2xl px-4 py-2 max-w-xs shadow-md text-gray-900 text-sm'
-                      : 'bg-gradient-to-br from-[#1a3a52] to-[#0f2744] text-white rounded-2xl px-4 py-2 max-w-xs text-sm'
+                      ? 'bg-white rounded-2xl px-4 py-2 max-w-[75%] sm:max-w-xs shadow-md text-gray-900 text-sm'
+                      : 'bg-gradient-to-br from-[#1a3a52] to-[#0f2744] text-white rounded-2xl px-4 py-2 max-w-[75%] sm:max-w-xs text-sm'
                   }
                 >
                   {msg.content}
