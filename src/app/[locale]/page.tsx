@@ -106,8 +106,8 @@ export default function HomePage() {
 
   // SECTION 7: PROGRAMS
   const programItems = [
-    { title: 'CGD', desc: 'Cultural Global Development — experiential learning through travel, service, and cross-cultural engagement.' },
-    { title: '1 Plus 3', desc: 'One year of intensive A-Level preparation followed by three years at a top global university.' },
+    { title: 'CGD', desc: 'Creative Thinking & Good Deeds — empowering bobaes to use creativity and gratitude to make a positive impact.' },
+    { title: '1 Plus 3', desc: 'Dedicated mentorship program pairing each bobae with a teacher for academic and emotional support.' },
     { title: 'HSK', desc: 'Structured Mandarin Chinese proficiency program — from beginner to advanced certification.' },
     { title: 'Choir & Orchestra', desc: 'Award-winning music programs nurturing creativity, discipline, and performance.' },
   ];
@@ -467,7 +467,7 @@ export default function HomePage() {
                     {programItems[0]?.title || 'CGD'}
                   </h3>
                   <p className="text-text-brand-light text-sm leading-relaxed">
-                    {programItems[0]?.desc || 'Cultural Global Development'}
+                    {programItems[0]?.desc || 'Creative Thinking & Good Deeds'}
                   </p>
                 </div>
               </Card>
@@ -485,7 +485,7 @@ export default function HomePage() {
                     {programItems[1]?.title || '1 Plus 3'}
                   </h3>
                   <p className="text-text-brand-light text-sm leading-relaxed">
-                    {programItems[1]?.desc || 'University Pathway'}
+                    {programItems[1]?.desc || '1 Plus 3 Mentorship'}
                   </p>
                 </div>
               </Card>

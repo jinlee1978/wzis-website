@@ -56,16 +56,16 @@ const schoolDivisions = [
 
 const signaturePrograms = [
   {
-    title: 'Cultural Global Development',
+    title: 'Creative Thinking & Good Deeds',
     shortTitle: 'CGD',
-    description: 'Cross-cultural understanding and global citizenship',
+    description: 'Creativity, gratitude, and emotional resilience through the Gratitude Olympics',
     href: '/cgd',
     icon: Globe,
   },
   {
     title: '1 Plus 3',
     shortTitle: '1 Plus 3',
-    description: 'University Pathway — mentorship program for college selection',
+    description: 'Dedicated mentorship pairing each bobae with a teacher for holistic support',
     href: '/one-plus-three',
     icon: Users,
   },

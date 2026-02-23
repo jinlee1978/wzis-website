@@ -1,72 +1,34 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Heart, Globe, Compass, Users, Zap } from 'lucide-react';
+import { Heart, Lightbulb, Smile, Globe, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'CGD | WZIS',
-  description: 'Cultural Global Development - Experiential learning through travel, service, and cross-cultural engagement at Weihai International School.',
+  description: 'Creative Thinking and Good Deeds — Empowering bobaes to use creativity to find solutions and make a positive impact at Weihai International School.',
 };
 
 export default function CGDPage() {
   const pillars = [
     {
-      title: 'Cultural Awareness',
-      description: 'Understanding diverse cultures, traditions, and perspectives through immersive experiences.',
-      icon: Globe,
+      title: 'Creative Problem Solving',
+      description: 'Empowering bobaes to use creativity to find innovative solutions to real-world challenges in their communities.',
+      icon: Lightbulb,
     },
     {
-      title: 'Global Citizenship',
-      description: 'Developing responsibility as members of a global community through service and engagement.',
+      title: 'Gratitude & Resilience',
+      description: 'Cultivating thankfulness and emotional resilience through the Gratitude Olympics, helping bobaes appreciate the small positives even during challenging times.',
       icon: Heart,
     },
     {
-      title: 'Personal Growth',
-      description: 'Building resilience, independence, and self-confidence through travel and new experiences.',
-      icon: Compass,
+      title: 'Positive Impact',
+      description: 'Encouraging bobaes to make a lasting, positive impact on their communities through good deeds and meaningful action.',
+      icon: Sparkles,
     },
     {
-      title: 'Leadership Development',
-      description: 'Cultivating servant leadership skills through real-world challenges and teamwork.',
-      icon: Users,
+      title: 'Emotional Well-Being',
+      description: 'Promoting emotional well-being for bobaes, parents, teachers, and staff — steering the whole community away from negativity.',
+      icon: Smile,
     },
-  ];
-
-  const journey = [
-    {
-      stage: 'Grades 1-3',
-      title: 'Local Discovery',
-      description: 'Exploring Weihai and surrounding areas, cultural field trips',
-      color: 'bg-accent-soft',
-      borderColor: 'border-blue-300',
-    },
-    {
-      stage: 'Grades 4-5',
-      title: 'Regional Exploration',
-      description: 'Extended trips within Shandong province, cultural exchanges',
-      color: 'bg-accent-soft',
-      borderColor: 'border-teal-300',
-    },
-    {
-      stage: 'Grades 6-8',
-      title: 'National Experience',
-      description: 'Multi-day trips across China, service projects, cultural immersion',
-      color: 'bg-emerald-50',
-      borderColor: 'border-emerald-300',
-    },
-    {
-      stage: 'Grades 9-12',
-      title: 'Global Engagement',
-      description: 'International travel, service learning, cross-cultural partnerships',
-      color: 'bg-purple-50',
-      borderColor: 'border-purple-300',
-    },
-  ];
-
-  const stats = [
-    { value: '17+', label: 'Years of CGD' },
-    { value: '4', label: 'Countries Visited' },
-    { value: '100+', label: 'Service Projects' },
-    { value: '500+', label: 'Students Impacted' },
   ];
 
   return (
@@ -75,10 +37,10 @@ export default function CGDPage() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-navy via-navy to-navy">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
-            Cultural Global Development
+            Creative Thinking &amp; Good Deeds
           </h1>
           <p className="text-lg sm:text-xl text-text-brand-light max-w-3xl mx-auto">
-            Experiential learning through travel, service, and cross-cultural engagement
+            Empowering bobaes to use creativity to find solutions and make a positive impact
           </p>
         </div>
       </section>
@@ -91,7 +53,7 @@ export default function CGDPage() {
               What is CGD?
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              CGD is WZIS's signature experiential learning program. Students engage in cultural immersion, community service, and global travel experiences that build empathy, leadership, and cross-cultural understanding. CGD runs from Grade 1 through Grade 12, creating a continuum of growth and development across our entire school community.
+              Inspired by founder Moody Lee, the Creative Thinking and Good Deeds (CGD) program at WZIS empowers bobaes to use creativity to find solutions and make a positive impact on their communities. At its heart is the belief that developing well-rounded individuals means nurturing both academic strength and emotional resilience — preparing bobaes to contribute meaningfully to society.
             </p>
           </div>
         </div>
@@ -125,65 +87,30 @@ export default function CGDPage() {
         </div>
       </section>
 
-      {/* CGD JOURNEY */}
+      {/* GRATITUDE OLYMPICS */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy mb-4">
-              CGD Journey: Grades 1-12
+              The Gratitude Olympics
             </h2>
-            <p className="text-lg text-gray-700">
-              A progressive curriculum of growth and global engagement
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Central to CGD is the Gratitude Olympics — an initiative designed to cultivate thankfulness and emotional resilience across the entire WZIS community. By fostering a sense of gratitude, bobaes, parents, teachers, and staff are encouraged to appreciate even the small positives during challenging times, promoting emotional well-being and steering away from negativity.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {journey.map((stage, idx) => (
-              <div key={idx} className={`${stage.color} border-l-4 ${stage.borderColor} rounded-lg p-8 transition-transform hover:scale-105`}>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mr-6">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-white border-2 border-gray-400">
-                      <span className="text-sm font-bold text-navy">{idx + 1}</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-1">
-                      {stage.stage}
-                    </p>
-                    <h3 className="text-2xl font-serif font-bold text-navy mb-2">
-                      {stage.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {stage.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IMPACT STATS */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-navy">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4">
-              CGD Impact by the Numbers
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="text-4xl sm:text-5xl font-serif font-bold text-accent mb-2">
-                  {stat.value}
-                </div>
-                <p className="text-text-brand-light font-sans">
-                  {stat.label}
+          <div className="bg-warm rounded-2xl p-8 md:p-12">
+            <div className="flex items-start gap-4">
+              <Globe className="w-10 h-10 text-accent flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-serif font-bold text-navy mb-3">
+                  Growing Beyond WZIS
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  The Gratitude Olympics extends beyond WZIS, with plans to promote it in South Korea and internationally — spreading the message of gratitude and positive thinking globally. This initiative reflects WZIS's commitment to developing well-rounded individuals who are ready to contribute meaningfully to society.
                 </p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -192,10 +119,10 @@ export default function CGDPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent to-warm">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-8">
-            Begin Your CGD Journey
+            Join the CGD Movement
           </h2>
           <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
-            Discover how WZIS develops global citizens and empowered leaders through experiential learning
+            Discover how WZIS develops creative thinkers and compassionate leaders through the CGD program
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

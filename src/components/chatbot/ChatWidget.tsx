@@ -308,6 +308,13 @@ export default function ChatWidget() {
               <Send className="w-5 h-5" />
             </button>
           </div>
+
+          {/* AI Disclaimer */}
+          <div className="px-4 pb-2 text-center">
+            <p className="text-[10px] text-gray-400 leading-tight">
+              AI-powered assistant — responses may not always be accurate. Please verify important details with the school office.
+            </p>
+          </div>
         </div>
       )}
     </>
