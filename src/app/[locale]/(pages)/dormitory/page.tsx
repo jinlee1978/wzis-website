@@ -238,7 +238,7 @@ export default function DormitoryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/dorm-room.webp"
+                src="/images/dorm-room.jpeg"
                 alt="Comfortable dormitory room"
                 fill
                 className="object-cover"
@@ -246,8 +246,8 @@ export default function DormitoryPage() {
             </div>
             <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/dorm-common.webp"
-                alt="Dormitory common area and activities"
+                src="/images/dormitory-students.jpeg"
+                alt="Students settling into their dormitory room"
                 fill
                 className="object-cover"
               />

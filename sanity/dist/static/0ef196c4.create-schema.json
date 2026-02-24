@@ -1,0 +1,365 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Title (English)"
+      },
+      {
+        "name": "titleKo",
+        "type": "string",
+        "title": "Title (Korean)"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "date",
+        "type": "datetime",
+        "title": "Event Date"
+      },
+      {
+        "options": {
+          "list": [
+            "academic",
+            "sports",
+            "arts",
+            "community",
+            "holiday",
+            "admissions"
+          ]
+        },
+        "name": "category",
+        "type": "string"
+      },
+      {
+        "rows": 4,
+        "name": "description",
+        "type": "text",
+        "title": "Description (English)"
+      },
+      {
+        "rows": 4,
+        "name": "descriptionKo",
+        "type": "text",
+        "title": "Description (Korean)"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image"
+      }
+    ],
+    "name": "event",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Full Name"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "role",
+        "type": "string",
+        "title": "Role (English)"
+      },
+      {
+        "name": "roleKo",
+        "type": "string",
+        "title": "Role (Korean)"
+      },
+      {
+        "options": {
+          "list": [
+            "leadership",
+            "elementary",
+            "middle-school",
+            "high-school",
+            "support",
+            "athletics"
+          ]
+        },
+        "name": "department",
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "type": "string"
+      },
+      {
+        "rows": 4,
+        "name": "bio",
+        "type": "text",
+        "title": "Bio (English)"
+      },
+      {
+        "rows": 4,
+        "name": "bioKo",
+        "type": "text",
+        "title": "Bio (Korean)"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image",
+        "title": "Photo"
+      }
+    ],
+    "name": "staff",
+    "type": "document",
+    "title": "Staff Member"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "gradeLevel",
+        "type": "string",
+        "title": "Grade Level (English)"
+      },
+      {
+        "name": "gradeLevelKo",
+        "type": "string",
+        "title": "Grade Level (Korean)"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "semesterFee",
+        "type": "number",
+        "title": "Semester Fee (RMB)"
+      },
+      {
+        "name": "academicYear",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "discounts",
+        "type": "text",
+        "title": "Discounts/Notes"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "tuition",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Job Title (English)"
+      },
+      {
+        "name": "titleKo",
+        "type": "string",
+        "title": "Job Title (Korean)"
+      },
+      {
+        "options": {
+          "list": [
+            "elementary",
+            "middle-school",
+            "high-school",
+            "athletics",
+            "support",
+            "administration"
+          ]
+        },
+        "name": "department",
+        "type": "string"
+      },
+      {
+        "rows": 6,
+        "name": "description",
+        "type": "text",
+        "title": "Description (English)"
+      },
+      {
+        "rows": 6,
+        "name": "descriptionKo",
+        "type": "text",
+        "title": "Description (Korean)"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "requirements",
+        "type": "array",
+        "title": "Requirements (English)"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "requirementsKo",
+        "type": "array",
+        "title": "Requirements (Korean)"
+      },
+      {
+        "initialValue": true,
+        "name": "isActive",
+        "type": "boolean",
+        "title": "Active"
+      }
+    ],
+    "name": "job",
+    "type": "document",
+    "title": "Job Posting"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "university",
+        "type": "string",
+        "title": "University Name"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "classYear",
+        "type": "number"
+      },
+      {
+        "options": {
+          "list": [
+            "north-america",
+            "europe",
+            "asia",
+            "oceania",
+            "other"
+          ]
+        },
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "logo",
+        "type": "image",
+        "title": "University Logo"
+      }
+    ],
+    "name": "collegeAcceptance",
+    "type": "document"
+  }
+]

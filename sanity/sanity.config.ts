@@ -5,8 +5,8 @@ import { schemaTypes } from './schemaTypes';
 export default defineConfig({
   name: 'wzis',
   title: 'WZIS Content Manager',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId: '1ai4bk4u',
+  dataset: 'production',
   plugins: [structureTool()],
   schema: { types: schemaTypes },
 });
