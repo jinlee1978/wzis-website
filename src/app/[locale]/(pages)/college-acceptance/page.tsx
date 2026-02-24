@@ -156,8 +156,10 @@ const placementHistory: RegionData[] = [
   },
 ]
 
+const schoolAge = String(new Date().getFullYear() - 2006);
+
 const stats = [
-  { number: '20', label: 'Years of Excellence' },
+  { number: schoolAge, label: 'Years of Excellence' },
   { number: '100+', label: 'Universities' },
   { number: '15+', label: 'Countries' },
   { number: '4', label: 'Continents' },

@@ -85,9 +85,11 @@ const signaturePrograms = [
   },
 ];
 
+const schoolAge = String(new Date().getFullYear() - 2006);
+
 const stats = [
   {
-    value: '20',
+    value: schoolAge,
     label: 'Years',
   },
   {
