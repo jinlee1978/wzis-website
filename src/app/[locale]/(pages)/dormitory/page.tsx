@@ -45,8 +45,8 @@ const dormFeatures = [
     icon: Activity,
   },
   {
-    title: 'Laundry Service',
-    description: 'Professional laundry service for all boarding students ensuring clean uniforms and clothing',
+    title: 'Laundry Facilities',
+    description: 'On-site washers and dryers available for boarding students to take care of their own laundry at their convenience',
     icon: Heart,
   },
   {
