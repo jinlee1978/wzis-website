@@ -53,11 +53,10 @@ export default function AthleticsPage() {
   return (
     <main className="flex flex-col w-full">
       {/* Hero Section */}
-      {/* sports-ceremony.jpeg is portrait (768×1024) — center on subject, shorter hero shows more */}
-      <section className="relative flex items-center justify-center overflow-hidden pt-[74px] min-h-[55vh]">
+      <section className="relative flex items-center justify-center overflow-hidden pt-[74px] min-h-[70vh]">
         <Image
-          src="/images/sports-ceremony.jpeg"
-          alt="WZFS Eagles Athletics"
+          src="/images/volleyball-match.jpeg"
+          alt="WZFS Eagles volleyball match in action"
           fill
           className="object-cover object-center"
           priority
@@ -149,7 +148,7 @@ export default function AthleticsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               { src: '/images/volleyball-boys-group.jpeg', alt: 'Volleyball Team' },
-              { src: '/images/volleyball-match.jpeg', alt: 'Volleyball Match in Action' },
+              { src: '/images/volleyball-boys-korea.jpeg', alt: 'Volleyball Tournament in Korea' },
               { src: '/images/zsa-baseball-team.jpeg', alt: 'ZSA Baseball Team' },
               { src: '/images/students-moose-field-2.jpeg', alt: 'Students at Sports Day' },
             ].map((photo, i) => (
