@@ -595,8 +595,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* ZSA & Dormitory quick links */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fadeUp" style={{ animationDelay: '0.2s' }}>
+              {/* ZSA, Dormitory & Music quick links */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeUp" style={{ animationDelay: '0.2s' }}>
                 <Link href="/sports-academy" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
                   <h4 className="font-serif text-lg font-bold text-navy group-hover:text-accent transition-colors">
                     Sports Academy (ZSA)
@@ -611,6 +611,14 @@ export default function HomePage() {
                   </h4>
                   <p className="text-sm text-gray-600 mt-2">
                     A safe, supportive home for BoBaes in grades 6–12.
+                  </p>
+                </Link>
+                <Link href="/music" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                  <h4 className="font-serif text-lg font-bold text-navy group-hover:text-accent transition-colors">
+                    Music & Orchestra
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Orchestra, choir & band performing across Weihai and beyond.
                   </p>
                 </Link>
               </div>
