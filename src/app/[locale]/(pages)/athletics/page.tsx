@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Trophy, Users, Target, Zap } from 'lucide-react';
+import { Trophy, Target, Zap } from 'lucide-react';
 import CTASection from '@/components/sections/CTASection';
 import Card from '@/components/ui/Card';
 
@@ -11,18 +11,13 @@ export const metadata = {
 const competitiveSports = [
   {
     title: 'Volleyball',
-    description: 'ZSA Eagles compete in regional and international tournaments, including South Korea. Lingang Volleyball Tournament champions. After-school training Tue/Thu.',
+    description: 'Boys and girls ZSA Eagles compete in regional and international tournaments, including South Korea. Lingang Volleyball Tournament champions.',
     icon: Trophy,
   },
   {
     title: 'Baseball',
-    description: 'Boys and girls teams compete through the Zhongshi Sports Academy (ZSA), building skills and sportsmanship on the diamond.',
+    description: 'Boys compete through the Zhongshi Sports Academy (ZSA), building skills and sportsmanship on the diamond.',
     icon: Target,
-  },
-  {
-    title: "World Scholar's Cup",
-    description: 'BoBaes compete in the World Scholar\'s Cup academic tournaments, bringing home trophies from regional and global rounds.',
-    icon: Users,
   },
   {
     title: 'Sports Day',
@@ -58,13 +53,13 @@ export default function AthleticsPage() {
   return (
     <main className="flex flex-col w-full">
       {/* Hero Section */}
-      {/* Custom hero — sports-ceremony.jpeg is portrait (768x1024), needs object-position */}
-      <section className="relative flex items-center justify-center overflow-hidden pt-[74px] min-h-[80vh]">
+      {/* sports-ceremony.jpeg is portrait (768×1024) — center on subject, shorter hero shows more */}
+      <section className="relative flex items-center justify-center overflow-hidden pt-[74px] min-h-[55vh]">
         <Image
           src="/images/sports-ceremony.jpeg"
           alt="WZFS Eagles Athletics"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
@@ -98,7 +93,7 @@ export default function AthleticsPage() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy text-center mb-12 md:mb-16">
             Our Competitive Programs
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {competitiveSports.map((sport, index) => {
               const IconComponent = sport.icon;
               return (
