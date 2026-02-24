@@ -2,10 +2,18 @@
   "nav": {
     "about": "소개",
     "academics": "학업",
+    "campusLife": "캠퍼스 생활",
     "careers": "진로",
     "contact": "연락처",
     "applyNow": "지원하기",
-    "language": "언어"
+    "language": "언어",
+    "subLinks": {
+      "athletics": "체육",
+      "sportsAcademy": "스포츠 아카데미 (ZSA)",
+      "dormitory": "기숙사",
+      "music": "음악",
+      "events": "행사 및 갤러리"
+    }
   },
   "footer": {
     "brand": {
@@ -37,6 +45,7 @@
     "campusLifeLinks": {
       "athletics": "체육",
       "sportsAcademy": "스포츠 아카데미",
+      "dormitory": "기숙사",
       "music": "음악",
       "careers": "진로"
     },

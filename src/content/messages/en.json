@@ -2,10 +2,18 @@
   "nav": {
     "about": "About",
     "academics": "Academics",
+    "campusLife": "Campus Life",
     "careers": "Careers",
     "contact": "Contact",
     "applyNow": "Apply Now",
-    "language": "Language"
+    "language": "Language",
+    "subLinks": {
+      "athletics": "Athletics",
+      "sportsAcademy": "Sports Academy (ZSA)",
+      "dormitory": "Dormitory",
+      "music": "Music",
+      "events": "Events & Gallery"
+    }
   },
   "footer": {
     "brand": {
@@ -37,6 +45,7 @@
     "campusLifeLinks": {
       "athletics": "Athletics",
       "sportsAcademy": "Sports Academy",
+      "dormitory": "Dormitory",
       "music": "Music",
       "careers": "Careers"
     },

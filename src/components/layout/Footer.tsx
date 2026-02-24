@@ -24,6 +24,7 @@ export default function Footer() {
   const campusLifeLinks = [
     { label: t('campusLifeLinks.athletics'), href: '/athletics' },
     { label: t('campusLifeLinks.sportsAcademy'), href: '/sports-academy' },
+    { label: t('campusLifeLinks.dormitory'), href: '/dormitory' },
     { label: t('campusLifeLinks.music'), href: '/music' },
     { label: t('campusLifeLinks.careers'), href: '/careers' },
   ];

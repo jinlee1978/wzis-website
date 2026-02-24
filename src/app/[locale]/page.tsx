@@ -579,9 +579,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: two stacked images */}
+            {/* Right: stacked cards */}
             <div className="lg:col-span-2 flex flex-col gap-8">
-              {/* Top image */}
+              {/* Sports Day image */}
               <div className="relative h-64 rounded-2xl overflow-hidden animate-fadeUp" style={{ animationDelay: '0.1s' }}>
                 <Image
                   src="/images/students-moose-field.jpeg"
@@ -595,6 +595,25 @@ export default function HomePage() {
                 </div>
               </div>
 
+              {/* ZSA & Dormitory quick links */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fadeUp" style={{ animationDelay: '0.2s' }}>
+                <Link href="/sports-academy" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                  <h4 className="font-serif text-lg font-bold text-navy group-hover:text-accent transition-colors">
+                    Sports Academy (ZSA)
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Competitive baseball & volleyball — serving the world through sports.
+                  </p>
+                </Link>
+                <Link href="/dormitory" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                  <h4 className="font-serif text-lg font-bold text-navy group-hover:text-accent transition-colors">
+                    Dormitory Life
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-2">
+                    A safe, supportive home for BoBaes in grades 6–12.
+                  </p>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

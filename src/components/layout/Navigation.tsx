@@ -1,17 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navigation() {
   const t = useTranslations('nav');
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCampusLifeOpen, setIsCampusLifeOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,9 +24,31 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-const navigationLinks = [
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsCampusLifeOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const simpleLinks = [
     { label: t('about'), href: '/about' },
     { label: t('academics'), href: '/academics' },
+  ];
+
+  const campusLifeSubLinks = [
+    { label: t('subLinks.athletics'), href: '/athletics' },
+    { label: t('subLinks.sportsAcademy'), href: '/sports-academy' },
+    { label: t('subLinks.dormitory'), href: '/dormitory' },
+    { label: t('subLinks.music'), href: '/music' },
+    { label: t('subLinks.events'), href: '/events' },
+  ];
+
+  const trailingLinks = [
     { label: t('careers'), href: '/careers' },
     { label: t('contact'), href: '/contact' },
   ];
@@ -52,7 +76,47 @@ const navigationLinks = [
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-8">
-          {navigationLinks.map((link) => (
+          {simpleLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-navy-mid hover:text-navy transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          {/* Campus Life Dropdown */}
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsCampusLifeOpen(!isCampusLifeOpen)}
+              onMouseEnter={() => setIsCampusLifeOpen(true)}
+              className="text-sm font-medium text-navy-mid hover:text-navy transition-colors flex items-center gap-1"
+            >
+              {t('campusLife')}
+              <ChevronDown className={"w-3.5 h-3.5 transition-transform" + (isCampusLifeOpen ? " rotate-180" : "")} />
+            </button>
+
+            {isCampusLifeOpen && (
+              <div
+                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2"
+                onMouseLeave={() => setIsCampusLifeOpen(false)}
+              >
+                {campusLifeSubLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2 text-sm text-navy-mid hover:bg-warm hover:text-navy transition-colors"
+                    onClick={() => setIsCampusLifeOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {trailingLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -63,9 +127,9 @@ const navigationLinks = [
           ))}
         </div>
 
-        {/* Right Section: Language Toggle + CTA + Mobile Menu */}
+        {/* Right Section: CTA + Mobile Menu */}
         <div className="flex items-center gap-4">
-{/* Apply Now CTA */}
+          {/* Apply Now CTA */}
           <Link
             href="/admissions"
             className="hidden sm:inline-block px-6 py-2 bg-navy text-white rounded-lg font-medium text-sm hover:bg-navy-mid transition-colors"
@@ -92,7 +156,7 @@ const navigationLinks = [
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-[74px] left-0 right-0 bg-white border-b border-gray-brand-light shadow-lg">
           <div className="px-4 py-4 space-y-3">
-            {navigationLinks.map((link) => (
+            {simpleLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -102,6 +166,37 @@ const navigationLinks = [
                 {link.label}
               </Link>
             ))}
+
+            {/* Campus Life section in mobile */}
+            <div className="py-2">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                {t('campusLife')}
+              </p>
+              <div className="pl-3 space-y-2 border-l-2 border-accent-soft">
+                {campusLifeSubLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block text-sm font-medium text-navy-mid hover:text-navy transition-colors py-1"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {trailingLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block text-sm font-medium text-navy-mid hover:text-navy transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+
             <div className="pt-2 border-t border-gray-brand-light mt-3">
               <Link
                 href="/admissions"
