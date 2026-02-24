@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Trophy, Target, Zap } from 'lucide-react';
+import { Trophy, Target, Zap, Warehouse, TreePine, Diamond, Circle, Footprints } from 'lucide-react';
 import CTASection from '@/components/sections/CTASection';
 import Card from '@/components/ui/Card';
 
@@ -27,26 +27,11 @@ const competitiveSports = [
 ];
 
 const facilities = [
-  {
-    name: 'Indoor Gymnasium',
-    icon: '🏀',
-  },
-  {
-    name: 'Outdoor Sports Field',
-    icon: '⚽',
-  },
-  {
-    name: 'Baseball Diamond',
-    icon: '⚾',
-  },
-  {
-    name: 'Volleyball Courts',
-    icon: '🏐',
-  },
-  {
-    name: 'Running Track',
-    icon: '🏃',
-  },
+  { name: 'Indoor Gymnasium', icon: Warehouse },
+  { name: 'Outdoor Sports Field', icon: TreePine },
+  { name: 'Baseball Diamond', icon: Diamond },
+  { name: 'Volleyball Courts', icon: Circle },
+  { name: 'Running Track', icon: Footprints },
 ];
 
 export default function AthleticsPage() {
@@ -124,17 +109,20 @@ export default function AthleticsPage() {
             Our Facilities
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {facilities.map((facility, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center p-6 rounded-lg bg-accent-soft hover:bg-accent hover:text-white transition-colors text-center"
-              >
-                <div className="text-4xl mb-3">{facility.icon}</div>
-                <p className="text-sm font-sans font-semibold text-navy hover:text-white">
-                  {facility.name}
-                </p>
-              </div>
-            ))}
+            {facilities.map((facility, index) => {
+              const FacilityIcon = facility.icon;
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center p-6 rounded-lg bg-accent-soft hover:bg-accent group transition-colors text-center"
+                >
+                  <FacilityIcon className="w-8 h-8 text-accent group-hover:text-white mb-3" />
+                  <p className="text-sm font-sans font-semibold text-navy group-hover:text-white">
+                    {facility.name}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
