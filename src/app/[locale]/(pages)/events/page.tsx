@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -8,6 +9,17 @@ import {
   Users,
   ArrowRight,
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Events & Academic Calendar | WZIS',
+  description:
+    'Explore the WZIS academic calendar, school events, sports tournaments, arts performances, and community celebrations at Weihai Zhongshi International School.',
+  openGraph: {
+    title: 'WZIS Events & Academic Calendar',
+    description:
+      'School events, sports tournaments, arts performances, and community celebrations throughout the academic year.',
+  },
+};
 
 export default function EventsPage() {
   // TODO: Replace hardcoded semesters with Sanity data from academic_calendars collection

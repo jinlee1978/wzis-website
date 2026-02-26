@@ -8,8 +8,14 @@ import { ArrowRight, Globe, BookOpen, Users, TrendingUp } from 'lucide-react'
 // TODO: Add testimonials section from alumni
 
 export const metadata = {
-  title: 'College Acceptance | WZIS',
-  description: 'Explore where WZIS graduates have been accepted — from prestigious South Korean universities to top institutions globally.',
+  title: 'College Acceptance Results | WZIS Graduates',
+  description:
+    'See where WZIS graduates have been accepted — Yonsei, Korea University, Sogang, Hanyang, and top institutions worldwide. University placement results from Weihai Zhongshi International School.',
+  openGraph: {
+    title: 'WZIS College Acceptance Results',
+    description:
+      'University placement results — our graduates are accepted to top Korean and global universities.',
+  },
 }
 
 interface University {

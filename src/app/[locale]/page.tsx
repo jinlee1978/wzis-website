@@ -125,7 +125,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <Image
           src="/images/school-community-pier.jpeg"
-          alt=""
+          alt="WZIS students and staff at the Weihai coastal pier — Weihai Zhongshi International School"
           fill
           className="object-cover"
           priority
@@ -532,7 +532,7 @@ export default function HomePage() {
           <div className="relative h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden group">
             <Image
               src="/images/orchestra-sunset-performance.jpeg"
-              alt="Community Performances"
+              alt="WZIS orchestra community performance at sunset in Weihai"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -566,7 +566,7 @@ export default function HomePage() {
               <div className="relative h-96 lg:h-full rounded-2xl overflow-hidden min-h-96">
                 <Image
                   src="/images/scholars-cup-winners.jpeg"
-                  alt="World Scholar's Cup 2025"
+                  alt="WZIS students winning at World Scholar's Cup 2025 academic competition"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -585,7 +585,7 @@ export default function HomePage() {
               <div className="relative h-64 rounded-2xl overflow-hidden animate-fadeUp" style={{ animationDelay: '0.1s' }}>
                 <Image
                   src="/images/students-moose-field.jpeg"
-                  alt="Athletics & Sports Day"
+                  alt="WZIS students at MOOSE Sports Day on the athletics field in Weihai"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />

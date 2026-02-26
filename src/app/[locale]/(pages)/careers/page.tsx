@@ -3,10 +3,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Heart, DollarSign, BookOpen, Home, Users, Utensils, Award, Plane, MapPin, Mail } from 'lucide-react';
 import CareerForm from '@/components/forms/CareerForm';
+import { careersPageSchema, breadcrumbSchema } from '@/lib/schemas';
 
 export const metadata: Metadata = {
-  title: 'Careers at WZIS | Join Our Team',
-  description: 'Explore career opportunities at WZIS. We are recruiting educators who are passionate about shaping future leaders.',
+  title: 'Teaching Jobs at WZIS | International School Careers in China',
+  description:
+    'Join Weihai Zhongshi International School. We are hiring experienced teachers for Elementary, English, Math, Science, and PE positions. Competitive salary, furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
+  openGraph: {
+    title: 'Teaching Careers at WZIS — International School Jobs in China',
+    description:
+      'Now hiring teachers. Competitive salary, furnished housing, tuition benefits, and professional development at a Cambridge International school in Weihai.',
+  },
 };
 
 interface Job {
@@ -123,6 +130,15 @@ const benefits = [
 
 export default function CareersPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(careersPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema('Careers', 'https://wzis.org/careers')) }}
+      />
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-navy to-navy/90 text-white py-24">
@@ -299,5 +315,6 @@ export default function CareersPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

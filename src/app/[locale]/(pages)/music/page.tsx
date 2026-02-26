@@ -7,8 +7,14 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Choir & Orchestra | WZIS',
-  description: 'WZIS Choir & Orchestra — nurturing creativity, discipline, and the joy of performance through comprehensive music education.',
+  title: 'Choir & Orchestra Music Program | WZIS',
+  description:
+    'WZIS Choir and Orchestra — nurturing creativity, discipline, and the joy of performance through comprehensive music education. Community performances and concerts at Weihai Zhongshi International School.',
+  openGraph: {
+    title: 'WZIS Choir & Orchestra Program',
+    description:
+      'Comprehensive music education, community performances, and ensemble programs at Weihai Zhongshi International School.',
+  },
 };
 
 const ensembles = [

@@ -4,8 +4,14 @@ import CTASection from '@/components/sections/CTASection';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Athletics | WZFS Eagles',
-  description: 'WZFS Eagles athletics — competitive sports programs, interschool tournaments, and athletic achievement building character through competition and teamwork.',
+  title: 'Athletics | WZIS Eagles',
+  description:
+    'WZIS Eagles athletics — volleyball, baseball, and competitive sports programs. Interschool tournaments and athletic achievement building character through competition, discipline, and teamwork in Weihai, China.',
+  openGraph: {
+    title: 'WZIS Eagles Athletics — Competitive Sports Programs',
+    description:
+      'Volleyball, baseball, and competitive sports at Weihai Zhongshi International School. Building character through athletics.',
+  },
 };
 
 const competitiveSports = [
@@ -41,7 +47,7 @@ export default function AthleticsPage() {
       <section className="relative flex items-center justify-center overflow-hidden pt-[74px] min-h-[70vh]">
         <Image
           src="/images/volleyball-match.jpeg"
-          alt="WZFS Eagles volleyball match in action"
+          alt="WZIS Eagles volleyball match in action at Weihai Zhongshi International School gymnasium"
           fill
           className="object-cover object-center"
           priority

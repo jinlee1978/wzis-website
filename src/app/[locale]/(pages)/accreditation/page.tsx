@@ -4,8 +4,14 @@ import Link from 'next/link';
 import { CheckCircle, Globe, Award, TrendingUp, Users, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Accreditation | WZIS',
-  description: 'Internationally recognized quality assurance for your child\'s education at Weihai International School.',
+  title: 'Accreditation | WASC, ACSI & Cambridge International',
+  description:
+    'WZIS is accredited by WASC (Western Association of Schools and Colleges), ACSI, and Cambridge International. Internationally recognized quality assurance for your child\'s education at Weihai Zhongshi International School, China.',
+  openGraph: {
+    title: 'WZIS Accreditation — WASC, ACSI & Cambridge International',
+    description:
+      'Triple-accredited international school in Weihai, China. WASC, ACSI, and Cambridge International recognized.',
+  },
 };
 
 export default function AccreditationPage() {

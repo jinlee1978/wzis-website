@@ -15,6 +15,7 @@ type HeroProps = {
   }>;
   overlay?: boolean;
   height?: 'full' | 'large' | 'medium';
+  imageAlt?: string;
 };
 
 const heights = {
@@ -30,12 +31,13 @@ export default function HeroSection({
   buttons,
   overlay = true,
   height = 'large',
+  imageAlt,
 }: HeroProps) {
   return (
     <section className={'relative flex items-center justify-center overflow-hidden pt-[74px] ' + heights[height]}>
       <Image
         src={backgroundImage}
-        alt=""
+        alt={imageAlt || title}
         fill
         className="object-cover"
         priority

@@ -1,7 +1,19 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, Phone, MessageSquare, MapPin, ExternalLink } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
+
+export const metadata: Metadata = {
+  title: 'Contact WZIS | Admissions, Careers & General Inquiries',
+  description:
+    'Get in touch with Weihai Zhongshi International School. Contact admissions, career inquiries, or general support. Phone lines in China and Korea, WeChat, and KakaoTalk available.',
+  openGraph: {
+    title: 'Contact WZIS — Admissions & Inquiries',
+    description:
+      'Reach WZIS admissions, careers, or support. Phone lines in China and Korea, WeChat, and KakaoTalk.',
+  },
+};
 
 export default function ContactPage() {
   const contactInfoItems = [

@@ -8,8 +8,14 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Sports Academy | ZSA Eagles',
-  description: 'Zhongshi Sports Academy — competitive athletics rooted in discipline, teamwork, and excellence.',
+  title: 'Zhongshi Sports Academy (ZSA) | WZIS Eagles',
+  description:
+    'Zhongshi Sports Academy (ZSA) — competitive baseball and volleyball programs rooted in discipline, teamwork, and excellence. Training the next generation of student-athletes in Weihai, China.',
+  openGraph: {
+    title: 'Zhongshi Sports Academy — ZSA Eagles',
+    description:
+      'Competitive baseball and volleyball programs building discipline, teamwork, and excellence in Weihai, China.',
+  },
 };
 
 const sportsPrograms = [

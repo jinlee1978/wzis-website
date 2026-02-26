@@ -7,8 +7,14 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'HSK Program | WZIS',
-  description: 'HSK Chinese Language Program — Master Mandarin in Weihai with native teachers and immersion learning.',
+  title: 'HSK Chinese Language Program | WZIS',
+  description:
+    'HSK Chinese Language Program at WZIS — learn Mandarin in Weihai with native-speaking teachers and immersion learning. HSK exam preparation from beginner to advanced levels at Weihai Zhongshi International School.',
+  openGraph: {
+    title: 'HSK Chinese Language Program at WZIS',
+    description:
+      'Learn Mandarin in Weihai, China. Native-speaking teachers, immersion learning, and HSK exam preparation.',
+  },
 };
 
 const hskLevels = [

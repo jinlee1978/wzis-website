@@ -3,8 +3,14 @@ import Link from 'next/link';
 import { Heart, Lightbulb, Smile, Globe, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CGD | WZIS',
-  description: 'Creative Thinking and Good Deeds — Empowering bobaes to use creativity to find solutions and make a positive impact at Weihai International School.',
+  title: 'CGD — Creative Thinking & Good Deeds | WZIS',
+  description:
+    'Creative Thinking and Good Deeds (CGD) at WZIS — empowering students to solve real-world problems through creativity, service, and community impact. Featuring the Gratitude Olympics at Weihai Zhongshi International School.',
+  openGraph: {
+    title: 'CGD Program — Creative Thinking & Good Deeds at WZIS',
+    description:
+      'Empowering students through creative problem-solving, service, and community impact. Featuring the Gratitude Olympics.',
+  },
 };
 
 export default function CGDPage() {

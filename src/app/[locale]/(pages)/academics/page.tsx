@@ -9,8 +9,14 @@ import Card from '@/components/ui/Card';
 import StatsSection from '@/components/sections/StatsSection';
 
 export const metadata = {
-  title: 'Academics | WZIS',
-  description: 'Cambridge International Curriculum - globally recognized education preparing students for top universities worldwide.',
+  title: 'Academics & Curriculum | WZIS',
+  description:
+    'Cambridge International Curriculum at WZIS — IGCSE and A-Level pathways, small class sizes, and holistic education from Pre-K through Grade 12. Preparing students for top universities in Korea, the US, UK, and worldwide.',
+  openGraph: {
+    title: 'WZIS Academics — Cambridge International Curriculum',
+    description:
+      'IGCSE and A-Level pathways, three school divisions, and signature programs preparing students for global universities.',
+  },
 };
 
 const schoolDivisions = [

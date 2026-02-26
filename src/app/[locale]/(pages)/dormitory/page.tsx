@@ -19,8 +19,14 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: 'Dormitory | WZIS',
-  description: 'Home Away from Home — A safe, supportive boarding experience for our BoBaes.',
+  title: 'Dormitory & Boarding | WZIS',
+  description:
+    'On-campus dormitory at Weihai Zhongshi International School — a safe, supervised boarding experience with study areas, meals, and community living for international students in Weihai, China.',
+  openGraph: {
+    title: 'WZIS Dormitory — Boarding Life in Weihai',
+    description:
+      'Safe, supportive on-campus boarding for international students with 24/7 supervision and community living.',
+  },
 };
 
 const dormFeatures = [

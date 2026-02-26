@@ -5,10 +5,17 @@ import HeroSection from '@/components/sections/HeroSection';
 import CTASection from '@/components/sections/CTASection';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import { admissionsFaqSchema, breadcrumbSchema } from '@/lib/schemas';
 
 export const metadata = {
-  title: 'Admissions | WZIS',
-  description: 'Begin your journey at WZIS. Learn about our admissions process, required documents, tuition fees, and how to apply.',
+  title: 'Admissions | Apply to WZIS',
+  description:
+    'Apply to Weihai Zhongshi International School. Learn about our admissions process, required documents, tuition fees, grade placement, and visa support for Korean and international families. Pre-K through Grade 12 enrollment open.',
+  openGraph: {
+    title: 'WZIS Admissions — Apply to Our International School in Weihai',
+    description:
+      'Step-by-step admissions process, required documents, tuition information, and enrollment for international families.',
+  },
 };
 
 export default function AdmissionsPage() {
@@ -152,6 +159,15 @@ export default function AdmissionsPage() {
   ];
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(admissionsFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema('Admissions', 'https://wzis.org/admissions')) }}
+      />
     <main className="flex flex-col w-full">
       {/* Hero Section */}
       <HeroSection
@@ -621,5 +637,6 @@ export default function AdmissionsPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

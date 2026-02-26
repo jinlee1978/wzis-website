@@ -5,8 +5,14 @@ import CTASection from '@/components/sections/CTASection';
 import Card from '@/components/ui/Card';
 
 export const metadata = {
-  title: '1 Plus 3 | WZIS',
-  description: '1 Plus 3 Mentorship Program — A dedicated mentorship initiative supporting bobaes in all aspects of their school experience.',
+  title: '1 Plus 3 Mentorship Program | WZIS',
+  description:
+    '1 Plus 3 Mentorship Program at WZIS — every student is paired with a dedicated teacher mentor for personalized guidance, academic support, and holistic development at Weihai Zhongshi International School.',
+  openGraph: {
+    title: '1 Plus 3 Mentorship Program at WZIS',
+    description:
+      'Every student paired with a dedicated teacher mentor for personalized guidance and holistic development.',
+  },
 };
 
 const programFeatures = [

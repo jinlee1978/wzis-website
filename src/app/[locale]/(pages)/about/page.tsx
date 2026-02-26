@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Heart, BookOpen, Globe, Shield, Users, Smile } from 'lucide-react';
@@ -6,6 +7,17 @@ import CTASection from '@/components/sections/CTASection';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+
+export const metadata: Metadata = {
+  title: 'About WZIS | Our Mission, History & Leadership',
+  description:
+    'Learn about Weihai Zhongshi International School — founded in 2006 by Moody and Esther Lee. WASC and ACSI accredited, Cambridge International curriculum. Shaping servant leaders through character development, integrity, and academic excellence in Weihai, China.',
+  openGraph: {
+    title: 'About WZIS — Shaping Servant Leaders Since 2006',
+    description:
+      'Our mission, core values, leadership team, and accreditations. A WASC-accredited Cambridge International school in Weihai, China.',
+  },
+};
 
 export default function AboutPage() {
   const coreValues = [
