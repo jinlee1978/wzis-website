@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heart, DollarSign, BookOpen, Home, Users, Utensils, Award, Plane, MapPin, Mail } from 'lucide-react';
+import { Heart, DollarSign, BookOpen, Home, Users, Utensils, Award, Plane, MapPin, Mail, FileText, ArrowRight, ExternalLink } from 'lucide-react';
 import CareerForm from '@/components/forms/CareerForm';
 import { careersPageSchema, breadcrumbSchema } from '@/lib/schemas';
 
@@ -150,7 +150,8 @@ const benefits = [
     id: 'relocation',
     icon: MapPin,
     title: 'Relocation Assistance',
-    description: 'Comprehensive support to help your family settle in Weihai',
+    description: 'Comprehensive visa and relocation support — see our Teacher Visa Guide for details.',
+    link: '/careers/visa-guide',
   },
   {
     id: 'flights',
@@ -273,27 +274,98 @@ export default function CareersPage() {
                 ? 'text-accent'
                 : 'text-navy';
 
+              const cardInner = (
+                <div className="flex items-start gap-4">
+                  <div className="text-accent flex-shrink-0">
+                    <IconComponent size={32} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className={'text-lg font-serif font-bold mb-2 ' + titleClasses}>
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {benefit.description}
+                    </p>
+                    {benefit.link && (
+                      <p className="text-accent text-sm font-semibold mt-3 inline-flex items-center gap-1">
+                        Learn more <ArrowRight size={14} />
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+
+              if (benefit.link) {
+                return (
+                  <Link
+                    key={benefit.id}
+                    href={benefit.link}
+                    className={containerClasses + ' rounded-lg p-6 transition-all hover:shadow-md block hover:ring-2 hover:ring-accent/50'}
+                  >
+                    {cardInner}
+                  </Link>
+                );
+              }
+
               return (
                 <div
                   key={benefit.id}
                   className={containerClasses + ' rounded-lg p-6 transition-all hover:shadow-md'}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="text-accent flex-shrink-0">
-                      <IconComponent size={32} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className={'text-lg font-serif font-bold mb-2 ' + titleClasses}>
-                        {benefit.title}
-                      </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </div>
+                  {cardInner}
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Visa & Relocation Resources Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-5">
+              <div className="md:col-span-2 bg-navy text-white p-8 md:p-10 flex flex-col justify-center">
+                <FileText size={36} className="text-accent-soft mb-4" />
+                <h2 className="text-2xl md:text-3xl font-serif font-bold mb-3">
+                  Teacher Visa Guide
+                </h2>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  A practical orientation for incoming WZIS teachers — Chinese visa pathways, document requirements, the Chain of Authentication, and your first 30 days in Weihai.
+                </p>
+              </div>
+              <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-center">
+                <h3 className="text-lg font-serif font-bold text-navy mb-4">
+                  What&apos;s inside
+                </h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-700 mb-6">
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>Three Golden Rules</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>X-Visa vs Z-Visa diagnostic</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>Core document checklist</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>Chain of Authentication</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>Common pitfalls &amp; red flags</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>Bringing your family</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>30-day flight window rule</li>
+                  <li className="flex gap-2"><span className="text-accent font-bold">•</span>Your first 30 days in Weihai</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/careers/visa-guide"
+                    className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-opacity-90 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200"
+                  >
+                    Read the Visa Guide <ArrowRight size={16} />
+                  </Link>
+                  <a
+                    href="/resources/wzis-teacher-visa-blueprint.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200"
+                  >
+                    View PDF <ExternalLink size={16} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
