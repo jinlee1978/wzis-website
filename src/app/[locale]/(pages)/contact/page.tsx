@@ -26,7 +26,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Careers',
-      content: 'jobs@zhongshischool.org',
+      content: 'careers@wzis.org',
       type: 'email',
     },
     {

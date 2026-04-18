@@ -24,10 +24,10 @@ export async function POST(req: NextRequest) {
 
     // TODO: Integrate with email service (Resend, SendGrid, etc.)
     // For now, the form submission is logged server-side.
-    // To receive these via email, add an email service and send to jobs@zhongshischool.org
+    // To receive these via email, add an email service and send to careers@wzis.org
 
     return NextResponse.json(
-      { success: true, message: 'Application received. Please also send your resume to jobs@zhongshischool.org' },
+      { success: true, message: 'Application received. Please also send your resume to careers@wzis.org' },
       { status: 200 }
     );
   } catch (error) {

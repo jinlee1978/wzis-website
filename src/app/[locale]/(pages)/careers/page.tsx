@@ -29,37 +29,75 @@ const jobs: Job[] = [
     id: 'elementary-teacher',
     title: 'Elementary Teacher (Lower Years)',
     details: ['24 periods/week', 'Cambridge Primary Curriculum', 'ELL training preferred'],
-    contact: 'jobs@zhongshischool.org',
+    contact: 'careers@wzis.org',
   },
   {
     id: 'english-teacher',
-    title: 'Middle & High School English Teacher',
-    details: ['2-3 classes', 'CEFR-aligned UK curriculum', 'IGCSE', 'Small classes'],
-    contact: 'jobs@zhongshischool.org',
+    title: 'Teacher of English — Middle & High School',
+    details: [
+      'UK / CEFR-aligned curriculum',
+      'IGCSE First / Second Language English and Literature',
+      'Max 24 × 45-min lessons, 3–4 ability-based sets',
+      'CELTA / DELTA / TESOL strongly preferred',
+    ],
+    contact: 'careers@wzis.org',
   },
   {
     id: 'math-teacher',
     title: 'High School Mathematics Teacher',
-    details: ['20 x 45-minute classes', 'IGCSE/A-Level preparation'],
-    contact: 'jobs@zhongshischool.org',
+    details: [
+      'Cambridge (CIE): Pure Math, Mechanics, Statistics at AS / A Level',
+      '20 × 45-min lessons weekly, 4 classes',
+      'IGCSE / A Level experience strongly preferred',
+      'EAL capability (CELTA / TESOL) preferred',
+    ],
+    contact: 'careers@wzis.org',
   },
   {
-    id: 'science-teacher',
-    title: 'Middle & High School Science Teacher (Physical Sciences)',
-    details: ['Chemistry and Physics', '20 x 45-minute classes'],
-    contact: 'jobs@zhongshischool.org',
+    id: 'chemistry-teacher',
+    title: 'High School Chemistry Teacher',
+    details: [
+      'IGCSE, AS, and A2 Chemistry',
+      '15 lessons/week across three levels',
+      'Fully equipped laboratory',
+      "Bachelor's in Chemistry or related science",
+      'CELTA / DELTA / TESOL preferred',
+    ],
+    contact: 'careers@wzis.org',
+  },
+  {
+    id: 'physics-teacher',
+    title: 'Middle & High School Physics Teacher',
+    details: [
+      'IGCSE and A Level Physics (Cambridge)',
+      '20 × 45-min lessons per week',
+      "Bachelor's in Physics or related field",
+      'EAL capability preferred',
+    ],
+    contact: 'careers@wzis.org',
+  },
+  {
+    id: 'geography-teacher',
+    title: 'Teacher of Geography, Economics & Business Studies',
+    details: [
+      'Cambridge IGCSE–A Level curriculum',
+      'Middle & High School, up to 24 lessons/week',
+      'Valid teaching licence required (work visa)',
+      'ELL-focused scaffolding and differentiation',
+    ],
+    contact: 'careers@wzis.org',
   },
   {
     id: 'pe-teacher',
     title: 'PE Teacher (Grades 3-12)',
     details: ['1-2 PE lessons per class', 'Badminton, soccer, basketball, baseball'],
-    contact: 'jobs@zhongshischool.org',
+    contact: 'careers@wzis.org',
   },
   {
     id: 'open-applications',
     title: 'Open Applications',
     details: ['Welcome applications from talented educators in all subject areas'],
-    contact: 'jobs@zhongshischool.org',
+    contact: 'careers@wzis.org',
   },
 ];
 
@@ -174,9 +212,9 @@ export default function CareersPage() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy mb-4 text-center">
             Current Openings
           </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-xl mx-auto">
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
             {/* TODO: Replace with dynamic content from Sanity CMS */}
-            We are currently hiring for the following positions:
+            We are growing and need additional teachers to meet the demand. We are currently hiring for the following positions:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -286,7 +324,7 @@ export default function CareersPage() {
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-xl mx-auto">
             Submit your application below. Remember to attach your resume and send it to
-            jobs@zhongshischool.org as well.
+            careers@wzis.org as well.
           </p>
 
           <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 md:p-12">
@@ -306,7 +344,7 @@ export default function CareersPage() {
             We'd love to hear from you. Get in touch with us to learn more about opportunities at WZIS.
           </p>
           <a
-            href="mailto:jobs@zhongshischool.org"
+            href="mailto:careers@wzis.org"
             className="inline-flex items-center gap-2 bg-accent hover:bg-opacity-90 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
           >
             <Mail size={20} />

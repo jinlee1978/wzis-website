@@ -40,7 +40,7 @@ export default function CareerForm() {
       '(Please remember to attach your resume to this email.)'
     );
 
-    window.location.href = 'mailto:jobs@zhongshischool.org?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:careers@wzis.org?subject=' + subject + '&body=' + body;
   };
 
   return (

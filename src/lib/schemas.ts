@@ -45,7 +45,7 @@ export const organizationSchema = {
     {
       '@type': 'ContactPoint',
       contactType: 'Careers',
-      email: 'jobs@zhongshischool.org',
+      email: 'careers@wzis.org',
       availableLanguage: ['English'],
     },
   ],
