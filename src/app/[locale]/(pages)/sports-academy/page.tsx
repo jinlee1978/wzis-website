@@ -21,17 +21,17 @@ export const metadata = {
 const sportsPrograms = [
   {
     title: 'Baseball',
-    description: 'Professional coaching, regional league competition, and skills development from fundamentals to advanced play.',
+    description: '2026 3rd Jito Cup National Youth Baseball Regional Champion — undefeated, first place. Professional coaching, regional and national competition, and skills development from fundamentals to advanced play.',
     details: [
+      '2026 3rd Jito Cup National Youth Baseball Regional Champion',
+      'Undefeated tournament run',
       'Professional coaching staff',
-      'Regional league competition',
       'Mon/Wed/Fri training after school',
-      'Skills development progression',
     ],
     icon: Trophy,
     accentColor: 'from-blue-100 to-blue-50',
-    image: '/images/zsa-baseball-team.jpeg',
-    imageAlt: 'ZSA Baseball Team',
+    image: '/images/zsa-jito-cup-champions-trophy.jpeg',
+    imageAlt: 'ZSA Eagles — 2026 3rd Jito Cup National Youth Baseball Regional Champion',
   },
   {
     title: 'Volleyball',
@@ -50,11 +50,16 @@ const sportsPrograms = [
 ];
 
 const galleryPhotos = [
-  { src: '/images/baseball-practice-field.jpeg', alt: 'Baseball Practice' },
-  { src: '/images/baseball-catcher.jpeg', alt: 'Baseball Catcher' },
+  { src: '/images/zsa-jito-cup-opening-ceremony.jpeg', alt: 'Jito Cup Opening Ceremony' },
+  { src: '/images/zsa-jito-cup-team-blue-whale.jpeg', alt: 'ZSA Team at Blue Whale Field' },
+  { src: '/images/zsa-jito-cup-coach-huddle.jpeg', alt: 'Coach Choi with the Team' },
+  { src: '/images/zsa-jito-cup-pitcher.jpeg', alt: 'ZSA Pitcher in Action' },
+  { src: '/images/zsa-jito-cup-batter-zayden.jpeg', alt: 'Zayden at the Plate' },
+  { src: '/images/zsa-jito-cup-batter-jun.jpeg', alt: 'Jun at the Plate' },
+  { src: '/images/zsa-jito-cup-team-handshake.jpeg', alt: 'Team Handshake' },
+  { src: '/images/zsa-jito-cup-team-circle.jpeg', alt: 'Team Circle' },
   { src: '/images/volleyball-huddle.jpeg', alt: 'Volleyball Huddle' },
   { src: '/images/volleyball-girls-coach.jpeg', alt: 'Girls Volleyball' },
-  { src: '/images/volleyball-boys-korea.jpeg', alt: 'Boys Team in Korea' },
 ];
 
 const facilities = [
@@ -122,6 +127,46 @@ export default function SportsAcademyPage() {
         title="Zhongshi Sports Academy"
         subtitle="ZSA Eagles — competitive athletics rooted in discipline, teamwork, and excellence"
       />
+
+      {/* Championship Spotlight */}
+      <section className="w-full bg-gradient-to-br from-navy via-navy-mid to-navy py-16 md:py-24 lg:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl relative">
+          <div className="text-center mb-10 md:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/40 mb-6">
+              <Trophy className="w-5 h-5 text-accent" />
+              <span className="text-accent font-bold text-sm tracking-widest uppercase">Regional Champion</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 leading-tight">
+              2026 3rd Jito Cup<br className="hidden md:block" /> National Youth Baseball
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 font-serif italic mb-2">
+              Regional Champion
+            </p>
+            <p className="text-2xl md:text-3xl text-accent font-bold tracking-wide">
+              First Place &middot; Undefeated
+            </p>
+            <p className="text-base md:text-lg text-white/80 mt-6 max-w-2xl mx-auto leading-relaxed">
+              The ZSA Eagles captured the title with an undefeated run, earning first place as the 2026 3rd Jito Cup National Youth Baseball Regional Champion — a defining moment for our program.
+            </p>
+          </div>
+          <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video max-w-4xl mx-auto ring-1 ring-accent/30">
+            <video
+              src="/images/zsa-jito-cup-trophy.mp4"
+              poster="/images/zsa-jito-cup-champions-trophy.jpeg"
+              className="w-full h-full object-cover"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Academy Overview */}
       <section className="w-full bg-white py-16 md:py-24 lg:py-32">

@@ -15,6 +15,7 @@ import {
   Shield,
   BookOpen,
   Heart,
+  Trophy,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -194,6 +195,51 @@ export default function HomePage() {
 
       {/* SECTION 2: MARQUEE STRIP */}
       <MarqueeStrip items={marqueeItems} />
+
+      {/* SECTION 2.5: CHAMPIONSHIP HIGHLIGHT */}
+      <section className="relative py-16 md:py-20 px-4 bg-gradient-to-br from-navy via-navy-mid to-navy overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            {/* Left: Trophy video */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black aspect-video ring-1 ring-accent/30 animate-fadeUp">
+              <video
+                src="/images/zsa-jito-cup-trophy.mp4"
+                poster="/images/zsa-jito-cup-champions-trophy.jpeg"
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
+            {/* Right: Championship copy */}
+            <div className="text-white animate-fadeUp" style={{ animationDelay: '0.15s' }}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/40 mb-5">
+                <Trophy className="w-5 h-5 text-accent" />
+                <span className="text-accent font-bold text-xs sm:text-sm tracking-widest uppercase">
+                  Regional Champion
+                </span>
+              </div>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">
+                2026 3rd Jito Cup National Youth Baseball Regional Champion
+              </h2>
+              <p className="text-xl md:text-2xl text-accent font-bold tracking-wide mb-5">
+                First Place &middot; Undefeated
+              </p>
+              <p className="text-white/80 text-base md:text-lg leading-relaxed mb-7 max-w-xl">
+                The ZSA Eagles captured the title with an undefeated tournament run — a defining moment for our program.
+              </p>
+              <Button href="/sports-academy" variant="primary" size="lg">
+                See the Championship Story
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 3: DISCOVER WEIHAI */}
       <section className="relative py-20 px-4 bg-white">
@@ -598,11 +644,15 @@ export default function HomePage() {
               {/* ZSA, Dormitory & Music quick links */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeUp" style={{ animationDelay: '0.2s' }}>
                 <Link href="/sports-academy" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-glow text-accent text-[10px] font-bold tracking-widest uppercase mb-2">
+                    <Trophy className="w-3 h-3" />
+                    2026 Regional Champion
+                  </div>
                   <h4 className="font-serif text-lg font-bold text-navy group-hover:text-accent transition-colors">
                     Sports Academy (ZSA)
                   </h4>
                   <p className="text-sm text-gray-600 mt-2">
-                    Competitive baseball & volleyball — serving the world through sports.
+                    Jito Cup baseball champions — competitive baseball & volleyball serving the world through sports.
                   </p>
                 </Link>
                 <Link href="/dormitory" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
