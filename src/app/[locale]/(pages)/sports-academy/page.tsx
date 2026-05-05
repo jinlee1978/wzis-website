@@ -154,6 +154,21 @@ export default function SportsAcademyPage() {
               The ZSA Eagles captured the title with an undefeated run, earning first place as the 2026 3rd Jito Cup National Youth Baseball Regional Champion — a defining moment for our program.
             </p>
           </div>
+          {/* Stat row — May 2026 tournament record */}
+          <div className="grid grid-cols-3 gap-2 md:gap-6 max-w-3xl mx-auto mb-12 md:mb-14 pt-8 border-t border-accent/20">
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">8&ndash;1</p>
+              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">May 2026 Record</p>
+            </div>
+            <div className="text-center border-l border-r border-accent/20 px-2">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">1st</p>
+              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">Jito Cup Regional</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">2nd</p>
+              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">Weihai Int&apos;l 18U</p>
+            </div>
+          </div>
           <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video max-w-4xl mx-auto ring-1 ring-accent/30">
             <video
               src="/images/zsa-jito-cup-trophy.mp4"
