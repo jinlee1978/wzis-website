@@ -124,7 +124,7 @@ export default function SportsAcademyPage() {
     <main className="flex flex-col w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/images/baseball-practice-field.jpeg"
+        backgroundImage="/images/zsa-team-walk-off.jpeg"
         title="Zhongshi Sports Academy"
         subtitle="ZSA Eagles — competitive athletics rooted in discipline, teamwork, and excellence"
       />
