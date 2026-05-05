@@ -405,9 +405,6 @@ export default function EventsPage() {
                 <p>
                   <span className="font-semibold text-navy">Includes:</span> Level-based English conversation, volleyball skills development, dormitory accommodation and meals, certificate of completion, and end-of-camp tournament awards.
                 </p>
-                <p>
-                  <span className="font-semibold text-navy">Tuition:</span> KRW 1,800,000 (airfare not included).
-                </p>
               </div>
 
               <Link
