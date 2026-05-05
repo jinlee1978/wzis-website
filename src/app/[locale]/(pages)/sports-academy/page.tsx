@@ -25,6 +25,7 @@ const sportsPrograms = [
     details: [
       '2026 3rd Jito Cup National Youth Baseball Regional Champion',
       'Undefeated tournament run',
+      '2026 Weihai International Invitational — 2nd Place (18U Division)',
       'Professional coaching staff',
       'Mon/Wed/Fri training after school',
     ],
@@ -164,6 +165,35 @@ export default function SportsAcademyPage() {
               loop
               playsInline
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Tournament Result */}
+      <section className="w-full bg-white py-16 md:py-20">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 grid grid-cols-1 md:grid-cols-5">
+            <div className="relative aspect-[4/3] md:aspect-auto md:col-span-2">
+              <Image
+                src="/images/zsa-weihai-international-2026.jpeg"
+                alt="ZSA Eagles player at the 2026 China Weihai International Baseball and Softball Invitational Tournament"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 480px"
+              />
+            </div>
+            <div className="md:col-span-3 p-6 md:p-10 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 mb-4 self-start">
+                <Award className="w-4 h-4 text-accent" />
+                <span className="text-accent font-semibold text-xs tracking-widest uppercase">May 2026 &middot; Runner-Up</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy mb-3 leading-tight">
+                2026 China Weihai International Baseball &amp; Softball Invitational
+              </h3>
+              <p className="text-text-brand-light leading-relaxed">
+                Just weeks after the Jito Cup title, ZSA&apos;s 9th-grade Eagles competed up in the 18U division and battled to the championship final, falling 5&ndash;6 in a tight closing game to take 2nd place &mdash; a hard-earned result against older competition.
+              </p>
+            </div>
           </div>
         </div>
       </section>
