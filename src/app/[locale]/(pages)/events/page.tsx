@@ -363,64 +363,8 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* FEATURED SUMMER PROGRAM */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-serif font-bold text-navy mb-4 text-center">
-            Featured Summer Program
-          </h2>
-          <p className="text-center text-gray-600 font-sans mb-12 max-w-2xl mx-auto">
-            Two weeks of intensive English instruction and competitive volleyball training on the WZIS campus in Weihai.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gray-50 rounded-lg p-6 sm:p-10 border border-gray-200">
-            <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-lg max-w-md mx-auto w-full">
-              <Image
-                src="/images/english-volleyball-camp-2026-poster.jpeg"
-                alt="WZIS English and Volleyball Summer Camp 2026 — August 2 to 15, two-week program in Weihai"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 480px"
-              />
-            </div>
-
-            <div>
-              <p className="text-sm font-sans font-semibold text-accent uppercase tracking-wide mb-2">
-                Summer 2026
-              </p>
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-navy mb-4">
-                English &amp; Volleyball Summer Camp
-              </h3>
-
-              <div className="space-y-3 mb-6 text-gray-700 font-sans">
-                <p>
-                  <span className="font-semibold text-navy">Dates:</span> August 2&ndash;15, 2026 (2 weeks)
-                </p>
-                <p>
-                  <span className="font-semibold text-navy">Location:</span> WZIS Campus, Weihai, China
-                </p>
-                <p>
-                  <span className="font-semibold text-navy">Schedule:</span> Mornings &mdash; intensive English (8:30&ndash;14:00). Afternoons &mdash; sports training (15:00&ndash;17:30).
-                </p>
-                <p>
-                  <span className="font-semibold text-navy">Includes:</span> Level-based English conversation, volleyball skills development, dormitory accommodation and meals, certificate of completion, and end-of-camp tournament awards.
-                </p>
-              </div>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-opacity-90 text-white font-sans font-semibold rounded-lg transition-colors"
-              >
-                Inquire About Camp
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ANNUAL HIGHLIGHTS */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-navy mb-12 text-center">
             Annual Highlights
