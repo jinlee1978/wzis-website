@@ -143,7 +143,7 @@ export default function AthleticsPage() {
             {[
               { src: '/images/volleyball-boys-group.jpeg', alt: 'Volleyball Team' },
               { src: '/images/volleyball-boys-korea.jpeg', alt: 'Volleyball Tournament in Korea' },
-              { src: '/images/zsa-baseball-team.jpeg', alt: 'ZSA Baseball Team' },
+              { src: '/images/zsa-baseball-dugout-trophy.jpeg', alt: 'ZSA Baseball Team celebrating in the dugout with championship trophy' },
               { src: '/images/students-moose-field-2.jpeg', alt: 'Students at Sports Day' },
             ].map((photo, i) => (
               <div
