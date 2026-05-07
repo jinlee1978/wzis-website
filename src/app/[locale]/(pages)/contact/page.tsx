@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Phone, MessageSquare, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, ExternalLink } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
 
 export const metadata: Metadata = {
@@ -25,32 +25,14 @@ export default function ContactPage() {
     },
     {
       icon: Mail,
-      title: 'Careers',
-      content: 'careers@wzis.org',
+      title: 'Careers & Employment',
+      content: 'careers@wzis.org\nFor job and hiring inquiries',
       type: 'email',
     },
     {
-      icon: Phone,
-      title: 'Phone (China)',
-      content: '0631-599-6381',
-      type: 'phone',
-    },
-    {
-      icon: Phone,
-      title: 'Phone (Korea)',
-      content: '070-7583-1742',
-      type: 'phone',
-    },
-    {
       icon: MessageSquare,
-      title: 'Admissions (WeChat)',
-      content: 'Andy Kim — andy_pku',
-      type: 'chat',
-    },
-    {
-      icon: MessageSquare,
-      title: 'Admissions (KakaoTalk)',
-      content: 'Andy Kim — andypku',
+      title: 'Admissions — Andy Kim',
+      content: 'WeChat: andy_pku\nKakaoTalk: andypku',
       type: 'chat',
     },
   ];
@@ -132,7 +114,7 @@ export default function ContactPage() {
 
             {/* Email and Phone Blocks */}
             <div className="space-y-4">
-              {contactInfoItems.slice(0, 6).map((item, index) => {
+              {contactInfoItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <div
@@ -142,7 +124,7 @@ export default function ContactPage() {
                     <Icon className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-navy">{item.title}</h3>
-                      <p className="text-text-brand-light text-sm mt-1">{item.content}</p>
+                      <p className="text-text-brand-light text-sm mt-1 whitespace-pre-line">{item.content}</p>
                     </div>
                   </div>
                 );
