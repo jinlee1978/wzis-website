@@ -248,22 +248,6 @@ export default function AdmissionsPage() {
                     <p className="text-white font-semibold">andypku</p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-white/80 text-sm">Korea</p>
-                    <p className="text-white font-semibold">010.8750.8090</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-white/80 text-sm">China</p>
-                    <p className="text-white font-semibold">186.1405.8090</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -555,7 +539,7 @@ export default function AdmissionsPage() {
             <div className="bg-accent-soft/20 border border-accent-soft rounded-lg p-6">
               <p className="text-navy font-semibold mb-2">Questions about visa preparation?</p>
               <p className="text-navy-mid text-sm mb-4">
-                Contact Andy Kim at 010.8750.8090 (Korea) or 186.1405.8090 (China), or via WeChat (Andy_pku) and KakaoTalk (andypku).
+                Contact Andy Kim via WeChat (Andy_pku) or KakaoTalk (andypku).
               </p>
             </div>
           </Card>
