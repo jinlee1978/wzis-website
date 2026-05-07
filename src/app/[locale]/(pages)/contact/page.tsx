@@ -43,14 +43,14 @@ export default function ContactPage() {
     },
     {
       icon: MessageSquare,
-      title: 'WeChat',
-      content: 'andy_pku',
+      title: 'Admissions (WeChat)',
+      content: 'Andy Kim — andy_pku',
       type: 'chat',
     },
     {
       icon: MessageSquare,
-      title: 'KakaoTalk',
-      content: 'andypku',
+      title: 'Admissions (KakaoTalk)',
+      content: 'Andy Kim — andypku',
       type: 'chat',
     },
   ];
@@ -96,8 +96,6 @@ export default function ContactPage() {
       contacts: [
         { label: 'WeChat', value: 'Andy_pku' },
         { label: 'KakaoTalk', value: 'andypku' },
-        { label: 'Korea', value: '010 8750 8090' },
-        { label: 'China', value: '186 1405 8090' },
       ],
     },
   ];
