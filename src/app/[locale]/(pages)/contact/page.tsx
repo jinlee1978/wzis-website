@@ -45,7 +45,7 @@ export default function ContactPage() {
     },
     {
       name: 'Xochitl Tobias',
-      position: 'Head of Primary / VP',
+      position: 'Head of Primary / Vice Principal',
       email: 'xtobias@zhongshischool.org',
     },
     {
@@ -55,7 +55,7 @@ export default function ContactPage() {
     },
     {
       name: 'Andy Kim',
-      position: 'Head of Planning & Development / VP',
+      position: 'Head of Planning & Development / Vice Principal',
       email: 'mkkim@zkis.org',
     },
   ];
