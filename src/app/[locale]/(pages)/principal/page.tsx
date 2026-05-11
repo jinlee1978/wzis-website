@@ -449,7 +449,7 @@ export default function PrincipalPage() {
             className="inline-flex items-center gap-2 bg-accent hover:bg-opacity-90 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
           >
             <Mail size={20} />
-            careers@wzis.org
+            Apply Now
           </a>
         </div>
       </section>
