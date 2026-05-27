@@ -37,3 +37,13 @@ export const classOf2026All: AcceptanceUniversity[] = [
   ...classOf2026.southKorea,
   ...classOf2026.international,
 ];
+
+// Headline universities for the compact homepage hero showcase. The full
+// list lives in the detailed "Class of 2026" section further down the page.
+export const classOf2026Featured: AcceptanceUniversity[] = [
+  { name: 'Seoul National University' },
+  { name: 'Korea University' },
+  { name: 'Fudan University' },
+  { name: 'Shanghai Jiao Tong University' },
+  { name: 'Virginia Tech' },
+];

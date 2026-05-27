@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 import MarqueeStrip from '@/components/sections/MarqueeStrip';
-import { classOf2026All } from '@/lib/collegeAcceptances';
+import { classOf2026All, classOf2026Featured } from '@/lib/collegeAcceptances';
 import {
   Globe,
   GraduationCap,
@@ -188,9 +188,75 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right column: Empty (removed floating photos for cleaner look) */}
-            <div className="hidden lg:block" />
+            {/* Right column: Class of 2026 showcase card (desktop) */}
+            <div className="hidden lg:flex justify-end animate-fadeUp" style={{ animationDelay: '0.2s' }}>
+              <div className="w-full max-w-md rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 p-7 shadow-glow">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/20 border border-accent/40 mb-5">
+                  <GraduationCap className="w-4 h-4 text-accent-soft" />
+                  <span className="text-accent-soft font-bold text-xs tracking-widest uppercase">
+                    Class of 2026
+                  </span>
+                </div>
+                <h2 className="font-serif text-2xl text-white mb-1">Where Our Graduates Got In</h2>
+                <p className="text-white/70 text-sm mb-5">
+                  Offers from leading universities in Korea, China &amp; the U.S.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {classOf2026Featured.map((uni, i) => (
+                    <span
+                      key={i}
+                      className="inline-block px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-medium"
+                    >
+                      {uni.name}
+                    </span>
+                  ))}
+                  <span className="inline-block px-3 py-1.5 rounded-full bg-accent/20 border border-accent/40 text-accent-soft text-xs font-semibold">
+                    + more
+                  </span>
+                </div>
+                <Link
+                  href="/college-acceptance"
+                  className="inline-flex items-center gap-2 text-accent-soft font-semibold text-sm hover:gap-3 transition-all"
+                >
+                  See all results
+                  <span>→</span>
+                </Link>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* CLASS OF 2026 SHOWCASE — mobile (the hero card is desktop-only) */}
+      <section className="lg:hidden bg-navy text-white px-4 py-8">
+        <div className="max-w-md mx-auto rounded-2xl bg-white/5 border border-white/15 p-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/20 border border-accent/40 mb-4">
+            <GraduationCap className="w-4 h-4 text-accent-soft" />
+            <span className="text-accent-soft font-bold text-xs tracking-widest uppercase">
+              Class of 2026
+            </span>
+          </div>
+          <h2 className="font-serif text-xl text-white mb-3">Where Our Graduates Got In</h2>
+          <div className="flex flex-wrap gap-2 mb-5">
+            {classOf2026Featured.map((uni, i) => (
+              <span
+                key={i}
+                className="inline-block px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-medium"
+              >
+                {uni.name}
+              </span>
+            ))}
+            <span className="inline-block px-3 py-1.5 rounded-full bg-accent/20 border border-accent/40 text-accent-soft text-xs font-semibold">
+              + more
+            </span>
+          </div>
+          <Link
+            href="/college-acceptance"
+            className="inline-flex items-center gap-2 text-accent-soft font-semibold text-sm"
+          >
+            See all results
+            <span>→</span>
+          </Link>
         </div>
       </section>
 
