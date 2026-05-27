@@ -27,7 +27,6 @@ export const classOf2026: ClassAcceptances = {
     { name: 'Virginia Tech' },
     { name: 'Iowa State University' },
     { name: 'University of Pittsburgh' },
-    { name: 'University of Pittsburgh at Johnstown' },
     { name: 'North Carolina State University' },
     { name: 'Arizona State University' },
   ],
