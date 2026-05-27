@@ -26,14 +26,14 @@ interface Job {
 // TODO: Replace with Sanity CMS query
 const jobs: Job[] = [
   {
-    id: 'english-teacher',
-    title: 'Teacher of English — Middle & High School',
+    id: 'igcse-english-teacher',
+    title: 'IGCSE English as a Second Language Teacher',
     details: [
       'Hiring for the 2027–2028 school year',
-      'UK / CEFR-aligned curriculum',
-      'IGCSE First / Second Language English and Literature',
-      'Max 24 × 45-min lessons, 3–4 ability-based sets',
-      'CELTA / DELTA / TESOL strongly preferred',
+      'IGCSE English as a Second Language (high school)',
+      'Max 24 × 45-min contact hours per week',
+      'Occasional flexibility for middle school English or Electives',
+      'Inclusive, data-informed instruction',
     ],
     contact: 'careers@wzis.org',
   },
