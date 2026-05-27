@@ -197,7 +197,7 @@ export default function HomePage() {
                     Class of 2026
                   </span>
                 </div>
-                <h2 className="font-serif text-2xl text-white mb-1">Where Our Graduates Got In</h2>
+                <h2 className="font-serif text-2xl text-white mb-1">University Acceptances</h2>
                 <p className="text-white/70 text-sm mb-5">
                   Offers from leading universities in Korea, China &amp; the U.S.
                 </p>
@@ -236,7 +236,7 @@ export default function HomePage() {
               Class of 2026
             </span>
           </div>
-          <h2 className="font-serif text-xl text-white mb-3">Where Our Graduates Got In</h2>
+          <h2 className="font-serif text-xl text-white mb-3">University Acceptances</h2>
           <div className="flex flex-wrap gap-2 mb-5">
             {classOf2026Featured.map((uni, i) => (
               <span
