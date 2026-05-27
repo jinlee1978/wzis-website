@@ -8,7 +8,7 @@ import { careersPageSchema, breadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Teaching Jobs at WZIS | International School Careers in China',
   description:
-    'Join Weihai Zhongshi International School. We are hiring experienced teachers for English, Math, Science, and Humanities positions. Competitive salary, furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
+    'Join Weihai Zhongshi International School. We are hiring experienced teachers for English, Science, and Humanities positions. Competitive salary, furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
   openGraph: {
     title: 'Teaching Careers at WZIS — International School Jobs in China',
     description:
@@ -38,13 +38,26 @@ const jobs: Job[] = [
     contact: 'careers@wzis.org',
   },
   {
-    id: 'math-teacher',
-    title: 'High School Mathematics Teacher',
+    id: 'english-social-studies-teacher',
+    title: 'Middle School English/Social Studies Teacher',
     details: [
-      'Cambridge (CIE): Pure Math, Mechanics, Statistics at AS / A Level',
-      '20 × 45-min lessons weekly, 4 classes',
-      'IGCSE / A Level experience strongly preferred',
-      'EAL capability (CELTA / TESOL) preferred',
+      'Hiring for the 2027–2028 school year',
+      'Teaches English & Social Studies in middle school',
+      'Max 24 × 45-min contact hours per week',
+      'Occasional flexibility for Debate & Electives',
+      'Inclusive, data-informed instruction',
+    ],
+    contact: 'careers@wzis.org',
+  },
+  {
+    id: 'history-social-studies-teacher',
+    title: 'History/Social Studies Teacher',
+    details: [
+      'Hiring for the 2027–2028 school year',
+      'IGCSE History (high school) & Social Studies (middle school)',
+      'Max 24 × 45-min contact hours per week',
+      'Occasional flexibility for English or Global Perspectives',
+      'Historical inquiry & critical-thinking focus',
     ],
     contact: 'careers@wzis.org',
   },
@@ -75,6 +88,7 @@ const jobs: Job[] = [
     id: 'geography-teacher',
     title: 'Teacher of Geography, Economics & Business Studies',
     details: [
+      'Hiring for the 2027–2028 school year',
       'Cambridge IGCSE–A Level curriculum',
       'Middle & High School, up to 24 lessons/week',
       'Valid teaching licence required (work visa)',

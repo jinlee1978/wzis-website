@@ -12,7 +12,8 @@ export default function CareerForm() {
 
   const positions = [
     'Middle & High School English Teacher',
-    'High School Mathematics Teacher',
+    'Middle School English/Social Studies Teacher',
+    'History/Social Studies Teacher',
     'Middle & High School Science Teacher (Physical Sciences)',
     'Open Applications',
   ];
