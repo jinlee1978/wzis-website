@@ -11,11 +11,9 @@ export default function CareerForm() {
   });
 
   const positions = [
-    'Elementary Teacher (Lower Years)',
     'Middle & High School English Teacher',
     'High School Mathematics Teacher',
     'Middle & High School Science Teacher (Physical Sciences)',
-    'PE Teacher (Grades 3-12)',
     'Open Applications',
   ];
 

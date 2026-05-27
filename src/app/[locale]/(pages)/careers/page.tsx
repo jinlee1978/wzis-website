@@ -8,7 +8,7 @@ import { careersPageSchema, breadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Teaching Jobs at WZIS | International School Careers in China',
   description:
-    'Join Weihai Zhongshi International School. We are hiring experienced teachers for Elementary, English, Math, Science, and PE positions. Competitive salary, furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
+    'Join Weihai Zhongshi International School. We are hiring experienced teachers for English, Math, Science, and Humanities positions. Competitive salary, furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
   openGraph: {
     title: 'Teaching Careers at WZIS — International School Jobs in China',
     description:
@@ -26,15 +26,10 @@ interface Job {
 // TODO: Replace with Sanity CMS query
 const jobs: Job[] = [
   {
-    id: 'elementary-teacher',
-    title: 'Elementary Teacher (Lower Years)',
-    details: ['24 periods/week', 'Cambridge Primary Curriculum', 'ELL training preferred'],
-    contact: 'careers@wzis.org',
-  },
-  {
     id: 'english-teacher',
     title: 'Teacher of English — Middle & High School',
     details: [
+      'Hiring for the 2027–2028 school year',
       'UK / CEFR-aligned curriculum',
       'IGCSE First / Second Language English and Literature',
       'Max 24 × 45-min lessons, 3–4 ability-based sets',
@@ -85,12 +80,6 @@ const jobs: Job[] = [
       'Valid teaching licence required (work visa)',
       'ELL-focused scaffolding and differentiation',
     ],
-    contact: 'careers@wzis.org',
-  },
-  {
-    id: 'pe-teacher',
-    title: 'PE Teacher (Grades 3-12)',
-    details: ['1-2 PE lessons per class', 'Badminton, soccer, basketball, baseball'],
     contact: 'careers@wzis.org',
   },
   {
