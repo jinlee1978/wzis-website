@@ -5,6 +5,7 @@ import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 import MarqueeStrip from '@/components/sections/MarqueeStrip';
+import { classOf2026All } from '@/lib/collegeAcceptances';
 import {
   Globe,
   GraduationCap,
@@ -478,6 +479,49 @@ export default function HomePage() {
           <div className="text-center">
             <Button href="/academics" variant="secondary" size="lg">
               {t('academics.cta')}
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6.5: CLASS OF 2026 COLLEGE ACCEPTANCES */}
+      <section className="relative py-20 px-4 bg-navy text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-accent blur-3xl" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/40 mb-5">
+              <GraduationCap className="w-5 h-5 text-accent-soft" />
+              <span className="text-accent-soft font-bold text-xs sm:text-sm tracking-widest uppercase">
+                Congratulations, Class of 2026
+              </span>
+            </div>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+              Where Our Graduates Are Headed
+            </h2>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              Our newest alumni earned offers from leading universities across Korea, China, and the United States.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {classOf2026All.map((uni, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium animate-fadeUp"
+                style={{ animationDelay: (i * 0.04) + 's' }}
+              >
+                {uni.name}
+                {uni.count && <span className="ml-2 font-bold text-accent-soft">×{uni.count}</span>}
+              </span>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button href="/college-acceptance" variant="primary" size="lg">
+              See All College Results
             </Button>
           </div>
         </div>

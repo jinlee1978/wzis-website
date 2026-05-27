@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Globe, BookOpen, Users, TrendingUp } from 'lucide-react'
+import { classOf2026 } from '@/lib/collegeAcceptances'
 
 // TODO: Connect to Sanity CMS for dynamic university data
 // TODO: Add filtering/sorting by region, year, acceptance rate
@@ -194,6 +195,40 @@ export default function CollegeAcceptancePage() {
           <p className="font-sans text-lg md:text-xl text-text-brand opacity-90 max-w-3xl mx-auto">
             Where Our Graduates Go — From China to the World
           </p>
+        </div>
+      </section>
+
+      {/* Class of 2026 Results */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-3 text-center">
+            Class of 2026 Results
+          </h2>
+          <p className="font-sans text-base text-text-brand opacity-80 text-center mb-12">
+            Our most recent graduates&apos; university offers
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            {/* South Korea */}
+            <div>
+              <h3 className="font-sans text-lg font-bold text-navy mb-6">South Korea</h3>
+              <div className="flex flex-wrap gap-3">
+                {classOf2026.southKorea.map((uni, idx) => (
+                  <UniversityPill key={idx} university={uni} />
+                ))}
+              </div>
+            </div>
+
+            {/* International */}
+            <div>
+              <h3 className="font-sans text-lg font-bold text-navy mb-6">International</h3>
+              <div className="flex flex-wrap gap-3">
+                {classOf2026.international.map((uni, idx) => (
+                  <UniversityPill key={idx} university={uni} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Award, BookOpen, Globe, Users, Zap, Music } from 'lucide-react';
+import { Award, BookOpen, Globe, Users, Zap, Music, GraduationCap } from 'lucide-react';
 import HeroSection from '@/components/sections/HeroSection';
+import { classOf2026 } from '@/lib/collegeAcceptances';
 import CTASection from '@/components/sections/CTASection';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
@@ -202,6 +203,51 @@ export default function AcademicsPage() {
               excellence spanning multiple continents.
             </p>
           </div>
+
+          {/* Class of 2026 acceptances */}
+          <div className="mb-12 md:mb-16">
+            <div className="flex items-center justify-center gap-2 mb-8">
+              <GraduationCap className="w-5 h-5 text-accent-soft" />
+              <span className="text-accent-soft font-semibold uppercase tracking-widest text-sm">
+                Class of 2026
+              </span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div>
+                <h3 className="font-sans text-lg font-bold text-white mb-4 text-center md:text-left">
+                  South Korea
+                </h3>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  {classOf2026.southKorea.map((uni, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium"
+                    >
+                      {uni.name}
+                      {uni.count && <span className="ml-2 font-bold text-accent-soft">×{uni.count}</span>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="font-sans text-lg font-bold text-white mb-4 text-center md:text-left">
+                  International
+                </h3>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  {classOf2026.international.map((uni, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium"
+                    >
+                      {uni.name}
+                      {uni.count && <span className="ml-2 font-bold text-accent-soft">×{uni.count}</span>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <StatsSection stats={stats} />
           <div className="flex justify-center mt-10">
             <Link href="/college-acceptance">
