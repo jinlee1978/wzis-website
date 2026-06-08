@@ -187,7 +187,7 @@ export default function CollegeAcceptancePage() {
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section className="relative bg-white py-16 md:py-24 px-4 md:px-8">
+      <section className="relative bg-white pt-28 pb-16 md:py-24 px-4 md:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-navy mb-4">
             College Acceptance
