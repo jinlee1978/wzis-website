@@ -4,8 +4,12 @@
 // names) lists, so multiple keys can resolve to the same slug.
 //
 // SLUG_FILE holds the actual on-disk filename per slug (extension varies:
-// some logos are .svg, some .png). Generated from the contents of
-// public/images/universities — see scripts that source the logos.
+// some logos are .svg, some .png).
+//
+// STANDARD for adding a school: every university gets its real emblem as a
+// card. Fetch the logo with `node scripts/fetch-university-logo.mjs --name
+// "<University>" --slug <slug>`, then add the two map lines it prints below.
+// Full process: docs/updating-college-acceptances.md
 
 // Display name -> slug
 const NAME_TO_SLUG: Record<string, string> = {
