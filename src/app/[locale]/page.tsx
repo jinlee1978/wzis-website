@@ -198,9 +198,15 @@ export default function HomePage() {
                   </span>
                 </div>
                 <h2 className="font-serif text-2xl text-white mb-1">University Acceptances</h2>
-                <p className="text-white/70 text-sm mb-5">
+                <p className="text-white/70 text-sm mb-4">
                   Offers from leading universities in Korea, China &amp; the U.S.
                 </p>
+                <div className="flex items-start gap-2 mb-5 rounded-lg bg-accent/20 border border-accent/40 px-3 py-2">
+                  <GraduationCap className="w-4 h-4 text-accent-soft flex-shrink-0 mt-0.5" />
+                  <span className="text-accent-soft text-xs font-semibold leading-snug">
+                    A SKY sweep — accepted to all three of Korea&apos;s top universities (Seoul National, Korea &amp; Yonsei)
+                  </span>
+                </div>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {classOf2026Featured.map((uni, i) => (
                     <span
@@ -237,6 +243,12 @@ export default function HomePage() {
             </span>
           </div>
           <h2 className="font-serif text-xl text-white mb-3">University Acceptances</h2>
+          <div className="flex items-start gap-2 mb-4 rounded-lg bg-accent/20 border border-accent/40 px-3 py-2">
+            <GraduationCap className="w-4 h-4 text-accent-soft flex-shrink-0 mt-0.5" />
+            <span className="text-accent-soft text-xs font-semibold leading-snug">
+              A SKY sweep — accepted to all three of Korea&apos;s top universities (Seoul National, Korea &amp; Yonsei)
+            </span>
+          </div>
           <div className="flex flex-wrap gap-2 mb-5">
             {classOf2026Featured.map((uni, i) => (
               <span
