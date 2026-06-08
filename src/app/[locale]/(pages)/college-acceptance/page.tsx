@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Globe, BookOpen, Users, TrendingUp } from 'lucide-react'
+import { ArrowRight, Globe, BookOpen, Users, TrendingUp, GraduationCap } from 'lucide-react'
 import { classOf2026 } from '@/lib/collegeAcceptances'
 
 // TODO: Connect to Sanity CMS for dynamic university data
@@ -204,9 +204,17 @@ export default function CollegeAcceptancePage() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-navy mb-3 text-center">
             Class of 2026 Results
           </h2>
-          <p className="font-sans text-base text-text-brand opacity-80 text-center mb-12">
+          <p className="font-sans text-base text-text-brand opacity-80 text-center mb-8">
             Our most recent graduates&apos; university offers
           </p>
+
+          {/* SKY emphasis */}
+          <div className="max-w-3xl mx-auto mb-12 rounded-2xl border border-accent bg-accent-soft px-6 py-5 flex items-start gap-4">
+            <GraduationCap className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+            <p className="font-sans text-sm md:text-base text-text-brand">
+              <span className="font-bold text-navy">A SKY sweep.</span> The Class of 2026 earned acceptances to all three of Korea&apos;s most prestigious universities — Seoul National, Korea University, and Yonsei — together known as &ldquo;SKY.&rdquo;
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* South Korea */}
