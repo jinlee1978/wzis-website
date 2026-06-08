@@ -17,7 +17,9 @@ export interface ClassAcceptances {
 export const classOf2026: ClassAcceptances = {
   southKorea: [
     { name: 'Seoul National University' },
-    { name: 'Korea University' },
+    { name: 'Korea University', count: 2 },
+    { name: 'Yonsei University', count: 2 },
+    { name: 'Hanyang University', count: 2 },
     { name: 'Korea Aerospace University', count: 2 },
   ],
   international: [
@@ -43,6 +45,7 @@ export const classOf2026All: AcceptanceUniversity[] = [
 export const classOf2026Featured: AcceptanceUniversity[] = [
   { name: 'Seoul National University' },
   { name: 'Korea University' },
+  { name: 'Yonsei University' },
   { name: 'Fudan University' },
   { name: 'Shanghai Jiao Tong University' },
   { name: 'Virginia Tech' },
