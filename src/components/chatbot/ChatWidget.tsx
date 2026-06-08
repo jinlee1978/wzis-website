@@ -10,6 +10,28 @@ interface ChatMessage {
   isError?: boolean;
 }
 
+// Safety net: the model is told to reply in plain text, but if any Markdown
+// leaks through (e.g. **bold**, ***, "# heading", "* bullet") we strip it here
+// so the chat bubble never shows raw Markdown characters. Rendered with
+// `whitespace-pre-line`, so line breaks and bullets stay legible.
+function formatReply(text: string): string {
+  return text
+    .replace(/\r\n/g, '\n')
+    // Bullet markers at line start -> clean bullet
+    .replace(/^[ \t]*[*+-][ \t]+/gm, '• ')
+    // Markdown headings (### Heading -> Heading)
+    .replace(/^#{1,6}[ \t]+/gm, '')
+    // Bold/italic wrappers: ***x*** / **x** / *x*
+    .replace(/\*{1,3}([^*]+)\*{1,3}/g, '$1')
+    // Bold/italic via double underscore (leaves single _ in handles/emails alone)
+    .replace(/__([^_]+)__/g, '$1')
+    // Any leftover stray asterisks (no meaningful use in this context)
+    .replace(/\*/g, '')
+    // Collapse runs of blank lines
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 
 export default function ChatWidget() {
   const t = useTranslations();
@@ -243,11 +265,11 @@ export default function ChatWidget() {
                 <div
                   className={
                     msg.role === 'assistant'
-                      ? 'bg-white rounded-2xl px-4 py-2 max-w-[75%] sm:max-w-xs shadow-md text-gray-900 text-sm'
-                      : 'bg-gradient-to-br from-[#1a3a52] to-[#0f2744] text-white rounded-2xl px-4 py-2 max-w-[75%] sm:max-w-xs text-sm'
+                      ? 'bg-white rounded-2xl px-4 py-2 max-w-[75%] sm:max-w-xs shadow-md text-gray-900 text-sm whitespace-pre-line'
+                      : 'bg-gradient-to-br from-[#1a3a52] to-[#0f2744] text-white rounded-2xl px-4 py-2 max-w-[75%] sm:max-w-xs text-sm whitespace-pre-line'
                   }
                 >
-                  {msg.content}
+                  {msg.role === 'assistant' ? formatReply(msg.content) : msg.content}
                 </div>
               </div>
             ))}
