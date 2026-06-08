@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Globe, BookOpen, Users, TrendingUp, GraduationCap } from 'lucide-react'
 import { classOf2026 } from '@/lib/collegeAcceptances'
+import UniversityCard from '@/components/ui/UniversityCard'
 
 // TODO: Connect to Sanity CMS for dynamic university data
 // TODO: Add filtering/sorting by region, year, acceptance rate
@@ -29,7 +30,7 @@ interface RegionData {
   universities: University[]
 }
 
-const classOf2025Data = {
+const classOf2025Data: { southKorea: University[]; international: University[] } = {
   southKorea: [
     { name: 'Yonsei', count: 2 },
     { name: 'Korea University', count: 1 },
@@ -62,7 +63,7 @@ const classOf2025Data = {
   ],
 }
 
-const classOf2024Data = {
+const classOf2024Data: { international: University[]; southKorea: University[] } = {
   international: [
     { name: 'Nottingham' },
     { name: 'Liverpool' },
@@ -216,23 +217,29 @@ export default function CollegeAcceptancePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="space-y-10">
             {/* South Korea */}
             <div>
-              <h3 className="font-sans text-lg font-bold text-navy mb-6">South Korea</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="mb-5 flex items-center gap-3">
+                <h3 className="font-sans text-lg font-bold text-navy">South Korea</h3>
+                <span className="h-px flex-1 bg-gray-brand-light" />
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {classOf2026.southKorea.map((uni, idx) => (
-                  <UniversityPill key={idx} university={uni} />
+                  <UniversityCard key={idx} name={uni.name} count={uni.count} />
                 ))}
               </div>
             </div>
 
             {/* International */}
             <div>
-              <h3 className="font-sans text-lg font-bold text-navy mb-6">International</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="mb-5 flex items-center gap-3">
+                <h3 className="font-sans text-lg font-bold text-navy">International</h3>
+                <span className="h-px flex-1 bg-gray-brand-light" />
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {classOf2026.international.map((uni, idx) => (
-                  <UniversityPill key={idx} university={uni} />
+                  <UniversityCard key={idx} name={uni.name} count={uni.count} />
                 ))}
               </div>
             </div>
@@ -250,23 +257,29 @@ export default function CollegeAcceptancePage() {
             Class of 2025 Results — 33 Acceptances
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="space-y-10">
             {/* South Korea */}
             <div>
-              <h3 className="font-sans text-xl font-bold text-accent mb-6">South Korea</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="mb-5 flex items-center gap-3">
+                <h3 className="font-sans text-xl font-bold text-accent-soft">South Korea</h3>
+                <span className="h-px flex-1 bg-white/15" />
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {classOf2025Data.southKorea.map((uni, idx) => (
-                  <UniversityPill key={idx} university={uni} />
+                  <UniversityCard key={idx} name={uni.name} count={uni.count} />
                 ))}
               </div>
             </div>
 
             {/* International */}
             <div>
-              <h3 className="font-sans text-xl font-bold text-accent mb-6">International</h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="mb-5 flex items-center gap-3">
+                <h3 className="font-sans text-xl font-bold text-accent-soft">International</h3>
+                <span className="h-px flex-1 bg-white/15" />
+              </div>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {classOf2025Data.international.map((uni, idx) => (
-                  <UniversityPill key={idx} university={uni} />
+                  <UniversityCard key={idx} name={uni.name} count={uni.count} />
                 ))}
               </div>
             </div>
