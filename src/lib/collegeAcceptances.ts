@@ -19,6 +19,7 @@ export const classOf2026: ClassAcceptances = {
     { name: 'Seoul National University' },
     { name: 'Korea University', count: 2 },
     { name: 'Yonsei University', count: 2 },
+    { name: 'Sungkyunkwan University', count: 3 },
     { name: 'Hanyang University', count: 2 },
     { name: 'Korea Aerospace University', count: 2 },
   ],

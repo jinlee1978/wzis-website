@@ -17,6 +17,7 @@ const NAME_TO_SLUG: Record<string, string> = {
   'Seoul National University': 'seoul-national',
   'Korea University': 'korea-university',
   'Yonsei University': 'yonsei',
+  'Sungkyunkwan University': 'sungkyunkwan',
   'Hanyang University': 'hanyang',
   'Korea Aerospace University': 'korea-aerospace',
   // --- Class of 2026: International ---
