@@ -82,6 +82,14 @@
       "proofYear": "2006",
       "proofYearLabel": "Established"
     },
+    "gradHero": {
+      "badge": "Class of 2026 · Graduation",
+      "titleLead": "Congratulations,",
+      "titleHighlight": "Class of 2026",
+      "subtitle": "Today we celebrate our graduating Eagles — servant leaders ready to make their mark on the world. We could not be prouder of all you have become.",
+      "ctaPrimary": "See College Results",
+      "ctaSecondary": "Explore WZIS"
+    },
     "marquee": {
       "items": [
         "Cambridge International School",

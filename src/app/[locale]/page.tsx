@@ -19,8 +19,21 @@ import {
   Trophy,
 } from 'lucide-react';
 
+// ─── Homepage hero ──────────────────────────────────────────────────────────
+// Celebratory "Class of 2026" graduation hero. To revert to the standard
+// staff/community hero, set GRADUATION_HERO to false — the original image and
+// copy (the `home.hero` translations) are preserved and used automatically.
+const GRADUATION_HERO = true;
+const HERO_IMAGE_GRADUATION = '/images/2026-graduation-cap-toss.jpeg';
+const HERO_IMAGE_DEFAULT = '/images/school-community-pier.jpeg';
+
 export default function HomePage() {
   const t = useTranslations('home');
+
+  const heroImage = GRADUATION_HERO ? HERO_IMAGE_GRADUATION : HERO_IMAGE_DEFAULT;
+  const heroAlt = GRADUATION_HERO
+    ? 'WZIS Class of 2026 graduates tossing their caps on the field — Weihai Zhongshi International School'
+    : 'WZIS students and staff at the Weihai coastal pier — Weihai Zhongshi International School';
 
   // SECTION 1: HERO
   const heroProofStats = [
@@ -126,48 +139,86 @@ export default function HomePage() {
       {/* SECTION 1: HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <Image
-          src="/images/school-community-pier.jpeg"
-          alt="WZIS students and staff at the Weihai coastal pier — Weihai Zhongshi International School"
+          src={heroImage}
+          alt={heroAlt}
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
+        {/* Extra left-anchored shade keeps the hero copy legible over the bright graduation photo */}
+        {GRADUATION_HERO && (
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/30 to-transparent" />
+        )}
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column: Text content */}
             <div className="animate-fadeUp">
-              {/* Accreditation badge */}
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-2 h-2 rounded-full bg-accent" />
-                <Badge variant="accent">{t('hero.badge')}</Badge>
-              </div>
+              {GRADUATION_HERO ? (
+                <>
+                  {/* Graduation badge */}
+                  <div className="flex items-center gap-2 mb-6">
+                    <GraduationCap className="w-5 h-5 text-accent-soft" />
+                    <Badge variant="accent">{t('gradHero.badge')}</Badge>
+                  </div>
 
-              {/* H1 with shimmer on "Servant Leaders" */}
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
-                Shaping{' '}
-                <span className="relative inline-block">
-                  Servant Leaders
-                </span>
-                <br />
-                {t('hero.titleLine2')}
-              </h1>
+                  {/* Congratulatory headline */}
+                  <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                    {t('gradHero.titleLead')}
+                    <br />
+                    <span className="text-accent-soft">{t('gradHero.titleHighlight')}</span>
+                  </h1>
 
-              {/* Subtitle */}
-              <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed max-w-lg">
-                {t('hero.subtitle')}
-              </p>
+                  {/* Subtitle */}
+                  <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed max-w-lg">
+                    {t('gradHero.subtitle')}
+                  </p>
 
-              {/* Two buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <Button href="/admissions" variant="primary" size="lg">
-                  {t('hero.cta')}
-                </Button>
-                <Button href="/about" variant="outline" size="lg">
-                  {t('hero.ctaSecondary')}
-                </Button>
-              </div>
+                  {/* Two buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                    <Button href="/college-acceptance" variant="primary" size="lg">
+                      {t('gradHero.ctaPrimary')}
+                    </Button>
+                    <Button href="/about" variant="outline" size="lg">
+                      {t('gradHero.ctaSecondary')}
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* Accreditation badge */}
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="w-2 h-2 rounded-full bg-accent" />
+                    <Badge variant="accent">{t('hero.badge')}</Badge>
+                  </div>
+
+                  {/* H1 with shimmer on "Servant Leaders" */}
+                  <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                    Shaping{' '}
+                    <span className="relative inline-block">
+                      Servant Leaders
+                    </span>
+                    <br />
+                    {t('hero.titleLine2')}
+                  </h1>
+
+                  {/* Subtitle */}
+                  <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed max-w-lg">
+                    {t('hero.subtitle')}
+                  </p>
+
+                  {/* Two buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                    <Button href="/admissions" variant="primary" size="lg">
+                      {t('hero.cta')}
+                    </Button>
+                    <Button href="/about" variant="outline" size="lg">
+                      {t('hero.ctaSecondary')}
+                    </Button>
+                  </div>
+                </>
+              )}
 
               {/* Proof stats row */}
               <div className="grid grid-cols-3 gap-4 sm:gap-8">
