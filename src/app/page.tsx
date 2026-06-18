@@ -147,10 +147,10 @@ export default function HomePage() {
         />
         {GRADUATION_HERO ? (
           <>
-            {/* Photo-forward treatment: shade the left for copy, keep the right
-                side of the graduation photo clear so the moment reads. */}
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/40 to-navy/10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-transparent to-navy/20" />
+            {/* Photo-forward treatment: a light left-anchored shade for copy
+                legibility, with the rest of the graduation photo kept clear. */}
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
           </>
         ) : (
           <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
@@ -159,7 +159,7 @@ export default function HomePage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column: Text content */}
-            <div className={GRADUATION_HERO ? 'animate-fadeUp [text-shadow:0_2px_16px_rgba(10,22,50,0.55)]' : 'animate-fadeUp'}>
+            <div className={GRADUATION_HERO ? 'animate-fadeUp [text-shadow:0_2px_18px_rgba(10,22,50,0.7),0_1px_4px_rgba(10,22,50,0.6)]' : 'animate-fadeUp'}>
               {GRADUATION_HERO ? (
                 <>
                   {/* Graduation badge */}
