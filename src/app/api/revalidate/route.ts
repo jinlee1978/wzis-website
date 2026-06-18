@@ -15,20 +15,20 @@ export async function POST(request: NextRequest) {
     // Revalidate specific pages based on content type
     switch (type) {
       case 'event':
-        revalidatePath('/[locale]/events', 'page');
-        revalidatePath('/[locale]', 'page'); // homepage shows upcoming events
+        revalidatePath('/events', 'page');
+        revalidatePath('/', 'page'); // homepage shows upcoming events
         break;
       case 'staff':
-        revalidatePath('/[locale]/about', 'page');
+        revalidatePath('/about', 'page');
         break;
       case 'tuition':
-        revalidatePath('/[locale]/admissions', 'page');
+        revalidatePath('/admissions', 'page');
         break;
       case 'job':
-        revalidatePath('/[locale]/careers', 'page');
+        revalidatePath('/careers', 'page');
         break;
       case 'collegeAcceptance':
-        revalidatePath('/[locale]/college-acceptance', 'page');
+        revalidatePath('/college-acceptance', 'page');
         break;
       default:
         revalidatePath('/', 'layout');

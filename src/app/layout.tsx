@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { locales } from '@/i18n';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import ChatWidget from '@/components/chatbot/ChatWidget';
@@ -83,20 +81,13 @@ export const metadata: Metadata = {
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
 };
 
-export default async function RootLayout({ children, params }: Props) {
-  const { locale } = await params;
-
-  if (!locales.includes(locale as any)) {
-    notFound();
-  }
-
+export default async function RootLayout({ children }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang="en">
       <head>
         <script defer src="/_vercel/insights/script.js" />
         <script
@@ -114,8 +105,4 @@ export default async function RootLayout({ children, params }: Props) {
       </body>
     </html>
   );
-}
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
 }
