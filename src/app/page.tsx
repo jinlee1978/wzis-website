@@ -137,31 +137,52 @@ export default function HomePage() {
   return (
     <>
       {/* SECTION 1: HERO */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <Image
-          src={heroImage}
-          alt={heroAlt}
-          fill
-          className="object-cover"
-          priority
-        />
-        {GRADUATION_HERO ? (
-          <>
-            {/* Photo-forward treatment: a light left-anchored shade for copy
-                legibility, with the rest of the graduation photo kept clear. */}
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/20 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
-          </>
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
-        )}
+      <section className={'relative flex items-center overflow-hidden bg-navy ' + (GRADUATION_HERO ? 'lg:min-h-screen' : 'min-h-screen')}>
+        {/* Full-bleed background photo. For the graduation hero this is
+            desktop-only — a wide group shot can't center-crop cleanly into a
+            tall phone screen, so on mobile the photo renders uncropped in a
+            framed card above the copy instead. */}
+        <div className={'absolute inset-0 ' + (GRADUATION_HERO ? 'hidden lg:block' : '')}>
+          <Image
+            src={heroImage}
+            alt={heroAlt}
+            fill
+            className="object-cover"
+            priority
+          />
+          {GRADUATION_HERO ? (
+            <>
+              {/* Photo-forward treatment: a light left-anchored shade for copy
+                  legibility, with the rest of the graduation photo kept clear. */}
+              <div className="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/80" />
+          )}
+        </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20">
+        <div className={'relative z-10 w-full max-w-7xl mx-auto px-4 ' + (GRADUATION_HERO ? 'pt-24 pb-14 lg:py-20' : 'py-20')}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column: Text content */}
-            <div className={GRADUATION_HERO ? 'animate-fadeUp [text-shadow:0_2px_18px_rgba(10,22,50,0.7),0_1px_4px_rgba(10,22,50,0.6)]' : 'animate-fadeUp'}>
+            <div className={GRADUATION_HERO ? 'animate-fadeUp lg:[text-shadow:0_2px_18px_rgba(10,22,50,0.7),0_1px_4px_rgba(10,22,50,0.6)]' : 'animate-fadeUp'}>
               {GRADUATION_HERO ? (
                 <>
+                  {/* Mobile-only: the full graduation photo in its natural ratio
+                      so the whole class is visible (desktop uses the full-bleed
+                      background above). */}
+                  <div className="lg:hidden mb-7">
+                    <div className="relative aspect-[3/2] w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15">
+                      <Image
+                        src={heroImage}
+                        alt={heroAlt}
+                        fill
+                        className="object-cover"
+                        priority
+                      />
+                    </div>
+                  </div>
+
                   {/* Graduation badge */}
                   <div className="flex items-center gap-2 mb-6">
                     <GraduationCap className="w-5 h-5 text-accent-soft" />
