@@ -62,18 +62,6 @@ const jobs: Job[] = [
     contact: 'careers@wzis.org',
   },
   {
-    id: 'chemistry-teacher',
-    title: 'High School Chemistry Teacher',
-    details: [
-      'IGCSE, AS, and A2 Chemistry',
-      '15 lessons/week across three levels',
-      'Fully equipped laboratory',
-      "Bachelor's in Chemistry or related science",
-      'CELTA / DELTA / TESOL preferred',
-    ],
-    contact: 'careers@wzis.org',
-  },
-  {
     id: 'physics-teacher',
     title: 'Middle & High School Physics Teacher',
     details: [
