@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heart, DollarSign, BookOpen, Home, Users, Utensils, Award, Plane, MapPin, Mail, FileText, ArrowRight, ExternalLink } from 'lucide-react';
+import { Heart, DollarSign, BookOpen, Home, Utensils, Award, Plane, MapPin, Mail, FileText, ArrowRight, ExternalLink } from 'lucide-react';
 import CareerForm from '@/components/forms/CareerForm';
 import { careersPageSchema, breadcrumbSchema } from '@/lib/schemas';
 
@@ -118,12 +118,6 @@ const benefits = [
     icon: Home,
     title: 'Housing Allowance',
     description: 'Generous housing allowance to support your accommodation needs',
-  },
-  {
-    id: 'spouse',
-    icon: Users,
-    title: 'Spouse Employment',
-    description: 'Support and assistance for spouse employment opportunities',
   },
   {
     id: 'meals',
