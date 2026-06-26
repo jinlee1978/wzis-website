@@ -8,11 +8,11 @@ import { careersPageSchema, breadcrumbSchema } from '@/lib/schemas';
 export const metadata: Metadata = {
   title: 'Teaching Jobs at WZIS | International School Careers in China',
   description:
-    'Join Weihai Zhongshi International School. We are hiring experienced teachers for English, Science, and Humanities positions. Competitive salary, furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
+    'Join Weihai Zhongshi International School. We are hiring experienced teachers for English, Science, and Humanities positions. Furnished housing, tuition benefits, annual flights, and professional development in Weihai, China.',
   openGraph: {
     title: 'Teaching Careers at WZIS — International School Jobs in China',
     description:
-      'Now hiring teachers. Competitive salary, furnished housing, tuition benefits, and professional development at a Cambridge International school in Weihai.',
+      'Now hiring teachers. Furnished housing, tuition benefits, and professional development at a Cambridge International school in Weihai.',
   },
 };
 
@@ -97,8 +97,8 @@ const benefits = [
   {
     id: 'salary',
     icon: DollarSign,
-    title: 'Competitive Salary',
-    description: 'Attractive compensation packages competitive with international schools',
+    title: 'Comprehensive Package',
+    description: 'Salary combined with housing, free tuition, meals, and flights for a strong overall value',
   },
   {
     id: 'cost-of-living',

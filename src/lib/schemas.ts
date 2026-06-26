@@ -160,7 +160,7 @@ export const jobPostingSchema = (job: {
     name: 'China',
   },
   jobBenefits:
-    'Competitive salary, furnished housing, tuition benefits for dependents, professional development, annual flights, meals provided',
+    'Furnished housing, tuition benefits for dependents, professional development, annual flights, meals provided',
 });
 
 export const careersPageSchema = {
@@ -168,7 +168,7 @@ export const careersPageSchema = {
   '@type': 'JobPosting',
   title: 'Teaching Positions at Weihai Zhongshi International School',
   description:
-    'WZIS is recruiting experienced educators for multiple positions including English, Science, and Humanities teachers. Competitive salary, furnished housing, tuition benefits, and professional development provided.',
+    'WZIS is recruiting experienced educators for multiple positions including English, Science, and Humanities teachers. Furnished housing, tuition benefits, and professional development provided.',
   datePosted: new Date().toISOString().split('T')[0],
   employmentType: 'FULL_TIME',
   hiringOrganization: {
@@ -187,5 +187,5 @@ export const careersPageSchema = {
     },
   },
   jobBenefits:
-    'Competitive salary, furnished housing, tuition benefits for dependents, professional development, annual flights, meals provided',
+    'Furnished housing, tuition benefits for dependents, professional development, annual flights, meals provided',
 };
