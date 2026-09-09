@@ -41,6 +41,7 @@ const sportsPrograms = [
     description: 'Competitive team training with boys and girls teams. Lingang Tournament champions bringing excellence to the court.',
     details: [
       'Boys and girls teams',
+      'Newly renovated indoor home court (2026)',
       'Tue/Thu training after school',
       'Lingang Tournament champions',
       'Competitive tournaments',
@@ -428,36 +429,40 @@ export default function SportsAcademyPage() {
         </div>
       </section>
 
+      {/* New Volleyball Court */}
+      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="text-center mb-10 md:mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/30 mb-5">
+              <Zap className="w-5 h-5 text-accent" />
+              <span className="text-accent font-bold text-sm tracking-widest uppercase">New for 2026</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">
+              A New Home Court for ZSA Volleyball
+            </h2>
+            <p className="text-lg text-text-brand-light max-w-3xl mx-auto leading-relaxed">
+              Our indoor volleyball court has been fully renovated with a professional-grade sport floor, fresh competition lines, and natural light from wall-to-wall windows &mdash; the home court where Coach Kim Cheol-yong trains the boys&apos; and girls&apos; ZSA Eagles.
+            </p>
+          </div>
+          <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden shadow-2xl ring-1 ring-navy/10">
+            <Image
+              src="/images/zsa-volleyball-court-2026.jpeg"
+              alt="Newly renovated ZSA indoor volleyball court with blue sport flooring and floor-to-ceiling windows"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1152px"
+              priority={false}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Facilities */}
       <section className="w-full bg-navy py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white text-center mb-12 md:mb-16">
             World-Class Facilities
           </h2>
-          {/* Facility Spotlight — renovated volleyball court (2026) */}
-          <div className="rounded-xl overflow-hidden shadow-2xl ring-1 ring-accent/30 bg-white/5 grid grid-cols-1 md:grid-cols-5 mb-10 md:mb-14 max-w-5xl mx-auto">
-            <div className="relative aspect-[4/3] md:aspect-auto md:col-span-3">
-              <Image
-                src="/images/zsa-volleyball-court-2026.jpeg"
-                alt="Newly renovated ZSA indoor volleyball court with blue sport flooring and floor-to-ceiling windows"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 640px"
-              />
-            </div>
-            <div className="md:col-span-2 p-6 md:p-10 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/40 mb-4 self-start">
-                <Zap className="w-4 h-4 text-accent" />
-                <span className="text-accent font-semibold text-xs tracking-widest uppercase">New for 2026</span>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3 leading-tight">
-                Renovated ZSA Volleyball Court
-              </h3>
-              <p className="text-white/80 leading-relaxed">
-                Our indoor volleyball court has been fully updated with a professional-grade sport floor, fresh competition lines, and natural light from wall-to-wall windows &mdash; a true home court for the boys&apos; and girls&apos; ZSA Eagles volleyball teams.
-              </p>
-            </div>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {facilities.map((facility, index) => {
               const IconComponent = facility.icon;
