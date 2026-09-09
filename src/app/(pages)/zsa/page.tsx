@@ -140,22 +140,22 @@ const facilities = [
 const coreValues = [
   {
     title: 'Discipline',
-    description: 'Commitment to training, improvement, and personal excellence through consistent effort',
+    description: 'Showing up prepared, every practice and every game. Consistent effort, not talent alone, earns a place on the field.',
     icon: Award,
   },
   {
     title: 'Teamwork',
-    description: 'Collaboration, communication, and mutual support both on and off the field',
+    description: 'Eagles play for each other. Communication, trust, and mutual support on the field, in the dorm, and in the classroom.',
     icon: Users,
   },
   {
     title: 'Excellence',
-    description: 'Pursuit of greatness in competition, sportsmanship, and personal development',
+    description: 'Chasing the highest standard in competition, in training, and in personal growth — and raising it again once it is reached.',
     icon: Trophy,
   },
   {
     title: 'Sportsmanship',
-    description: 'Respect for opponents, coaches, and the game—winning and losing with character',
+    description: 'Respect for opponents, officials, coaches, and the game. Winning with humility and losing with character.',
     icon: Heart,
   },
 ];
@@ -178,7 +178,10 @@ export default function SportsAcademyPage() {
               About ZSA Eagles
             </h2>
             <p className="text-lg text-text-brand-light leading-relaxed">
-              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and, from the 2026–27 school year, volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA emphasizes excellence, teamwork, and the pursuit of athletic greatness.
+              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and, from the 2026–27 school year, volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA is built on four core values &mdash; <strong className="text-navy">Discipline, Teamwork, Excellence, and Sportsmanship</strong> &mdash; that shape how our athletes train, compete, and carry themselves off the field.
+            </p>
+            <p className="text-base text-text-brand-light leading-relaxed">
+              <Link href="#core-values" className="text-accent font-semibold hover:underline">See how our core values shape the program &rarr;</Link>
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-4">
               <Badge variant="accent">Competitive Athletics</Badge>
@@ -196,7 +199,7 @@ export default function SportsAcademyPage() {
               Coaching Staff
             </h2>
             <p className="text-lg text-text-brand-light max-w-3xl mx-auto leading-relaxed">
-              ZSA student-athletes train under coaches who have led national teams on the Olympic stage and developed players at the top of Korean sport.
+              ZSA student-athletes train under coaches who have led national teams on the Olympic stage and developed players at the top of Korean sport &mdash; and who hold every Eagle to our core values of discipline, teamwork, excellence, and sportsmanship, on and off the field.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -548,11 +551,19 @@ export default function SportsAcademyPage() {
       </section>
 
       {/* Core Values */}
-      <section className="w-full bg-warm py-16 md:py-24 lg:py-32">
+      <section id="core-values" className="w-full bg-warm py-16 md:py-24 lg:py-32 scroll-mt-24">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy text-center mb-12 md:mb-16">
-            Our Core Values
-          </h2>
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy mb-5">
+              Our Core Values
+            </h2>
+            <p className="text-lg text-text-brand-light leading-relaxed mb-4">
+              Trophies are the result, not the goal. ZSA exists to shape servant leaders through sport, and four core values are the foundation of everything the academy does. They guide how our coaches run every practice, how our teams prepare for every tournament, and how each Eagle represents WZIS at home and abroad.
+            </p>
+            <p className="text-lg text-text-brand-light leading-relaxed">
+              An athlete who leaves ZSA with these values has succeeded &mdash; whatever the scoreboard says.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreValues.map((value, index) => {
               const IconComponent = value.icon;
@@ -571,13 +582,16 @@ export default function SportsAcademyPage() {
               );
             })}
           </div>
+          <p className="text-center text-navy font-serif italic text-xl md:text-2xl mt-12 md:mt-14">
+            &ldquo;Serving the World Through Sports&rdquo; &mdash; the ZSA mission
+          </p>
         </div>
       </section>
 
       {/* CTA Section */}
       <CTASection
         title="Join the ZSA Eagles"
-        subtitle="Become part of our competitive athletics program and develop excellence through sport, teamwork, and character. Apply today to start your athletic journey."
+        subtitle="Join a program where discipline, teamwork, excellence, and sportsmanship matter as much as the final score. Apply today to start your athletic journey."
         primaryButton={{ label: 'Explore Admissions', href: '/admissions' }}
         secondaryButton={{ label: 'Learn About Athletics', href: '/athletics' }}
       />
