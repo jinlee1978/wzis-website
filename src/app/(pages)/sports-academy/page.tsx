@@ -10,7 +10,7 @@ import Card from '@/components/ui/Card';
 export const metadata = {
   title: 'Zhongshi Sports Academy (ZSA) | WZIS Eagles',
   description:
-    'Zhongshi Sports Academy (ZSA) — competitive baseball and volleyball programs rooted in discipline, teamwork, and excellence. Training the next generation of student-athletes in Weihai, China.',
+    'Zhongshi Sports Academy (ZSA) — competitive baseball and volleyball programs led by Olympic and KBO-pedigree Korean coaches. Training the next generation of student-athletes in Weihai, China.',
   openGraph: {
     title: 'Zhongshi Sports Academy — ZSA Eagles',
     description:
@@ -68,6 +68,39 @@ const galleryPhotos = [
   { src: '/images/zsa-northern-division-2026-batter-swing.jpeg', alt: 'Eagles Batter Follows Through' },
   { src: '/images/zsa-northern-division-2026-team-huddle.jpeg', alt: 'Alex, Edward, and Jun in the Huddle' },
   { src: '/images/zsa-northern-division-2026-both-teams.jpeg', alt: 'Both Teams Together After the Final' },
+];
+
+const coachingStaff = [
+  {
+    name: 'Kim Cheol-yong',
+    koreanName: '김철용',
+    role: 'Head Coach, Volleyball',
+    headline: 'Three-time Olympic head coach of the Korea women\'s national team',
+    image: null as string | null,
+    imageAlt: '',
+    initials: 'KC',
+    credentials: [
+      'Head coach of the Korea women\'s national team (1993–2000, 2003–04), leading the team at three Olympic Games: Atlanta 1996, Sydney 2000, and Athens 2004',
+      '1994 Hiroshima Asian Games gold medal and 1998 Bangkok Asian Games silver medal',
+      'Built the Honam Oil dynasty: 92 consecutive wins (1991–95) and nine straight Superleague championships (1991–99)',
+      'Head coach of Peru\'s women\'s national team (2009–11) and chair of the Korea Volleyball Association\'s women\'s performance committee (2022–23)',
+    ],
+  },
+  {
+    name: 'Choi Jeong-jung',
+    koreanName: '최정중',
+    role: 'Head Coach, Baseball',
+    headline: 'Gunsan Commercial alumnus and 1996 KBO draft pick',
+    image: '/images/zsa-coach-choi-55.jpeg' as string | null,
+    imageAlt: 'Coach Choi, wearing number 55, watches from the field at the 2026 CTBC Cup Northern Division competition',
+    initials: 'CJ',
+    credentials: [
+      'Outfielder at Gunsan Commercial High School, one of Korea\'s most storied baseball programs',
+      'Selected by the Ssangbangwool Raiders in the 1996 KBO draft',
+      'Respected youth baseball coach in Incheon before joining ZSA on the recommendation of Korean baseball legend Lee Man-soo',
+      'Guided the Eagles to the 2026 CTBC Cup regional title and the Northern Division final in the program\'s first season',
+    ],
+  },
 ];
 
 const facilities = [
@@ -314,6 +347,63 @@ export default function SportsAcademyPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Coaching Staff */}
+      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">
+              Coaching Staff
+            </h2>
+            <p className="text-lg text-text-brand-light max-w-3xl mx-auto leading-relaxed">
+              ZSA student-athletes train under coaches who have led national teams on the Olympic stage and developed players at the top of Korean sport.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {coachingStaff.map((coach) => (
+              <div
+                key={coach.name}
+                className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white flex flex-col"
+              >
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-navy via-navy-mid to-navy-light">
+                  {coach.image ? (
+                    <Image
+                      src={coach.image}
+                      alt={coach.imageAlt}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 560px"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                      <span className="text-6xl md:text-7xl font-serif font-bold tracking-widest text-accent-soft">{coach.initials}</span>
+                      <span className="mt-3 text-sm uppercase tracking-widest text-white/60">{coach.koreanName}</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 mb-4 self-start">
+                    <Award className="w-4 h-4 text-accent" />
+                    <span className="text-accent font-semibold text-xs tracking-widest uppercase">{coach.role}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy leading-tight">
+                    {coach.name} <span className="text-lg md:text-xl font-sans font-normal text-text-brand-light">{coach.koreanName}</span>
+                  </h3>
+                  <p className="text-accent font-semibold mt-2 mb-5">{coach.headline}</p>
+                  <ul className="space-y-3 text-text-brand-light leading-relaxed">
+                    {coach.credentials.map((line) => (
+                      <li key={line} className="flex gap-3">
+                        <Trophy className="w-4 h-4 text-accent mt-1 shrink-0" />
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
