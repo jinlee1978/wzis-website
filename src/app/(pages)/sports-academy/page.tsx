@@ -21,10 +21,11 @@ export const metadata = {
 const sportsPrograms = [
   {
     title: 'Baseball',
-    description: '2026 3rd Jito Cup National Youth Baseball Regional Champion — undefeated, first place. Professional coaching, regional and national competition, and skills development from fundamentals to advanced play.',
+    description: '2026 3rd CTBC Cup National Youth Baseball Regional Champion — undefeated, first place — and Northern Division U18 runner-up. Professional coaching, regional and national competition, and skills development from fundamentals to advanced play.',
     details: [
-      '2026 3rd Jito Cup National Youth Baseball Regional Champion',
+      '2026 3rd CTBC Cup National Youth Baseball Regional Champion',
       'Undefeated tournament run',
+      '2026 CTBC Cup National Youth Baseball League — Northern Division Runner-Up (U18)',
       '2026 Weihai International Invitational — 2nd Place (18U Division)',
       'Professional coaching staff',
       'Mon/Wed/Fri training after school',
@@ -32,7 +33,7 @@ const sportsPrograms = [
     icon: Trophy,
     accentColor: 'from-blue-100 to-blue-50',
     image: '/images/zsa-jito-cup-champions-trophy.jpeg',
-    imageAlt: 'ZSA Eagles — 2026 3rd Jito Cup National Youth Baseball Regional Champion',
+    imageAlt: 'ZSA Eagles — 2026 3rd CTBC Cup National Youth Baseball Regional Champion',
   },
   {
     title: 'Volleyball',
@@ -51,7 +52,7 @@ const sportsPrograms = [
 ];
 
 const galleryPhotos = [
-  { src: '/images/zsa-jito-cup-opening-ceremony.jpeg', alt: 'Jito Cup Opening Ceremony' },
+  { src: '/images/zsa-jito-cup-opening-ceremony.jpeg', alt: 'CTBC Cup Opening Ceremony' },
   { src: '/images/zsa-jito-cup-team-blue-whale.jpeg', alt: 'ZSA Team at Blue Whale Field' },
   { src: '/images/zsa-jito-cup-coach-huddle.jpeg', alt: 'Coach Choi with the Team' },
   { src: '/images/zsa-jito-cup-pitcher.jpeg', alt: 'ZSA Pitcher in Action' },
@@ -142,7 +143,7 @@ export default function SportsAcademyPage() {
               <span className="text-accent font-bold text-sm tracking-widest uppercase">Regional Champion</span>
             </div>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 leading-tight">
-              2026 3rd Jito Cup<br className="hidden md:block" /> National Youth Baseball
+              2026 3rd CTBC Cup<br className="hidden md:block" /> National Youth Baseball
             </h2>
             <p className="text-xl md:text-2xl text-white/90 font-serif italic mb-2">
               Regional Champion
@@ -151,20 +152,24 @@ export default function SportsAcademyPage() {
               First Place &middot; Undefeated
             </p>
             <p className="text-base md:text-lg text-white/80 mt-6 max-w-2xl mx-auto leading-relaxed">
-              The ZSA Eagles captured the title with an undefeated run, earning first place as the 2026 3rd Jito Cup National Youth Baseball Regional Champion — a defining moment for our program.
+              The ZSA Eagles captured the title with an undefeated run, earning first place as the 2026 3rd CTBC Cup National Youth Baseball Regional Champion — a defining moment for our program.
             </p>
           </div>
-          {/* Stat row — May 2026 tournament record */}
-          <div className="grid grid-cols-3 gap-2 md:gap-6 max-w-3xl mx-auto mb-12 md:mb-14 pt-8 border-t border-accent/20">
+          {/* Stat row — 2026 season record */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-2 md:gap-x-6 max-w-4xl mx-auto mb-12 md:mb-14 pt-8 border-t border-accent/20">
             <div className="text-center">
               <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">8&ndash;1</p>
               <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">May 2026 Record</p>
             </div>
-            <div className="text-center border-l border-r border-accent/20 px-2">
+            <div className="text-center border-l border-accent/20 px-2">
               <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">1st</p>
-              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">Jito Cup Regional</p>
+              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">CTBC Cup Regional</p>
             </div>
-            <div className="text-center">
+            <div className="text-center md:border-l border-accent/20 px-2">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">2nd</p>
+              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">CTBC Cup Northern Division U18</p>
+            </div>
+            <div className="text-center border-l border-accent/20 px-2">
               <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">2nd</p>
               <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">Weihai Int&apos;l 18U</p>
             </div>
@@ -184,9 +189,32 @@ export default function SportsAcademyPage() {
         </div>
       </section>
 
-      {/* Recent Tournament Result */}
+      {/* Recent Tournament Results */}
       <section className="w-full bg-white py-16 md:py-20">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl space-y-8">
+          <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 grid grid-cols-1 md:grid-cols-5">
+            <div className="relative aspect-[4/3] md:aspect-auto md:col-span-2">
+              <Image
+                src="/images/zsa-jito-cup-catcher-team.jpeg"
+                alt="ZSA Eagles players gather on the infield between innings"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 480px"
+              />
+            </div>
+            <div className="md:col-span-3 p-6 md:p-10 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 mb-4 self-start">
+                <Award className="w-4 h-4 text-accent" />
+                <span className="text-accent font-semibold text-xs tracking-widest uppercase">September 2026 &middot; Runner-Up</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy mb-3 leading-tight">
+                2026 CTBC Cup National Youth Baseball League &mdash; Northern Division (U18)
+              </h3>
+              <p className="text-text-brand-light leading-relaxed">
+                Building on their regional title in May, the ZSA Eagles took the field at the league&apos;s Northern Division competition in Shijiazhuang, Hebei &mdash; organized by the China Baseball Association and hosted by the Shijiazhuang Baseball Association. Competing in the U18 division, the Eagles won through to the championship final and finished as runners-up among the top youth programs in northern China.
+              </p>
+            </div>
+          </div>
           <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 grid grid-cols-1 md:grid-cols-5">
             <div className="relative aspect-[4/3] md:aspect-auto md:col-span-2">
               <Image
@@ -206,7 +234,7 @@ export default function SportsAcademyPage() {
                 2026 China Weihai International Baseball &amp; Softball Invitational
               </h3>
               <p className="text-text-brand-light leading-relaxed">
-                Just weeks after the Jito Cup title, ZSA&apos;s 9th-grade Eagles competed up in the 18U division and battled to the championship final, falling 5&ndash;6 in a tight closing game to take 2nd place &mdash; a hard-earned result against older competition.
+                Just weeks after the CTBC Cup regional title, ZSA&apos;s 9th-grade Eagles competed up in the 18U division and battled to the championship final, falling 5&ndash;6 in a tight closing game to take 2nd place &mdash; a hard-earned result against older competition.
               </p>
             </div>
           </div>

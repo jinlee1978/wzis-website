@@ -381,7 +381,7 @@ export default function HomePage() {
                 </span>
               </div>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">
-                2026 3rd Jito Cup National Youth Baseball Regional Champion
+                2026 3rd CTBC Cup National Youth Baseball Regional Champion
               </h2>
               <p className="text-xl md:text-2xl text-accent font-bold tracking-wide mb-5">
                 First Place &middot; Undefeated
@@ -851,7 +851,7 @@ export default function HomePage() {
                     Sports Academy (ZSA)
                   </h4>
                   <p className="text-sm text-gray-600 mt-2">
-                    Jito Cup baseball champions — competitive baseball & volleyball serving the world through sports.
+                    CTBC Cup regional champions and 2026 Northern Division runners-up — competitive baseball & volleyball serving the world through sports.
                   </p>
                 </Link>
                 <Link href="/dormitory" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">

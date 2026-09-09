@@ -22,7 +22,7 @@ const competitiveSports = [
   },
   {
     title: 'Baseball',
-    description: 'Boys compete through the Zhongshi Sports Academy (ZSA), building skills and sportsmanship on the diamond.',
+    description: 'Boys compete through the Zhongshi Sports Academy (ZSA) — 2026 CTBC Cup National Youth Baseball regional champions and Northern Division U18 runners-up.',
     icon: Target,
   },
   {
