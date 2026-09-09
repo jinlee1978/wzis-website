@@ -468,9 +468,12 @@ export default function SportsAcademyPage() {
       {/* Facilities */}
       <section className="w-full bg-navy py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white text-center mb-12 md:mb-16">
-            World-Class Facilities
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white text-center mb-4">
+            Our Facilities
           </h2>
+          <p className="text-lg text-white/80 text-center max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
+            Well-kept, purpose-built spaces on campus where our student-athletes train year-round.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {facilities.map((facility, index) => {
               const IconComponent = facility.icon;
