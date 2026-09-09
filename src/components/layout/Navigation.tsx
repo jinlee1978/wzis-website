@@ -42,7 +42,7 @@ export default function Navigation() {
 
   const campusLifeSubLinks = [
     { label: t('subLinks.athletics'), href: '/athletics' },
-    { label: t('subLinks.sportsAcademy'), href: '/sports-academy' },
+    { label: t('subLinks.sportsAcademy'), href: '/zsa' },
     { label: t('subLinks.dormitory'), href: '/dormitory' },
     { label: t('subLinks.music'), href: '/music' },
     { label: t('subLinks.events'), href: '/events' },

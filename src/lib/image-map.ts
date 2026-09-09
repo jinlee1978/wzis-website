@@ -23,7 +23,7 @@ export const IMAGE_MAP: Record<string, string[]> = {
   dormitory: ['/images/dormitory-hero.webp', '/images/dorm-room.webp', '/images/dorm-common.webp'],
   events: ['/images/events-hero.webp'],
   music: ['/images/music-hero.webp', '/images/music-performance.webp', '/images/music-practice.webp'],
-  'sports-academy': ['/images/sports-academy-hero.webp', '/images/baseball-field.webp', '/images/volleyball-court.webp'],
+  zsa: ['/images/sports-academy-hero.webp', '/images/baseball-field.webp', '/images/volleyball-court.webp'],
   'college-acceptance': ['/images/college-hero.webp', '/images/graduation.webp'],
   accreditation: ['/images/accreditation-hero.webp'],
   cgd: ['/images/cgd-hero.webp'],

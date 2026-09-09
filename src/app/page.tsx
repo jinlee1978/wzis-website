@@ -389,7 +389,7 @@ export default function HomePage() {
               <p className="text-white/80 text-base md:text-lg leading-relaxed mb-7 max-w-xl">
                 The ZSA Eagles captured the title with an undefeated tournament run — a defining moment for our program.
               </p>
-              <Button href="/sports-academy" variant="primary" size="lg">
+              <Button href="/zsa" variant="primary" size="lg">
                 See the Championship Story
               </Button>
             </div>
@@ -842,7 +842,7 @@ export default function HomePage() {
 
               {/* ZSA, Dormitory & Music quick links */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeUp" style={{ animationDelay: '0.2s' }}>
-                <Link href="/sports-academy" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                <Link href="/zsa" className="group bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-glow text-accent text-[10px] font-bold tracking-widest uppercase mb-2">
                     <Trophy className="w-3 h-3" />
                     2026 Regional Champion

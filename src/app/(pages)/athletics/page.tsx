@@ -167,7 +167,7 @@ export default function AthleticsPage() {
         title="Join the Eagles"
         subtitle="Be part of our athletic community and discover your potential"
         primaryButton={{ label: 'Admissions', href: '/admissions' }}
-        secondaryButton={{ label: 'Sports Academy', href: '/sports-academy' }}
+        secondaryButton={{ label: 'Sports Academy', href: '/zsa' }}
       />
     </main>
   );
