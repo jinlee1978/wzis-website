@@ -163,11 +163,6 @@ const coreValues = [
     description: 'Athletes first, students always. ZSA develops mind, body, and spirit, with the classroom and the field working together.',
     icon: Smile,
   },
-  {
-    title: 'Service',
-    description: 'Serving the World Through Sports — playing for your teammates, representing WZIS, and giving back to the community.',
-    icon: Users,
-  },
 ];
 
 export default function SportsAcademyPage() {
@@ -188,7 +183,7 @@ export default function SportsAcademyPage() {
               About ZSA Eagles
             </h2>
             <p className="text-lg text-text-brand-light leading-relaxed">
-              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and, from the 2026–27 school year, volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA is built on the same six core values as WZIS &mdash; <strong className="text-navy">Respect, Wisdom, Self-Expression, Responsibility, Holistic Education, and Service</strong> &mdash; and they shape how our athletes train, compete, and carry themselves off the field.
+              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and, from the 2026–27 school year, volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA is built on the same five core values as WZIS &mdash; <strong className="text-navy">Respect, Wisdom, Self-Expression, Responsibility, and Holistic Education</strong> &mdash; and they shape how our athletes train, compete, and carry themselves off the field.
             </p>
             <p className="text-base text-text-brand-light leading-relaxed">
               <Link href="#core-values" className="text-accent font-semibold hover:underline">See how our core values shape the program &rarr;</Link>
@@ -568,7 +563,7 @@ export default function SportsAcademyPage() {
               Our Core Values
             </h2>
             <p className="text-lg text-text-brand-light leading-relaxed mb-4">
-              Trophies are the result, not the goal. ZSA exists to shape servant leaders through sport, and it stands on the same six core values as the rest of WZIS. The values that guide our classrooms guide our dugouts and courts: they shape how our coaches run every practice, how our teams prepare for every tournament, and how each Eagle represents WZIS at home and abroad.
+              Trophies are the result, not the goal. ZSA exists to shape servant leaders through sport, and it stands on the same five core values as the rest of WZIS. The values that guide our classrooms guide our dugouts and courts: they shape how our coaches run every practice, how our teams prepare for every tournament, and how each Eagle represents WZIS at home and abroad.
             </p>
             <p className="text-lg text-text-brand-light leading-relaxed">
               An athlete who leaves ZSA with these values has succeeded &mdash; whatever the scoreboard says.

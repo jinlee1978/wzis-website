@@ -26,7 +26,6 @@ export default function AboutPage() {
     { icon: Globe, label: 'Self-Expression', description: 'Encouraging authentic voice and creativity' },
     { icon: Shield, label: 'Responsibility', description: 'Empowering students to own their actions and growth' },
     { icon: Smile, label: 'Holistic Education', description: 'Nurturing mind, body, and spirit development' },
-    { icon: Users, label: 'Service', description: 'Leading with compassion and community impact' },
   ];
 
   const leadership = [
@@ -101,7 +100,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  A servant leader uses their talents and abilities to benefit others. Our approach to character development centers around six core values: respect, wisdom, self-expression, responsibility, holistic education, and service.
+                  A servant leader uses their talents and abilities to benefit others. Our approach to character development centers around five core values: respect, wisdom, self-expression, responsibility, and holistic education.
                 </p>
 
                 <p>
