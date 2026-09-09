@@ -62,6 +62,11 @@ const galleryPhotos = [
   { src: '/images/zsa-jito-cup-team-circle.jpeg', alt: 'Team Circle' },
   { src: '/images/volleyball-huddle.jpeg', alt: 'Volleyball Huddle' },
   { src: '/images/volleyball-girls-coach.jpeg', alt: 'Girls Volleyball' },
+  { src: '/images/zsa-northern-division-2026-departure.jpeg', alt: 'Departing for Shijiazhuang — CTBC Cup Northern Division' },
+  { src: '/images/zsa-northern-division-2026-opening-lineup.jpeg', alt: 'Opening Lineup at Home Plate' },
+  { src: '/images/zsa-northern-division-2026-batter-swing.jpeg', alt: 'Eagles Batter Follows Through' },
+  { src: '/images/zsa-northern-division-2026-team-huddle.jpeg', alt: 'Alex, Edward, and Jun in the Huddle' },
+  { src: '/images/zsa-northern-division-2026-both-teams.jpeg', alt: 'Both Teams Together After the Final' },
 ];
 
 const facilities = [
@@ -195,8 +200,8 @@ export default function SportsAcademyPage() {
           <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 grid grid-cols-1 md:grid-cols-5">
             <div className="relative aspect-[4/3] md:aspect-auto md:col-span-2">
               <Image
-                src="/images/zsa-northern-division-2026-departure.jpeg"
-                alt="ZSA Eagles and Coach Choi at the station, departing for the 2026 CTBC Cup Northern Division competition in Shijiazhuang"
+                src="/images/zsa-northern-division-2026-pitcher-aiden.jpeg"
+                alt="ZSA Eagles pitcher Aiden delivers from the mound at the 2026 CTBC Cup Northern Division competition in Shijiazhuang"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 480px"
