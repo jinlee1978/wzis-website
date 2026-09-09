@@ -195,8 +195,8 @@ export default function SportsAcademyPage() {
           <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 grid grid-cols-1 md:grid-cols-5">
             <div className="relative aspect-[4/3] md:aspect-auto md:col-span-2">
               <Image
-                src="/images/zsa-jito-cup-catcher-team.jpeg"
-                alt="ZSA Eagles players gather on the infield between innings"
+                src="/images/zsa-northern-division-2026-departure.jpeg"
+                alt="ZSA Eagles and Coach Choi at the station, departing for the 2026 CTBC Cup Northern Division competition in Shijiazhuang"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 480px"
