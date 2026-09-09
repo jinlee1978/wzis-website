@@ -241,6 +241,26 @@ export default function SportsAcademyPage() {
               </div>
             ))}
           </div>
+          {/* Coach demo video — Coach Kim's first session */}
+          <div className="mt-12 md:mt-16 max-w-4xl mx-auto">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy mb-2">On the Court with Coach Kim</h3>
+              <p className="text-text-brand-light leading-relaxed">
+                A look inside Coach Kim Cheol-yong&apos;s first training session with the ZSA Eagles volleyball team.
+              </p>
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video ring-1 ring-navy/10">
+              <video
+                src="/images/zsa-coach-kim-first-session.mp4"
+                poster="/images/zsa-coach-kim-first-session-poster.jpeg"
+                className="w-full h-full object-cover"
+                controls
+                muted
+                playsInline
+                preload="metadata"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
