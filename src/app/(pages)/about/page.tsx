@@ -101,7 +101,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  A servant leader uses their talents and abilities to benefit others. Our approach to character development centers around five core values: respect, wisdom, self-expression, responsibility, and holistic education.
+                  A servant leader uses their talents and abilities to benefit others. Our approach to character development centers around six core values: respect, wisdom, self-expression, responsibility, holistic education, and service.
                 </p>
 
                 <p>

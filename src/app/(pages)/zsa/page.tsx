@@ -26,7 +26,7 @@ const sportsPrograms = [
       '2026 3rd CTBC Cup National Youth Baseball Regional Champion',
       'Undefeated tournament run',
       '2026 CTBC Cup National Youth Baseball League — Northern Division Runner-Up (U18)',
-      '2026 Weihai International Invitational — 2nd Place (18U Division)',
+      '2026 Weihai International Invitational — 2nd Place (U18 Division)',
       '13–3 overall record across the 2026 season',
       'Professional coaching staff',
       'Mon/Wed/Fri training after school',
@@ -319,7 +319,7 @@ export default function SportsAcademyPage() {
             </div>
             <div className="text-center border-l border-accent/20 px-2">
               <p className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-accent mb-1 leading-none">2nd</p>
-              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">Weihai Int&apos;l 18U</p>
+              <p className="text-[10px] md:text-xs text-white/70 uppercase tracking-widest">Weihai Int&apos;l U18</p>
             </div>
           </div>
           <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video max-w-4xl mx-auto ring-1 ring-accent/30">
@@ -382,7 +382,7 @@ export default function SportsAcademyPage() {
                 2026 China Weihai International Baseball &amp; Softball Invitational
               </h3>
               <p className="text-text-brand-light leading-relaxed">
-                Just weeks after the CTBC Cup regional title, ZSA&apos;s 9th-grade Eagles competed up in the 18U division and battled to the championship final, falling 5&ndash;6 in a tight closing game to take 2nd place &mdash; a hard-earned result against older competition.
+                Just weeks after the CTBC Cup regional title, ZSA&apos;s 9th-grade Eagles competed up in the U18 division and battled to the championship final, falling 5&ndash;6 in a tight closing game to take 2nd place &mdash; a hard-earned result against older competition.
               </p>
             </div>
           </div>
