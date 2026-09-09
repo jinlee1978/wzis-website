@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heart, BookOpen, Globe, Shield, Users, Smile } from 'lucide-react';
+import { Heart, BookOpen, Globe, Shield, Smile } from 'lucide-react';
 import HeroSection from '@/components/sections/HeroSection';
 import CTASection from '@/components/sections/CTASection';
 import Badge from '@/components/ui/Badge';
