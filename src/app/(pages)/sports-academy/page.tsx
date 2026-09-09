@@ -33,23 +33,25 @@ const sportsPrograms = [
     ],
     icon: Trophy,
     accentColor: 'from-blue-100 to-blue-50',
-    image: '/images/zsa-jito-cup-champions-trophy.jpeg',
+    image: '/images/zsa-jito-cup-champions-trophy.jpeg' as string | null,
     imageAlt: 'ZSA Eagles — 2026 3rd CTBC Cup National Youth Baseball Regional Champion',
+    launchLabel: '',
   },
   {
     title: 'Volleyball',
-    description: 'Competitive team training with boys and girls teams. Lingang Tournament champions bringing excellence to the court.',
+    description: 'Launching in the 2026–27 school year under Head Coach Kim Cheol-yong, three-time Olympic head coach of the Korea women\'s national team. Boys and girls teams train on ZSA\'s newly renovated home court.',
     details: [
+      'New program — first season 2026–27',
+      'Head Coach Kim Cheol-yong (joined August 2026)',
       'Boys and girls teams',
       'Newly renovated indoor home court (2026)',
       'Tue/Thu training after school',
-      'Lingang Tournament champions',
-      'Competitive tournaments',
     ],
     icon: Users,
     accentColor: 'from-orange-100 to-orange-50',
-    image: '/images/volleyball-match.jpeg',
-    imageAlt: 'Volleyball Match',
+    image: null as string | null,
+    imageAlt: '',
+    launchLabel: 'Launching 2026–27',
   },
 ];
 
@@ -62,8 +64,6 @@ const galleryPhotos = [
   { src: '/images/zsa-jito-cup-batter-jun.jpeg', alt: 'Jun at the Plate' },
   { src: '/images/zsa-jito-cup-team-handshake.jpeg', alt: 'Team Handshake' },
   { src: '/images/zsa-jito-cup-team-circle.jpeg', alt: 'Team Circle' },
-  { src: '/images/volleyball-huddle.jpeg', alt: 'Volleyball Huddle' },
-  { src: '/images/volleyball-girls-coach.jpeg', alt: 'Girls Volleyball' },
   { src: '/images/zsa-northern-division-2026-departure.jpeg', alt: 'Departing for Shijiazhuang — CTBC Cup Northern Division' },
   { src: '/images/zsa-northern-division-2026-opening-lineup.jpeg', alt: 'Opening Lineup at Home Plate' },
   { src: '/images/zsa-northern-division-2026-batter-swing.jpeg', alt: 'Eagles Batter Follows Through' },
@@ -178,7 +178,7 @@ export default function SportsAcademyPage() {
               About ZSA Eagles
             </h2>
             <p className="text-lg text-text-brand-light leading-relaxed">
-              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA emphasizes excellence, teamwork, and the pursuit of athletic greatness.
+              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and, from the 2026–27 school year, volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA emphasizes excellence, teamwork, and the pursuit of athletic greatness.
             </p>
             <div className="flex flex-wrap justify-center gap-3 pt-4">
               <Badge variant="accent">Competitive Athletics</Badge>
@@ -390,13 +390,21 @@ export default function SportsAcademyPage() {
                   key={index}
                   className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white"
                 >
-                  <div className="relative h-56 md:h-64">
-                    <Image
-                      src={program.image}
-                      alt={program.imageAlt}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative h-56 md:h-64 bg-gradient-to-br from-navy via-navy-mid to-navy-light">
+                    {program.image ? (
+                      <Image
+                        src={program.image}
+                        alt={program.imageAlt}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                        <Users className="w-10 h-10 text-accent-soft mb-3" />
+                        <span className="text-2xl md:text-3xl font-serif font-bold tracking-wide">{program.launchLabel}</span>
+                        <span className="mt-2 text-xs uppercase tracking-widest text-white/60">ZSA Eagles Volleyball</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-4">
@@ -441,7 +449,7 @@ export default function SportsAcademyPage() {
               A New Home Court for ZSA Volleyball
             </h2>
             <p className="text-lg text-text-brand-light max-w-3xl mx-auto leading-relaxed">
-              Our indoor volleyball court has been fully renovated with a professional-grade sport floor, fresh competition lines, and natural light from wall-to-wall windows &mdash; the home court where Coach Kim Cheol-yong trains the boys&apos; and girls&apos; ZSA Eagles.
+              Our indoor volleyball court has been fully renovated with a professional-grade sport floor, fresh competition lines, and natural light from wall-to-wall windows &mdash; the home court where Coach Kim Cheol-yong is building the boys&apos; and girls&apos; ZSA Eagles volleyball program from its first season.
             </p>
           </div>
           <div className="relative aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden shadow-2xl ring-1 ring-navy/10">

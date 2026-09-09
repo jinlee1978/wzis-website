@@ -17,7 +17,7 @@ export const metadata = {
 const competitiveSports = [
   {
     title: 'Volleyball',
-    description: 'Boys and girls ZSA Eagles compete in regional and international tournaments, including South Korea. Lingang Volleyball Tournament champions.',
+    description: 'WZFS Eagles boys and girls compete in regional and international tournaments, including South Korea. Lingang Volleyball Tournament champions.',
     icon: Trophy,
   },
   {
