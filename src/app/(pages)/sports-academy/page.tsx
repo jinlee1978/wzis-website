@@ -211,7 +211,7 @@ export default function SportsAcademyPage() {
                 2026 CTBC Cup National Youth Baseball League &mdash; Northern Division (U18)
               </h3>
               <p className="text-text-brand-light leading-relaxed">
-                Building on their regional title in May, the ZSA Eagles took the field at the league&apos;s Northern Division competition in Shijiazhuang, Hebei &mdash; organized by the China Baseball Association and hosted by the Shijiazhuang Baseball Association. Competing in the U18 division, the Eagles won through to the championship final and finished as runners-up among the top youth programs in northern China.
+                Building on their regional title in May, the ZSA Eagles took the field at the league&apos;s Northern Division competition in Shijiazhuang, Hebei &mdash; organized by the China Baseball Association and hosted by the Shijiazhuang Baseball Association. Competing in the U18 division, the Eagles went 2&ndash;1, winning through to the championship final before falling 5&ndash;3 to finish as runners-up among the top youth programs in northern China.
               </p>
             </div>
           </div>
