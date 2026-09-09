@@ -27,7 +27,6 @@ const sportsPrograms = [
       'Undefeated tournament run',
       '2026 CTBC Cup National Youth Baseball League — Northern Division Runner-Up (U18)',
       '2026 Weihai International Invitational — 2nd Place (18U Division)',
-      '2026 tournament play in South Korea — 3–1 record',
       '13–3 overall record across the 2026 season',
       'Professional coaching staff',
       'Mon/Wed/Fri training after school',
