@@ -82,8 +82,8 @@ const facilities = [
     icon: Zap,
   },
   {
-    title: 'Volleyball Courts',
-    description: 'Professional-grade courts for competition and practice',
+    title: 'Volleyball Court',
+    description: 'Newly renovated in 2026 — professional sport flooring and competition lines',
     icon: Users,
   },
   {
@@ -373,6 +373,30 @@ export default function SportsAcademyPage() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white text-center mb-12 md:mb-16">
             World-Class Facilities
           </h2>
+          {/* Facility Spotlight — renovated volleyball court (2026) */}
+          <div className="rounded-xl overflow-hidden shadow-2xl ring-1 ring-accent/30 bg-white/5 grid grid-cols-1 md:grid-cols-5 mb-10 md:mb-14 max-w-5xl mx-auto">
+            <div className="relative aspect-[4/3] md:aspect-auto md:col-span-3">
+              <Image
+                src="/images/zsa-volleyball-court-2026.jpeg"
+                alt="Newly renovated ZSA indoor volleyball court with blue sport flooring and floor-to-ceiling windows"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 640px"
+              />
+            </div>
+            <div className="md:col-span-2 p-6 md:p-10 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/40 mb-4 self-start">
+                <Zap className="w-4 h-4 text-accent" />
+                <span className="text-accent font-semibold text-xs tracking-widest uppercase">New for 2026</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3 leading-tight">
+                Renovated ZSA Volleyball Court
+              </h3>
+              <p className="text-white/80 leading-relaxed">
+                Our indoor volleyball court has been fully updated with a professional-grade sport floor, fresh competition lines, and natural light from wall-to-wall windows &mdash; a true home court for the boys&apos; and girls&apos; ZSA Eagles volleyball teams.
+              </p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {facilities.map((facility, index) => {
               const IconComponent = facility.icon;
