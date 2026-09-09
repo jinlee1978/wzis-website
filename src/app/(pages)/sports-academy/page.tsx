@@ -76,8 +76,8 @@ const coachingStaff = [
     koreanName: '김철용',
     role: 'Head Coach, Volleyball',
     headline: 'Three-time Olympic head coach of the Korea women\'s national team',
-    image: null as string | null,
-    imageAlt: '',
+    image: '/images/zsa-coach-kim-training.jpeg' as string | null,
+    imageAlt: 'Coach Kim Cheol-yong runs a ZSA volleyball training session at the net in the school auditorium',
     initials: 'KC',
     credentials: [
       'Head coach of the Korea women\'s national team (1993–2000, 2003–04), leading the team at three Olympic Games: Atlanta 1996, Sydney 2000, and Athens 2004',
