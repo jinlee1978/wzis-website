@@ -169,6 +169,81 @@ export default function SportsAcademyPage() {
         subtitle="ZSA Eagles — competitive athletics rooted in discipline, teamwork, and excellence"
       />
 
+      {/* Academy Overview */}
+      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy">
+              About ZSA Eagles
+            </h2>
+            <p className="text-lg text-text-brand-light leading-relaxed">
+              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA emphasizes excellence, teamwork, and the pursuit of athletic greatness.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 pt-4">
+              <Badge variant="accent">Competitive Athletics</Badge>
+              <Badge variant="navy">ZSA Eagles</Badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Coaching Staff */}
+      <section className="w-full bg-warm py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">
+              Coaching Staff
+            </h2>
+            <p className="text-lg text-text-brand-light max-w-3xl mx-auto leading-relaxed">
+              ZSA student-athletes train under coaches who have led national teams on the Olympic stage and developed players at the top of Korean sport.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {coachingStaff.map((coach) => (
+              <div
+                key={coach.name}
+                className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white flex flex-col"
+              >
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-navy via-navy-mid to-navy-light">
+                  {coach.image ? (
+                    <Image
+                      src={coach.image}
+                      alt={coach.imageAlt}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 560px"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                      <span className="text-6xl md:text-7xl font-serif font-bold tracking-widest text-accent-soft">{coach.initials}</span>
+                      <span className="mt-3 text-sm uppercase tracking-widest text-white/60">{coach.koreanName}</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 mb-4 self-start">
+                    <Award className="w-4 h-4 text-accent" />
+                    <span className="text-accent font-semibold text-xs tracking-widest uppercase">{coach.role}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy leading-tight">
+                    {coach.name} <span className="text-lg md:text-xl font-sans font-normal text-text-brand-light">{coach.koreanName}</span>
+                  </h3>
+                  <p className="text-accent font-semibold mt-2 mb-5">{coach.headline}</p>
+                  <ul className="space-y-3 text-text-brand-light leading-relaxed">
+                    {coach.credentials.map((line) => (
+                      <li key={line} className="flex gap-3">
+                        <Trophy className="w-4 h-4 text-accent mt-1 shrink-0" />
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Championship Spotlight */}
       <section className="w-full bg-gradient-to-br from-navy via-navy-mid to-navy py-16 md:py-24 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -280,24 +355,6 @@ export default function SportsAcademyPage() {
         </div>
       </section>
 
-      {/* Academy Overview */}
-      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy">
-              About ZSA Eagles
-            </h2>
-            <p className="text-lg text-text-brand-light leading-relaxed">
-              The Zhongshi Sports Academy (ZSA) is WZIS's competitive athletics program, providing professional coaching and training in baseball and volleyball. Our Eagles compete in regional and national tournaments, building champions both in sport and in character. Open to students across all grades, ZSA emphasizes excellence, teamwork, and the pursuit of athletic greatness.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 pt-4">
-              <Badge variant="accent">Competitive Athletics</Badge>
-              <Badge variant="navy">ZSA Eagles</Badge>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Sports Programs */}
       <section className="w-full bg-warm py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
@@ -347,112 +404,6 @@ export default function SportsAcademyPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Coaching Staff */}
-      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">
-              Coaching Staff
-            </h2>
-            <p className="text-lg text-text-brand-light max-w-3xl mx-auto leading-relaxed">
-              ZSA student-athletes train under coaches who have led national teams on the Olympic stage and developed players at the top of Korean sport.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {coachingStaff.map((coach) => (
-              <div
-                key={coach.name}
-                className="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white flex flex-col"
-              >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-navy via-navy-mid to-navy-light">
-                  {coach.image ? (
-                    <Image
-                      src={coach.image}
-                      alt={coach.imageAlt}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, 560px"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                      <span className="text-6xl md:text-7xl font-serif font-bold tracking-widest text-accent-soft">{coach.initials}</span>
-                      <span className="mt-3 text-sm uppercase tracking-widest text-white/60">{coach.koreanName}</span>
-                    </div>
-                  )}
-                </div>
-                <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 mb-4 self-start">
-                    <Award className="w-4 h-4 text-accent" />
-                    <span className="text-accent font-semibold text-xs tracking-widest uppercase">{coach.role}</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy leading-tight">
-                    {coach.name} <span className="text-lg md:text-xl font-sans font-normal text-text-brand-light">{coach.koreanName}</span>
-                  </h3>
-                  <p className="text-accent font-semibold mt-2 mb-5">{coach.headline}</p>
-                  <ul className="space-y-3 text-text-brand-light leading-relaxed">
-                    {coach.credentials.map((line) => (
-                      <li key={line} className="flex gap-3">
-                        <Trophy className="w-4 h-4 text-accent mt-1 shrink-0" />
-                        <span>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Program Gallery */}
-      <section className="w-full bg-accent-soft py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy text-center mb-12 md:mb-16">
-            ZSA Eagles in Action
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {galleryPhotos.map((photo, i) => (
-              <div
-                key={i}
-                className="relative h-48 md:h-56 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group"
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Junior Program */}
-      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-          <div className="rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-accent-soft to-white border border-accent/20">
-            <div className="h-1 bg-accent" />
-            <div className="p-8 md:p-12">
-              <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-8 h-8 text-accent" />
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy">
-                  Junior Athletics &amp; Sports Day
-                </h2>
-              </div>
-              <p className="text-text-brand-light text-lg leading-relaxed mb-6">
-                Our junior athletics programs and annual Sports Day introduce primary students to the fundamentals of sports and physical activity. Through fun, engaging instruction, young athletes build confidence, coordination, and a love for movement that lasts a lifetime.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Badge variant="accent">Youth Development</Badge>
-                <Badge variant="navy">Fundamentals</Badge>
-                <Badge variant="navy">Fun & Community</Badge>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -511,8 +462,57 @@ export default function SportsAcademyPage() {
         </div>
       </section>
 
-      {/* Core Values */}
+      {/* Program Gallery */}
+      <section className="w-full bg-accent-soft py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy text-center mb-12 md:mb-16">
+            ZSA Eagles in Action
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {galleryPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className="relative h-48 md:h-56 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Junior Program */}
       <section className="w-full bg-white py-16 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+          <div className="rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-accent-soft to-white border border-accent/20">
+            <div className="h-1 bg-accent" />
+            <div className="p-8 md:p-12">
+              <div className="flex items-center gap-3 mb-4">
+                <Zap className="w-8 h-8 text-accent" />
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy">
+                  Junior Athletics &amp; Sports Day
+                </h2>
+              </div>
+              <p className="text-text-brand-light text-lg leading-relaxed mb-6">
+                Our junior athletics programs and annual Sports Day introduce primary students to the fundamentals of sports and physical activity. Through fun, engaging instruction, young athletes build confidence, coordination, and a love for movement that lasts a lifetime.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Badge variant="accent">Youth Development</Badge>
+                <Badge variant="navy">Fundamentals</Badge>
+                <Badge variant="navy">Fun & Community</Badge>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="w-full bg-warm py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy text-center mb-12 md:mb-16">
             Our Core Values
