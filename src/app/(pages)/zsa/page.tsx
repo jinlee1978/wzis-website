@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Trophy, Users, Award, Heart, Zap, Globe, BookOpen, Shield, Smile } from 'lucide-react';
@@ -6,16 +7,83 @@ import CTASection from '@/components/sections/CTASection';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
+import { breadcrumbSchema } from '@/lib/schemas';
 
-export const metadata = {
-  title: 'Zhongshi Sports Academy (ZSA) | WZIS Eagles',
+export const metadata: Metadata = {
+  title: 'Zhongshi Sports Academy (ZSA) | Weihai Baseball & Volleyball | WZIS',
   description:
-    'Zhongshi Sports Academy (ZSA) — competitive baseball and volleyball programs led by Olympic and KBO-pedigree Korean coaches. Training the next generation of student-athletes in Weihai, China.',
-  openGraph: {
-    title: 'Zhongshi Sports Academy — ZSA Eagles',
-    description:
-      'Competitive baseball and volleyball programs building discipline, teamwork, and excellence in Weihai, China.',
+    'Discover Zhongshi Sports Academy (ZSA), the athletics arm of WZIS/WZFS in Weihai, Shandong, China. Home of the ZSA Eagles baseball program and the new volleyball program launching in 2026–27.',
+  keywords: [
+    'Zhongshi Sports Academy',
+    'ZSA Weihai',
+    'ZSA Eagles baseball',
+    'Weihai international school athletics',
+    'Weihai international school baseball',
+    'Weihai international school volleyball',
+    'WZIS athletics',
+    'WZFS athletics',
+    '中实体育',
+  ],
+  alternates: {
+    canonical: '/sports-academy',
   },
+  openGraph: {
+    type: 'website',
+    url: 'https://wzis.org/sports-academy',
+    title: 'Zhongshi Sports Academy (ZSA) | WZIS Eagles Athletics',
+    description:
+      'ZSA Eagles baseball and volleyball at Weihai Zhongshi International School (WZIS/WZFS), including coaching, facilities, and recent competition results.',
+    images: [
+      {
+        url: '/images/zsa-jito-cup-champions-trophy.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Zhongshi Sports Academy (ZSA) Eagles celebrating the 2026 CTBC Cup regional baseball championship',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zhongshi Sports Academy (ZSA) | WZIS Eagles Athletics',
+    description:
+      'Explore ZSA Eagles baseball and volleyball in Weihai, China — the competitive athletics program of WZIS/WZFS.',
+    images: ['/images/zsa-jito-cup-champions-trophy.jpeg'],
+  },
+};
+
+const sportsAcademySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsOrganization',
+  '@id': 'https://wzis.org/sports-academy#sports-organization',
+  name: 'Zhongshi Sports Academy',
+  alternateName: ['ZSA', 'ZSA Eagles', '中实体育'],
+  url: 'https://wzis.org/sports-academy',
+  description:
+    'Zhongshi Sports Academy (ZSA) is the competitive athletics arm of WZIS/WZFS in Weihai, Shandong, China, with baseball and volleyball programs for student-athletes.',
+  sport: ['Baseball', 'Volleyball'],
+  memberOf: {
+    '@type': 'EducationalOrganization',
+    '@id': 'https://wzis.org/#organization',
+    name: 'Weihai Zhongshi International School',
+  },
+  coach: [
+    { '@type': 'Person', name: 'Kim Cheol-yong' },
+    { '@type': 'Person', name: 'Choi Jeong-jung' },
+  ],
+  location: {
+    '@type': 'Place',
+    name: 'Weihai Zhongshi International School',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Weihai',
+      addressRegion: 'Shandong',
+      addressCountry: 'CN',
+    },
+  },
+  image: [
+    'https://wzis.org/images/zsa-jito-cup-champions-trophy.jpeg',
+    'https://wzis.org/images/zsa-volleyball-court-2026.jpeg',
+  ],
 };
 
 const sportsPrograms = [
@@ -56,19 +124,19 @@ const sportsPrograms = [
 ];
 
 const galleryPhotos = [
-  { src: '/images/zsa-jito-cup-opening-ceremony.jpeg', alt: 'CTBC Cup Opening Ceremony' },
-  { src: '/images/zsa-jito-cup-team-blue-whale.jpeg', alt: 'ZSA Team at Blue Whale Field' },
-  { src: '/images/zsa-jito-cup-coach-huddle.jpeg', alt: 'Coach Choi with the Team' },
-  { src: '/images/zsa-jito-cup-pitcher.jpeg', alt: 'ZSA Pitcher in Action' },
-  { src: '/images/zsa-jito-cup-batter-zayden.jpeg', alt: 'Zayden at the Plate' },
-  { src: '/images/zsa-jito-cup-batter-jun.jpeg', alt: 'Jun at the Plate' },
-  { src: '/images/zsa-jito-cup-team-handshake.jpeg', alt: 'Team Handshake' },
-  { src: '/images/zsa-jito-cup-team-circle.jpeg', alt: 'Team Circle' },
-  { src: '/images/zsa-northern-division-2026-departure.jpeg', alt: 'Departing for Shijiazhuang — CTBC Cup Northern Division' },
-  { src: '/images/zsa-northern-division-2026-opening-lineup.jpeg', alt: 'Opening Lineup at Home Plate' },
-  { src: '/images/zsa-northern-division-2026-batter-swing.jpeg', alt: 'Eagles Batter Follows Through' },
-  { src: '/images/zsa-northern-division-2026-team-huddle.jpeg', alt: 'Alex, Edward, and Jun in the Huddle' },
-  { src: '/images/zsa-northern-division-2026-both-teams.jpeg', alt: 'Both Teams Together After the Final' },
+  { src: '/images/zsa-jito-cup-opening-ceremony.jpeg', alt: 'ZSA Eagles at the 2026 CTBC Cup opening ceremony in Weihai' },
+  { src: '/images/zsa-jito-cup-team-blue-whale.jpeg', alt: 'Zhongshi Sports Academy baseball team at Blue Whale Field' },
+  { src: '/images/zsa-jito-cup-coach-huddle.jpeg', alt: 'Coach Choi Jeong-jung leading a ZSA Eagles huddle' },
+  { src: '/images/zsa-jito-cup-pitcher.jpeg', alt: 'ZSA Eagles pitcher in game action during the CTBC Cup' },
+  { src: '/images/zsa-jito-cup-batter-zayden.jpeg', alt: 'ZSA Eagles batter Zayden at the plate' },
+  { src: '/images/zsa-jito-cup-batter-jun.jpeg', alt: 'ZSA Eagles batter Jun at the plate' },
+  { src: '/images/zsa-jito-cup-team-handshake.jpeg', alt: 'ZSA Eagles players during a post-game handshake line' },
+  { src: '/images/zsa-jito-cup-team-circle.jpeg', alt: 'ZSA Eagles team circle before competition' },
+  { src: '/images/zsa-northern-division-2026-departure.jpeg', alt: 'ZSA Eagles departing for the CTBC Cup Northern Division in Shijiazhuang' },
+  { src: '/images/zsa-northern-division-2026-opening-lineup.jpeg', alt: 'ZSA Eagles opening lineup at home plate in Northern Division play' },
+  { src: '/images/zsa-northern-division-2026-batter-swing.jpeg', alt: 'ZSA Eagles batter follow-through during Northern Division competition' },
+  { src: '/images/zsa-northern-division-2026-team-huddle.jpeg', alt: 'ZSA Eagles players Alex, Edward, and Jun in a team huddle' },
+  { src: '/images/zsa-northern-division-2026-both-teams.jpeg', alt: 'Both teams after the Northern Division final featuring ZSA Eagles' },
 ];
 
 const coachingStaff = [
@@ -167,12 +235,24 @@ const coreValues = [
 
 export default function SportsAcademyPage() {
   return (
-    <main className="flex flex-col w-full">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sportsAcademySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema('Zhongshi Sports Academy', 'https://wzis.org/sports-academy')),
+        }}
+      />
+      <main className="flex flex-col w-full">
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/images/zsa-team-walk-off.jpeg"
-        title="Zhongshi Sports Academy"
-        subtitle="ZSA Eagles — competitive athletics rooted in discipline, teamwork, and excellence"
+        title="Zhongshi Sports Academy (ZSA)"
+        subtitle="ZSA Eagles baseball and volleyball — competitive athletics rooted in discipline, teamwork, and excellence"
+        imageAlt="Zhongshi Sports Academy (ZSA) Eagles baseball players walking onto the field in Weihai"
       />
 
       {/* Academy Overview */}
@@ -600,6 +680,7 @@ export default function SportsAcademyPage() {
         primaryButton={{ label: 'Explore Admissions', href: '/admissions' }}
         secondaryButton={{ label: 'Learn About Athletics', href: '/athletics' }}
       />
-    </main>
+      </main>
+    </>
   );
 }

@@ -1,16 +1,37 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Trophy, Target, Zap, Warehouse, TreePine, Diamond, Circle, Footprints } from 'lucide-react';
 import CTASection from '@/components/sections/CTASection';
 import Card from '@/components/ui/Card';
 
-export const metadata = {
-  title: 'Athletics | WZIS Eagles',
+export const metadata: Metadata = {
+  title: 'Athletics at WZIS | ZSA Eagles Baseball & Volleyball in Weihai',
   description:
-    'WZIS Eagles athletics — volleyball, baseball, and competitive sports programs. Interschool tournaments and athletic achievement building character through competition, discipline, and teamwork in Weihai, China.',
+    'Explore WZIS/WZFS athletics in Weihai, China, including Zhongshi Sports Academy (ZSA) Eagles baseball and volleyball programs, facilities, and student competition opportunities.',
+  alternates: {
+    canonical: '/athletics',
+  },
   openGraph: {
-    title: 'WZIS Eagles Athletics — Competitive Sports Programs',
+    type: 'website',
+    url: 'https://wzis.org/athletics',
+    title: 'Athletics at WZIS | ZSA Eagles Baseball & Volleyball',
     description:
-      'Volleyball, baseball, and competitive sports at Weihai Zhongshi International School. Building character through athletics.',
+      'WZIS/WZFS Eagles athletics in Weihai, featuring Zhongshi Sports Academy (ZSA) baseball and volleyball.',
+    images: [
+      {
+        url: '/images/volleyball-match.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'WZIS Eagles athletics volleyball match in Weihai',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Athletics at WZIS | ZSA Eagles Baseball & Volleyball',
+    description: 'Learn about athletics at WZIS, including Zhongshi Sports Academy (ZSA) in Weihai.',
+    images: ['/images/volleyball-match.jpeg'],
   },
 };
 
@@ -72,6 +93,13 @@ export default function AthleticsPage() {
             </h2>
             <p className="text-lg text-navy-mid leading-relaxed">
               Athletics are integral to the WZFS Eagles experience. Our competitive programs and interschool tournaments bring together students to compete, collaborate, and grow. Through sports, our Eagles develop resilience, leadership, and the values of fair play and sportsmanship that define our community.
+            </p>
+            <p className="text-base text-navy-mid leading-relaxed">
+              Looking for our dedicated baseball and volleyball track? Visit{' '}
+              <Link href="/sports-academy" className="text-accent font-semibold hover:underline">
+                Zhongshi Sports Academy (ZSA)
+              </Link>{' '}
+              to explore coaching, facilities, and recent ZSA Eagles results.
             </p>
           </div>
         </div>
@@ -167,7 +195,7 @@ export default function AthleticsPage() {
         title="Join the Eagles"
         subtitle="Be part of our athletic community and discover your potential"
         primaryButton={{ label: 'Admissions', href: '/admissions' }}
-        secondaryButton={{ label: 'Sports Academy', href: '/zsa' }}
+        secondaryButton={{ label: 'Zhongshi Sports Academy (ZSA)', href: '/sports-academy' }}
       />
     </main>
   );
