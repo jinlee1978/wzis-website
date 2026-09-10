@@ -66,10 +66,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: baseUrl + '/zsa',
+      url: baseUrl + '/sports-academy',
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: baseUrl + '/dormitory',

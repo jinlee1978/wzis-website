@@ -9,7 +9,7 @@
     "language": "Language",
     "subLinks": {
       "athletics": "Athletics",
-      "sportsAcademy": "Sports Academy (ZSA)",
+      "sportsAcademy": "Zhongshi Sports Academy (ZSA)",
       "dormitory": "Dormitory",
       "music": "Music",
       "events": "Events & Gallery"
@@ -44,7 +44,7 @@
     },
     "campusLifeLinks": {
       "athletics": "Athletics",
-      "sportsAcademy": "Sports Academy",
+      "sportsAcademy": "Zhongshi Sports Academy (ZSA)",
       "dormitory": "Dormitory",
       "music": "Music",
       "careers": "Careers"
@@ -211,7 +211,7 @@
         {
           "title": "ZSA Sports Academy",
           "desc": "Competitive baseball and volleyball programs",
-          "href": "/zsa"
+          "href": "/sports-academy"
         }
       ]
     },
