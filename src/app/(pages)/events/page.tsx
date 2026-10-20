@@ -23,148 +23,88 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   // TODO: Replace hardcoded semesters with Sanity data from academic_calendars collection
+  // Source: WZFS School Calendar 2026-2027, First Semester (Ver.260911)
   const semesters = [
     {
-      id: 'fall-2025',
+      id: 'fall-2026',
       name: 'First Semester',
-      period: 'Aug 2025 - Jan 2026',
-      days: 89,
-      opening: 'Aug 25, 2025',
+      period: 'Aug 2026 - Jan 2027',
+      days: 91,
+      opening: 'Aug 31, 2026',
       break: {
-        name: 'Winter Break',
-        dates: 'Jan 10 - Mar 1, 2026',
+        name: 'Winter Vacation',
+        dates: 'Jan 15 - Feb 28, 2027',
       },
-      themes: ['August', 'Mid-Autumn', 'United Nations', 'Thanksgiving', 'Christmas'],
+      themes: ['Mid-Autumn Festival', 'United Nations', 'Thanksgiving', 'Christmas'],
     },
     {
-      id: 'spring-2026',
+      id: 'spring-2027',
       name: 'Second Semester',
-      period: 'Feb 2026 - Jul 2026',
-      days: 90,
-      opening: 'Mar 2, 2026',
-      break: {
-        name: 'Summer Break',
-        dates: 'Aug 1, 2026',
-      },
-      themes: ['March', 'English', 'Sports', 'Art & Music'],
+      period: 'Mar 2027 - Jul 2027',
+      opening: 'Mar 1, 2027',
+      note: 'The full second-semester calendar will be posted once it is released.',
     },
   ];
 
-  // TODO: Replace hardcoded events with Sanity data from events collection (filtered for Second Semester)
+  // TODO: Replace hardcoded events with Sanity data from events collection (filtered for the current semester)
   const monthlyEvents = [
     {
-      month: 'March',
+      month: 'August 2026',
       events: [
-        {
-          date: 'Mar 2',
-          title: 'Opening Day & ID Photos',
-          audience: 'Whole School',
-        },
-        {
-          date: 'Mar 27',
-          title: 'Birthday Party & Casual Day',
-          audience: 'All Students',
-        },
+        { date: 'Aug 31', title: 'Opening Day', audience: 'Whole School' },
       ],
     },
     {
-      month: 'April',
+      month: 'September 2026',
       events: [
-        {
-          date: 'Apr 6',
-          title: 'Tomb-Sweeping Day',
-          audience: 'Holiday',
-        },
-        {
-          date: 'Apr 24',
-          title: 'Birthday Party',
-          audience: 'All Students',
-        },
-        {
-          date: 'Apr 27-29',
-          title: 'Midterm Assessments',
-          audience: 'All Students',
-        },
-        {
-          date: 'Apr 30',
-          title: 'Field Trip',
-          audience: 'All Students',
-        },
+        { date: 'Sep 8', title: "Meet the Teachers Day & Parents' General Assembly", audience: 'Parents Invited' },
+        { date: 'Sep 10', title: 'IGCSE Information Day', audience: 'Grades 9-10 & Parents' },
+        { date: 'Sep 13', title: 'HSK Test', audience: 'Registered Candidates' },
+        { date: 'Sep 24', title: 'Birthday Party & Casual Day', audience: 'All Students' },
+        { date: 'Sep 25', title: 'Chuseok & Mid-Autumn Festival', audience: 'Holiday' },
+        { date: 'Sep 30', title: 'Zhongshi Festival', audience: 'Parents Invited' },
       ],
     },
     {
-      month: 'May',
+      month: 'October 2026',
       events: [
-        {
-          date: 'May 1-5',
-          title: 'Labor Day Holiday',
-          audience: 'School Closure',
-        },
-        {
-          date: 'May 29',
-          title: 'Birthday Party',
-          audience: 'All Students',
-        },
+        { date: 'Oct 1-7', title: 'National Day Holiday', audience: 'School Closure' },
+        { date: 'Oct 10', title: 'Sports Day', audience: 'Whole School' },
+        { date: 'Oct 16', title: 'Little Play Maker (English Competition)', audience: 'Primary' },
+        { date: 'Oct 17', title: 'HSK Test', audience: 'Registered Candidates' },
+        { date: 'Oct 23', title: 'Birthday Party & Casual Day', audience: 'All Students' },
+        { date: 'Oct 26-29', title: 'Midterm Assessments', audience: 'All Students' },
+        { date: 'Oct 29', title: 'Hero Day', audience: 'Primary' },
+        { date: 'Oct 30', title: 'Field Trip', audience: 'All Students' },
       ],
     },
     {
-      month: 'June',
+      month: 'November 2026',
       events: [
-        {
-          date: 'Jun 1',
-          title: "Children's Day",
-          audience: 'Holiday',
-        },
-        {
-          date: 'Jun 6',
-          title: 'IGCSE/A-Level Exam Period',
-          audience: 'Grades 10-12',
-        },
-        {
-          date: 'Jun 19',
-          title: 'Dragon Boat Festival',
-          audience: 'Holiday',
-        },
-        {
-          date: 'Jun 20-24',
-          title: 'Final Exams',
-          audience: 'All Students',
-        },
-        {
-          date: 'Jun 25',
-          title: 'Dragon Boat Festival Field Trip',
-          audience: 'All Students',
-        },
+        { date: 'Nov 7', title: 'HSK Test', audience: 'Registered Candidates' },
+        { date: 'Nov 9-20', title: 'Parent-Teacher Conferences', audience: 'Parents Invited' },
+        { date: 'Nov 27', title: 'Science Fair', audience: 'Parents Invited' },
+        { date: 'Nov 27', title: 'Birthday Party & Casual Day', audience: 'All Students' },
       ],
     },
     {
-      month: 'July',
+      month: 'December 2026',
       events: [
-        {
-          date: 'Jul 1',
-          title: 'Recognition & Closing Ceremony',
-          audience: 'Whole School',
-        },
-        {
-          date: 'Jul 2',
-          title: 'G12 Graduation & Farewell',
-          audience: 'Grade 12',
-        },
-        {
-          date: 'Jul 3',
-          title: 'Last Day of School',
-          audience: 'Whole School',
-        },
-        {
-          date: 'Jul 3-31',
-          title: 'Summer Programs',
-          audience: 'All Students',
-        },
-        {
-          date: 'Aug 1+',
-          title: 'Summer Break',
-          audience: 'School Closure',
-        },
+        { date: 'Dec 1', title: 'Chinese Vocabulary Competition', audience: 'Primary' },
+        { date: 'Dec 2', title: 'Chinese Knowledge Competition', audience: 'Primary' },
+        { date: 'Dec 13', title: 'HSK Test', audience: 'Registered Candidates' },
+        { date: 'Dec 18', title: 'Christmas Play & Nine Lessons', audience: 'Primary' },
+        { date: 'Dec 25', title: 'Christmas Holiday', audience: 'School Closure' },
+        { date: 'Dec 28-31', title: 'Final Exams', audience: 'All Students' },
+      ],
+    },
+    {
+      month: 'January 2027',
+      events: [
+        { date: 'Jan 1', title: "New Year's Day", audience: 'School Closure' },
+        { date: 'Jan 8-9', title: 'Lingang Volleyball Tournament', audience: 'School Volleyball Team' },
+        { date: 'Jan 14', title: 'Recognition & Closing Ceremony', audience: 'Whole School' },
+        { date: 'Jan 15 - Feb 28', title: 'Winter Vacation', audience: 'School Closure' },
       ],
     },
   ];
@@ -242,7 +182,7 @@ export default function EventsPage() {
             School Calendar & Events
           </h1>
           <p className="text-xl text-white opacity-90">
-            2025-2026 Academic Year
+            2026-2027 Academic Year
           </p>
         </div>
       </section>
@@ -267,9 +207,11 @@ export default function EventsPage() {
                   <p className="text-lg font-sans text-accent font-semibold">
                     {semester.period}
                   </p>
-                  <p className="text-sm text-warm mt-1">
-                    {semester.days} instructional days
-                  </p>
+                  {semester.days && (
+                    <p className="text-sm text-warm mt-1">
+                      {semester.days} instructional days
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-4 mb-6 pb-6 border-b border-gray-200">
@@ -281,42 +223,52 @@ export default function EventsPage() {
                       {semester.opening}
                     </p>
                   </div>
-                  <div>
-                    <p className="text-sm font-sans text-gray-600 uppercase tracking-wide">
-                      {semester.break.name}
-                    </p>
-                    <p className="text-lg font-serif font-bold text-navy">
-                      {semester.break.dates}
-                    </p>
-                  </div>
+                  {semester.break && (
+                    <div>
+                      <p className="text-sm font-sans text-gray-600 uppercase tracking-wide">
+                        {semester.break.name}
+                      </p>
+                      <p className="text-lg font-serif font-bold text-navy">
+                        {semester.break.dates}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
-                <div>
-                  <p className="text-sm font-sans text-gray-600 uppercase tracking-wide mb-3">
-                    Thematic Units
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {semester.themes.map((theme, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-block px-3 py-1 bg-accent bg-opacity-10 text-navy rounded-full text-sm font-sans"
-                      >
-                        {theme}
-                      </span>
-                    ))}
+                {semester.themes && (
+                  <div>
+                    <p className="text-sm font-sans text-gray-600 uppercase tracking-wide mb-3">
+                      Thematic Units
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {semester.themes.map((theme, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-block px-3 py-1 bg-accent bg-opacity-10 text-navy rounded-full text-sm font-sans"
+                        >
+                          {theme}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {semester.note && (
+                  <p className="text-base font-sans text-gray-600">
+                    {semester.note}
+                  </p>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECOND SEMESTER EVENTS TIMELINE */}
+      {/* CURRENT SEMESTER EVENTS TIMELINE */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-navy mb-12 text-center">
-            Second Semester Event Timeline
+            First Semester Event Timeline
           </h2>
 
           <div className="space-y-12">
