@@ -8,8 +8,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Canonical ZSA route is /sports-academy; keep /zsa links and bookmarks working.
-      { source: '/zsa', destination: '/sports-academy', permanent: true },
+      // ZSA page lives at /zsa (Sept 2026); keep old /sports-academy links and search results working
+      { source: '/sports-academy', destination: '/zsa', permanent: true },
     ];
   },
 };

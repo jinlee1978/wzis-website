@@ -96,7 +96,7 @@ export default function AthleticsPage() {
             </p>
             <p className="text-base text-navy-mid leading-relaxed">
               Looking for our dedicated baseball and volleyball track? Visit{' '}
-              <Link href="/sports-academy" className="text-accent font-semibold hover:underline">
+              <Link href="/zsa" className="text-accent font-semibold hover:underline">
                 Zhongshi Sports Academy (ZSA)
               </Link>{' '}
               to explore coaching, facilities, and recent ZSA Eagles results.
@@ -195,7 +195,7 @@ export default function AthleticsPage() {
         title="Join the Eagles"
         subtitle="Be part of our athletic community and discover your potential"
         primaryButton={{ label: 'Admissions', href: '/admissions' }}
-        secondaryButton={{ label: 'Zhongshi Sports Academy (ZSA)', href: '/sports-academy' }}
+        secondaryButton={{ label: 'Zhongshi Sports Academy (ZSA)', href: '/zsa' }}
       />
     </main>
   );

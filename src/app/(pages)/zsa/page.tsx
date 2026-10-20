@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     '中实体育',
   ],
   alternates: {
-    canonical: '/sports-academy',
+    canonical: '/zsa',
   },
   openGraph: {
     type: 'website',
-    url: 'https://wzis.org/sports-academy',
+    url: 'https://wzis.org/zsa',
     title: 'Zhongshi Sports Academy (ZSA) | WZIS Eagles Athletics',
     description:
       'ZSA Eagles baseball and volleyball at Weihai Zhongshi International School (WZIS/WZFS), including coaching, facilities, and recent competition results.',
@@ -54,10 +54,10 @@ export const metadata: Metadata = {
 const sportsAcademySchema = {
   '@context': 'https://schema.org',
   '@type': 'SportsOrganization',
-  '@id': 'https://wzis.org/sports-academy#sports-organization',
+  '@id': 'https://wzis.org/zsa#sports-organization',
   name: 'Zhongshi Sports Academy',
   alternateName: ['ZSA', 'ZSA Eagles', '中实体育'],
-  url: 'https://wzis.org/sports-academy',
+  url: 'https://wzis.org/zsa',
   description:
     'Zhongshi Sports Academy (ZSA) is the competitive athletics arm of WZIS/WZFS in Weihai, Shandong, China, with baseball and volleyball programs for student-athletes.',
   sport: ['Baseball', 'Volleyball'],
@@ -243,7 +243,7 @@ export default function SportsAcademyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema('Zhongshi Sports Academy', 'https://wzis.org/sports-academy')),
+          __html: JSON.stringify(breadcrumbSchema('Zhongshi Sports Academy', 'https://wzis.org/zsa')),
         }}
       />
       <main className="flex flex-col w-full">
