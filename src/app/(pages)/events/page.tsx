@@ -1,14 +1,6 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Calendar,
-  Sparkles,
-  Trophy,
-  Music,
-  Users,
-  ArrowRight,
-} from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Events & Academic Calendar | WZIS',
@@ -107,70 +99,6 @@ export default function EventsPage() {
         { date: 'Jan 14', title: 'Recognition & Closing Ceremony', audience: 'Whole School' },
         { date: 'Jan 15 - Feb 28', title: 'Winter Vacation', audience: 'School Closure' },
       ],
-    },
-  ];
-
-  // TODO: Replace hardcoded highlights with Sanity data from annual_highlights collection
-  const highlights = [
-    {
-      id: 'shining-heart',
-      title: 'Shining Heart Festival',
-      description: 'Community-wide cultural celebration and talent showcase',
-      icon: Sparkles,
-    },
-    {
-      id: 'christmas',
-      title: 'Zhongshi Christmas Festival',
-      description: 'Holiday celebration with performances and activities',
-      icon: Music,
-    },
-    {
-      id: 'sports-academy',
-      title: 'ZSA Launch Ceremony',
-      description: 'Official launch of Zhongshi Sports Academy programs',
-      icon: Trophy,
-    },
-    {
-      id: 'sports-day',
-      title: 'Sports Day & Athletics',
-      description: 'Whole-school athletics competition',
-      icon: Trophy,
-    },
-    {
-      id: 'volleyball',
-      title: 'Lingang Volleyball Tournament',
-      description: 'Inter-school volleyball competition',
-      icon: Trophy,
-    },
-    {
-      id: 'dragon-boat',
-      title: 'Dragon Boat Festival',
-      description: 'Cultural celebration with traditional activities',
-      icon: Calendar,
-    },
-    {
-      id: 'graduation',
-      title: 'Grade 12 Graduation',
-      description: 'Commencement ceremony for graduating seniors',
-      icon: Users,
-    },
-    {
-      id: 'closing-ceremony',
-      title: 'Recognition & Closing Ceremony',
-      description: 'End-of-year awards and celebration',
-      icon: Sparkles,
-    },
-    {
-      id: 'tedx',
-      title: 'TED x @WZFS',
-      description: 'Student-led TED-style talks',
-      icon: Users,
-    },
-    {
-      id: 'wesc',
-      title: 'WESC Main Event & Awards',
-      description: 'WZIS English Speech Competition',
-      icon: Sparkles,
     },
   ];
 
@@ -312,37 +240,6 @@ export default function EventsPage() {
                 )}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ANNUAL HIGHLIGHTS */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-serif font-bold text-navy mb-12 text-center">
-            Annual Highlights
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {highlights.map((highlight) => {
-              const IconComponent = highlight.icon;
-              return (
-                <div
-                  key={highlight.id}
-                  className="bg-gray-50 rounded-lg p-6 hover:bg-accent hover:bg-opacity-5 transition-colors border border-gray-200 hover:border-accent"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-accent bg-opacity-10 flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="text-lg font-serif font-bold text-navy mb-2">
-                    {highlight.title}
-                  </h3>
-                  <p className="text-sm font-sans text-gray-600">
-                    {highlight.description}
-                  </p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
