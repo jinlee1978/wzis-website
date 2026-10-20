@@ -59,6 +59,7 @@ export default function EventsPage() {
       events: [
         { date: 'Sep 8', title: "Meet the Teachers Day & Parents' General Assembly", audience: 'Parents Invited' },
         { date: 'Sep 10', title: 'IGCSE Information Day', audience: 'Grades 9-10 & Parents' },
+        { date: 'Sep 11', title: 'Education with Parents (EWP)', audience: 'Parents Invited' },
         { date: 'Sep 13', title: 'HSK Test', audience: 'Registered Candidates' },
         { date: 'Sep 24', title: 'Birthday Party & Casual Day', audience: 'All Students' },
         { date: 'Sep 25', title: 'Chuseok & Mid-Autumn Festival', audience: 'Holiday' },
