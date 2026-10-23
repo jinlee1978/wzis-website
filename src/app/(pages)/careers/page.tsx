@@ -30,6 +30,7 @@ const jobs: Job[] = [
   {
     id: 'igcse-english-teacher',
     title: 'IGCSE English as a Second Language Teacher',
+    hidden: true,
     details: [
       'Hiring for the 2027–2028 school year',
       'IGCSE English as a Second Language (high school)',
