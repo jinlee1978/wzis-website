@@ -21,6 +21,8 @@ interface Job {
   title: string;
   details: string[];
   contact: string;
+  /** Set to true to take a posting down without deleting it; flip back to repost. */
+  hidden?: boolean;
 }
 
 // TODO: Replace with Sanity CMS query
@@ -40,6 +42,7 @@ const jobs: Job[] = [
   {
     id: 'english-social-studies-teacher',
     title: 'Middle School English/Social Studies Teacher',
+    hidden: true,
     details: [
       'Hiring for the 2027–2028 school year',
       'Teaches English & Social Studies in middle school',
@@ -91,6 +94,8 @@ const jobs: Job[] = [
     contact: 'careers@wzis.org',
   },
 ];
+
+const openJobs = jobs.filter((job) => !job.hidden);
 
 // TODO: Replace with Sanity CMS query
 const benefits = [
@@ -204,7 +209,7 @@ export default function CareersPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {jobs.map((job) => (
+            {openJobs.map((job) => (
               <div
                 key={job.id}
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border-t-4 border-accent"
@@ -386,7 +391,7 @@ export default function CareersPage() {
 
           <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 md:p-12">
             {/* TODO: Replace with Sanity CMS integration if needed */}
-            <CareerForm />
+            <CareerForm positions={openJobs.map((job) => job.title)} />
           </div>
         </div>
       </section>

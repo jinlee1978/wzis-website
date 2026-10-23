@@ -3,20 +3,16 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 
-export default function CareerForm() {
+interface CareerFormProps {
+  positions: string[];
+}
+
+export default function CareerForm({ positions }: CareerFormProps) {
   const [formData, setFormData] = useState({
     fullName: '',
     position: '',
     message: '',
   });
-
-  const positions = [
-    'IGCSE English as a Second Language Teacher',
-    'Middle School English/Social Studies Teacher',
-    'History/Social Studies Teacher',
-    'Middle & High School Science Teacher (Physical Sciences)',
-    'Open Applications',
-  ];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
